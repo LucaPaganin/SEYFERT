@@ -1,5 +1,4 @@
 # SEYFERT
-[![pipeline status](https://baltig.infn.it/Euclid-Ge/seyfert/badges/develop/pipeline.svg)](https://baltig.infn.it/Euclid-Ge/seyfert/-/commits/develop)
 
 SurvEY FishEr foRecast Tool
 
