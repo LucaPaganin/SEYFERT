@@ -1,0 +1,45 @@
+seyfert.config package
+======================
+
+Submodules
+----------
+
+seyfert.config.cmd\_line module
+-------------------------------
+
+.. automodule:: seyfert.config.cmd_line
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.config.forecast\_config module
+--------------------------------------
+
+.. automodule:: seyfert.config.forecast_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.config.main\_config module
+----------------------------------
+
+.. automodule:: seyfert.config.main_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.config.probe\_config module
+-----------------------------------
+
+.. automodule:: seyfert.config.probe_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

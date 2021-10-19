@@ -1,0 +1,19 @@
+H5Bias
+======
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: H5Bias
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5Bias.writeObjectToFile
+      ~H5Bias.writeToObject
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

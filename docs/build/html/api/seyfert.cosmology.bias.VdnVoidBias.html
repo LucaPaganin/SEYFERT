@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>VdnVoidBias &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Weight functions" href="../weight_functions.html" />
+    <link rel="prev" title="PiecewiseBias" href="seyfert.cosmology.bias.PiecewiseBias.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmology.html">Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameter.html">Physical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../power_spectrum.html">Power Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boltzmann_solver.html">Boltzmann solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../redshift_density.html">Redshift Density</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bias.html">Bias</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bias.html#module-seyfert.cosmology.bias">seyfert.cosmology.bias Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../bias.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.Bias.html">Bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.BiasError.html">BiasError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.BiasModel.html">BiasModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.ConstantBias.html">ConstantBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.EuclidFlagshipGCphBias.html">EuclidFlagshipGCphBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.FiducialGrowthVoidBias.html">FiducialGrowthVoidBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.H5Bias.html">H5Bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.bias.PiecewiseBias.html">PiecewiseBias</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">VdnVoidBias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bias.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../weight_functions.html">Weight functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c_ells.html">Angular power spectra</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../bias.html">Bias</a> &raquo;</li>
+        
+      <li>VdnVoidBias</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/seyfert.cosmology.bias.VdnVoidBias.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vdnvoidbias">
+<h1>VdnVoidBias<a class="headerlink" href="#vdnvoidbias" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">VdnVoidBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.cosmology.bias.BiasModel.html#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc" title="seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R_max_Mpc</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc" title="seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R_min_Mpc</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.delta_c0" title="seyfert.cosmology.bias.VdnVoidBias.delta_c0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_c0</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.delta_v0" title="seyfert.cosmology.bias.VdnVoidBias.delta_v0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_v0</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.n_R" title="seyfert.cosmology.bias.VdnVoidBias.n_R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_R</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.z_grid" title="seyfert.cosmology.bias.VdnVoidBias.z_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z_grid</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.computeBias" title="seyfert.cosmology.bias.VdnVoidBias.computeBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computeBias</span></code></a>(z_grid)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction" title="seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computeVdnSizeFunction</span></code></a>(R, D, x, delta_v_z, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity" title="seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computeVoidMultiplicity</span></code></a>(D, x, delta_v_z, sigmaR)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity" title="seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">voidMultiplicity</span></code></a>(delta_v, D, sigma, x)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc">
+<span class="sig-name descname"><span class="pre">R_max_Mpc</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc">
+<span class="sig-name descname"><span class="pre">R_min_Mpc</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.delta_c0">
+<span class="sig-name descname"><span class="pre">delta_c0</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.delta_c0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.delta_v0">
+<span class="sig-name descname"><span class="pre">delta_v0</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.delta_v0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.n_R">
+<span class="sig-name descname"><span class="pre">n_R</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.n_R" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.z_grid">
+<span class="sig-name descname"><span class="pre">z_grid</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.z_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction">
+<span class="sig-name descname"><span class="pre">computeVdnSizeFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_v_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmaR</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity">
+<span class="sig-name descname"><span class="pre">computeVoidMultiplicity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_v_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmaR</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">voidMultiplicity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../weight_functions.html" class="btn btn-neutral float-right" title="Weight functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.cosmology.bias.PiecewiseBias.html" class="btn btn-neutral float-left" title="PiecewiseBias" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

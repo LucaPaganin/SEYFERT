@@ -1,0 +1,87 @@
+Cosmology
+=========
+
+.. currentmodule:: seyfert.cosmology.cosmology
+
+.. autoclass:: Cosmology
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Cosmology.E_z
+      ~Cosmology.H0
+      ~Cosmology.H_z
+      ~Cosmology.OmDE
+      ~Cosmology.OmK
+      ~Cosmology.Omb
+      ~Cosmology.Omm
+      ~Cosmology.cosmo_pars_current
+      ~Cosmology.growth_factor_z
+      ~Cosmology.h
+      ~Cosmology.k_grid
+      ~Cosmology.mnu
+      ~Cosmology.ns
+      ~Cosmology.r_tilde_z
+      ~Cosmology.r_z
+      ~Cosmology.sigma8
+      ~Cosmology.transfer_function_k
+      ~Cosmology.w0
+      ~Cosmology.wa
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Cosmology.checkParameters
+      ~Cosmology.computeComovingDistance
+      ~Cosmology.computeDimensionlessComovingDistance
+      ~Cosmology.computeDimensionlessHubbleParameter
+      ~Cosmology.computeHubbleParameter
+      ~Cosmology.computeReciprocalDimensionlessHubbleParameter
+      ~Cosmology.computeSigmaR
+      ~Cosmology.evaluateOverRedshiftGrid
+      ~Cosmology.evaluatePowerSpectrum
+      ~Cosmology.fromHDF5
+      ~Cosmology.loadFromHDF5
+      ~Cosmology.saveToHDF5
+      ~Cosmology.sigmaR
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: E_z
+   .. autoattribute:: H0
+   .. autoattribute:: H_z
+   .. autoattribute:: OmDE
+   .. autoattribute:: OmK
+   .. autoattribute:: Omb
+   .. autoattribute:: Omm
+   .. autoattribute:: cosmo_pars_current
+   .. autoattribute:: growth_factor_z
+   .. autoattribute:: h
+   .. autoattribute:: k_grid
+   .. autoattribute:: mnu
+   .. autoattribute:: ns
+   .. autoattribute:: r_tilde_z
+   .. autoattribute:: r_z
+   .. autoattribute:: sigma8
+   .. autoattribute:: transfer_function_k
+   .. autoattribute:: w0
+   .. autoattribute:: wa
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: checkParameters
+   .. automethod:: computeComovingDistance
+   .. automethod:: computeDimensionlessComovingDistance
+   .. automethod:: computeDimensionlessHubbleParameter
+   .. automethod:: computeHubbleParameter
+   .. automethod:: computeReciprocalDimensionlessHubbleParameter
+   .. automethod:: computeSigmaR
+   .. automethod:: evaluateOverRedshiftGrid
+   .. automethod:: evaluatePowerSpectrum
+   .. automethod:: fromHDF5
+   .. automethod:: loadFromHDF5
+   .. automethod:: saveToHDF5
+   .. automethod:: sigmaR

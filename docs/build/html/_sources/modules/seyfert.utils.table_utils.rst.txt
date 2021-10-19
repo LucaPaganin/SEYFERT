@@ -1,0 +1,7 @@
+seyfert.utils.table\_utils module
+=================================
+
+.. automodule:: seyfert.utils.table_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

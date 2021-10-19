@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.cosmology.cosmology module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.cosmology.kernel_functions module" href="seyfert.cosmology.kernel_functions.html" />
+    <link rel="prev" title="seyfert.cosmology.c_ells module" href="seyfert.cosmology.c_ells.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.cosmology.html">seyfert.cosmology package</a> &raquo;</li>
+        
+      <li>seyfert.cosmology.cosmology module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.cosmology.cosmology.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.cosmology.cosmology">
+<span id="seyfert-cosmology-cosmology-module"></span><h1>seyfert.cosmology.cosmology module<a class="headerlink" href="#module-seyfert.cosmology.cosmology" title="Permalink to this headline">¶</a></h1>
+<p>Module hosting the cosmology class and its HDF5 file-interface.
+The Cosmology possesses cosmological parameters values and it can compute all relevant cosmological functions, like the
+Hubble parameter and the co-moving distance. For now accepted cosmological parameters are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(w_0\)</span>, CPL dark energy equation of state intercept</p></li>
+<li><p><span class="math notranslate nohighlight">\(w_a\)</span>, CPL dark energy equation of state slope</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span>, the dimensionless Hubble constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum m_{\nu}\)</span>, the sum of the neutrino mass eigenstates</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n_s\)</span>, the scalar spectral index</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Omega_m\)</span>, the cold matter density parameter</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Omega_b\)</span>, the baryon density parameter</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Omega_{\rm DE}\)</span>, the dark energy density parameter</p></li>
+</ul>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.cosmology.</span></span><span class="sig-name descname"><span class="pre">Cosmology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for managing the cosmology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]]) – a dictionary with the cosmological parameters, stored as <a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a> instances.</p></li>
+<li><p><strong>z_grid</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – a <code class="xref py py-class docutils literal notranslate"><span class="pre">np.ndarray</span></code> storing the redshift grid on which to compute functions.</p></li>
+<li><p><strong>dimensionless_hubble_array</strong> – a <code class="xref py py-class docutils literal notranslate"><span class="pre">np.ndarray</span></code> storing the values of the dimensionless Hubble parameter
+<span class="math notranslate nohighlight">\(E(z)\)</span> sampled on the grid.</p></li>
+<li><p><strong>dimensionless_comoving_distance_array</strong> – a <code class="xref py py-class docutils literal notranslate"><span class="pre">np.ndarray</span></code> storing the values of the comoving distance
+<span class="math notranslate nohighlight">\(r(z)\)</span> sampled on the grid.</p></li>
+<li><p><strong>power_spectrum</strong> – the matter power spectrum, instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrum</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.E_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">E_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.E_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.H0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">H0</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.H0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubble constant in <span class="math notranslate nohighlight">\(\mathrm{km \, s^{-1}\, {Mpc}^{-1}}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.H_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">H_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.H_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.OmDE">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">OmDE</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.OmDE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dark energy density parameter <span class="math notranslate nohighlight">\(\Omega_{\rm DE}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.OmK">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">OmK</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.OmK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature density parameter <span class="math notranslate nohighlight">\(\Omega_k\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.Omb">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Omb</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.Omb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Baryon density parameter <span class="math notranslate nohighlight">\(\Omega_b\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.Omm">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Omm</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.Omm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cold matter density parameter <span class="math notranslate nohighlight">\(\Omega_m\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.c_km_s">
+<span class="sig-name descname"><span class="pre">c_km_s</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.c_km_s" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.checkParameters">
+<span class="sig-name descname"><span class="pre">checkParameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.checkParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method checking values of cosmological parameters, returning error if values are invalid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeComovingDistance">
+<span class="sig-name descname"><span class="pre">computeComovingDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeComovingDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compute the comoving distance as a function of the redshift.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeDimensionlessComovingDistance">
+<span class="sig-name descname"><span class="pre">computeDimensionlessComovingDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeDimensionlessComovingDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compute the dimensionless comoving distance at a given redshift, computed according the formula:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\tilde{r}(z) = \int_{0}^{z} \frac{dz}{E(z)}\]</div>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>z</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – the value of the redshift at which to compute the comoving distance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the value of the comoving distance at the given redshift(s) z</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeDimensionlessHubbleParameter">
+<span class="sig-name descname"><span class="pre">computeDimensionlessHubbleParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeDimensionlessHubbleParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compute the dimensionless Hubble parameter as a function of the redshift.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeHubbleParameter">
+<span class="sig-name descname"><span class="pre">computeHubbleParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeHubbleParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compute the Hubble parameter as a function of the redshift.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeReciprocalDimensionlessHubbleParameter">
+<span class="sig-name descname"><span class="pre">computeReciprocalDimensionlessHubbleParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeReciprocalDimensionlessHubbleParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut method to compute integrals of the reciprocal of <span class="math notranslate nohighlight">\(E(z)\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.computeSigmaR">
+<span class="sig-name descname"><span class="pre">computeSigmaR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.computeSigmaR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compute the variance of the filtered matter density fluctuations.
+It computes the variance using a top-hat filter in Fourier space with at a given radius R</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>R</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – radius or radii grid, units are Mpc</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the value(s) of <span class="math notranslate nohighlight">\(\sigma_R\)</span> at given radius value(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.cosmo_pars_current">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cosmo_pars_current</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">float]</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.cosmo_pars_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current values of the cosmological parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.dimensionless_comoving_distance_array">
+<span class="sig-name descname"><span class="pre">dimensionless_comoving_distance_array</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.dimensionless_comoving_distance_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.dimensionless_hubble_array">
+<span class="sig-name descname"><span class="pre">dimensionless_hubble_array</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.dimensionless_hubble_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.evaluateOverRedshiftGrid">
+<span class="sig-name descname"><span class="pre">evaluateOverRedshiftGrid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.evaluateOverRedshiftGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which evaluates the Hubble parameter and the comoving distance on the redshift grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.evaluatePowerSpectrum">
+<span class="sig-name descname"><span class="pre">evaluatePowerSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_spectrum_config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.evaluatePowerSpectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method computing the power spectrum for the given cosmology. It will make a call to the Boltzmann code
+selected for the computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workdir</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>]) – working directory</p></li>
+<li><p><strong>power_spectrum_config</strong> (<a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.PowerSpectrumConfig" title="seyfert.config.main_config.PowerSpectrumConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrumConfig</span></code></a>) – power spectrum configuration, instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrumConfig</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.fromHDF5">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_power_spectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.fromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cosmology</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.growth_factor_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">growth_factor_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.growth_factor_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>The growth factor <span class="math notranslate nohighlight">\(D(z)\)</span> as a function of redshift. The convention is that this growth factor is a
+decreasing function of <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.h">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">h</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimensionless Hubble constant</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.k_grid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">k_grid</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.k_grid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.loadFromHDF5">
+<span class="sig-name descname"><span class="pre">loadFromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_power_spectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.loadFromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.mnu">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mnu</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.mnu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sum of the neutrino mass eigenstates <span class="math notranslate nohighlight">\(\sum m_{\nu}\)</span> in <span class="math notranslate nohighlight">\(\mathrm{eV}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.ns">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ns</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scalar spectral index <span class="math notranslate nohighlight">\(n_s\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.params">
+<span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.power_spectrum">
+<span class="sig-name descname"><span class="pre">power_spectrum</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.power_spectrum.html#seyfert.cosmology.power_spectrum.PowerSpectrum" title="seyfert.cosmology.power_spectrum.PowerSpectrum"><span class="pre">seyfert.cosmology.power_spectrum.PowerSpectrum</span></a></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.r_tilde_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">r_tilde_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.r_tilde_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.r_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">r_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.r_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.saveToHDF5">
+<span class="sig-name descname"><span class="pre">saveToHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_power_spectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.saveToHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.sigma8">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sigma8</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.sigma8" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="math notranslate nohighlight">\(\sigma_8\)</span> parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.sigmaR">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">sigmaR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P_lin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.sigmaR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to compute the value <span class="math notranslate nohighlight">\(\sigma_R\)</span> of the matter fluctuation variance filtered at a given
+radius value R</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – the radius of the filter</p></li>
+<li><p><strong>P_lin</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the linear matter power spectrum as a function of the wavenumber <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the wavenumber grid <span class="math notranslate nohighlight">\(k\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the value of <span class="math notranslate nohighlight">\(\sigma_R\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.transfer_function_k">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">transfer_function_k</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.transfer_function_k" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.w0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">w0</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.w0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dark energy <span class="math notranslate nohighlight">\(w_0\)</span> CPL parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.wa">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">wa</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.wa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dark energy <span class="math notranslate nohighlight">\(w_a\)</span> CPL (slope) parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.Cosmology.z_grid">
+<span class="sig-name descname"><span class="pre">z_grid</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.Cosmology.z_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.CosmologyError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.cosmology.</span></span><span class="sig-name descname"><span class="pre">CosmologyError</span></span><a class="headerlink" href="#seyfert.cosmology.cosmology.CosmologyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.cosmology.</span></span><span class="sig-name descname"><span class="pre">H5Cosmology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.file_io.hdf5_io.html#seyfert.file_io.hdf5_io.AbstractH5FileIO" title="seyfert.file_io.hdf5_io.AbstractH5FileIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.file_io.hdf5_io.AbstractH5FileIO</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.build_data">
+<span class="sig-name descname"><span class="pre">build_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.builder_func">
+<span class="sig-name descname"><span class="pre">builder_func</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.builder_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">Path</span></em><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.readBuildingData">
+<span class="sig-name descname"><span class="pre">readBuildingData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.readBuildingData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.writeObjectToFile">
+<span class="sig-name descname"><span class="pre">writeObjectToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.writeObjectToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.cosmology.H5Cosmology.writeToObject">
+<span class="sig-name descname"><span class="pre">writeToObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.cosmology.H5Cosmology.writeToObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.cosmology.kernel_functions.html" class="btn btn-neutral float-right" title="seyfert.cosmology.kernel_functions module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.cosmology.c_ells.html" class="btn btn-neutral float-left" title="seyfert.cosmology.c_ells module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

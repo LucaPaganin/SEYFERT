@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PhysicalParametersCollection &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Power Spectrum" href="../power_spectrum.html" />
+    <link rel="prev" title="PhysicalParameter" href="seyfert.cosmology.parameter.PhysicalParameter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmology.html">Cosmology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../parameter.html">Physical parameters</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../parameter.html#module-seyfert.cosmology.parameter">seyfert.cosmology.parameter Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../parameter.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.parameter.ParameterError.html">ParameterError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html">PhysicalParameter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PhysicalParametersCollection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../parameter.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../power_spectrum.html">Power Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boltzmann_solver.html">Boltzmann solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../redshift_density.html">Redshift Density</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bias.html">Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weight_functions.html">Weight functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c_ells.html">Angular power spectra</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../parameter.html">Physical parameters</a> &raquo;</li>
+        
+      <li>PhysicalParametersCollection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/seyfert.cosmology.parameter.PhysicalParametersCollection.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="physicalparameterscollection">
+<h1>PhysicalParametersCollection<a class="headerlink" href="#physicalparameterscollection" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.parameter.</span></span><span class="sig-name descname"><span class="pre">PhysicalParametersCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_stem_disps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_universe_flat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict.GenericDictInterface</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></code></a>]</p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_current_values" title="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_current_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosmo_pars_current_values</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_fiducials" title="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_fiducials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosmo_pars_fiducials</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmological_parameters" title="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmological_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosmological_parameters</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmo_pars_fiducials" title="seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmo_pars_fiducials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">free_cosmo_pars_fiducials</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmological_parameters" title="seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmological_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">free_cosmological_parameters</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_physical_parameters" title="seyfert.cosmology.parameter.PhysicalParametersCollection.free_physical_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">free_physical_parameters</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.nuisance_parameters" title="seyfert.cosmology.parameter.PhysicalParametersCollection.nuisance_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nuisance_parameters</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.params" title="seyfert.cosmology.parameter.PhysicalParametersCollection.params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">params</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.computePhysParSTEMValues" title="seyfert.cosmology.parameter.PhysicalParametersCollection.computePhysParSTEMValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computePhysParSTEMValues</span></code></a>([dvar])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.fromJSON" title="seyfert.cosmology.parameter.PhysicalParametersCollection.fromJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromJSON</span></code></a>(file[, only_cosmological])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.from_dict_list" title="seyfert.cosmology.parameter.PhysicalParametersCollection.from_dict_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_dict_list</span></code></a>(dict_list[, only_cosmological])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getFreeNuisanceParametersForProbe" title="seyfert.cosmology.parameter.PhysicalParametersCollection.getFreeNuisanceParametersForProbe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFreeNuisanceParametersForProbe</span></code></a>(probe)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getNuisanceParametersForProbe" title="seyfert.cosmology.parameter.PhysicalParametersCollection.getNuisanceParametersForProbe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNuisanceParametersForProbe</span></code></a>(probe)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getParamsDictFromDictList" title="seyfert.cosmology.parameter.PhysicalParametersCollection.getParamsDictFromDictList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParamsDictFromDictList</span></code></a>(dict_list[, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.loadStemDisplacements" title="seyfert.cosmology.parameter.PhysicalParametersCollection.loadStemDisplacements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadStemDisplacements</span></code></a>(base_stem_disp)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.readJSON" title="seyfert.cosmology.parameter.PhysicalParametersCollection.readJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readJSON</span></code></a>(file[, only_cosmological])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.resetPhysicalParametersToFiducial" title="seyfert.cosmology.parameter.PhysicalParametersCollection.resetPhysicalParametersToFiducial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetPhysicalParametersToFiducial</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.updatePhysicalParametersForDvarStep" title="seyfert.cosmology.parameter.PhysicalParametersCollection.updatePhysicalParametersForDvarStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updatePhysicalParametersForDvarStep</span></code></a>([dvar, step])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.writeJSON" title="seyfert.cosmology.parameter.PhysicalParametersCollection.writeJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeJSON</span></code></a>(file)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_current_values">
+<span class="sig-name descname"><span class="pre">cosmo_pars_current_values</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_current_values" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_fiducials">
+<span class="sig-name descname"><span class="pre">cosmo_pars_fiducials</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmo_pars_fiducials" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.cosmological_parameters">
+<span class="sig-name descname"><span class="pre">cosmological_parameters</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.cosmological_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmo_pars_fiducials">
+<span class="sig-name descname"><span class="pre">free_cosmo_pars_fiducials</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmo_pars_fiducials" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmological_parameters">
+<span class="sig-name descname"><span class="pre">free_cosmological_parameters</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_cosmological_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.free_physical_parameters">
+<span class="sig-name descname"><span class="pre">free_physical_parameters</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.free_physical_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.nuisance_parameters">
+<span class="sig-name descname"><span class="pre">nuisance_parameters</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.nuisance_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.params">
+<span class="sig-name descname"><span class="pre">params</span></span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.params" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.computePhysParSTEMValues">
+<span class="sig-name descname"><span class="pre">computePhysParSTEMValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.computePhysParSTEMValues" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.fromJSON">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_cosmological</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.from_dict_list">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_dict_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_cosmological</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.from_dict_list" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.getFreeNuisanceParametersForProbe">
+<span class="sig-name descname"><span class="pre">getFreeNuisanceParametersForProbe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getFreeNuisanceParametersForProbe" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.getNuisanceParametersForProbe">
+<span class="sig-name descname"><span class="pre">getNuisanceParametersForProbe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getNuisanceParametersForProbe" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.getParamsDictFromDictList">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getParamsDictFromDictList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_cosmological</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.getParamsDictFromDictList" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.parameter.PhysicalParameter.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.loadStemDisplacements">
+<span class="sig-name descname"><span class="pre">loadStemDisplacements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_stem_disp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.loadStemDisplacements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.readJSON">
+<span class="sig-name descname"><span class="pre">readJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_cosmological</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.readJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.resetPhysicalParametersToFiducial">
+<span class="sig-name descname"><span class="pre">resetPhysicalParametersToFiducial</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.resetPhysicalParametersToFiducial" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.updatePhysicalParametersForDvarStep">
+<span class="sig-name descname"><span class="pre">updatePhysicalParametersForDvarStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.updatePhysicalParametersForDvarStep" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.parameter.PhysicalParametersCollection.writeJSON">
+<span class="sig-name descname"><span class="pre">writeJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.parameter.PhysicalParametersCollection.writeJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../power_spectrum.html" class="btn btn-neutral float-right" title="Power Spectrum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.cosmology.parameter.PhysicalParameter.html" class="btn btn-neutral float-left" title="PhysicalParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+PowerSpectrum
+=============
+
+.. currentmodule:: seyfert.cosmology.power_spectrum
+
+.. autoclass:: PowerSpectrum
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~PowerSpectrum.growth_factor_z
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PowerSpectrum.evaluateLinearAndNonLinearPowerSpectra
+      ~PowerSpectrum.fromHDF5
+      ~PowerSpectrum.getResultsFromMatterPowerGenerator
+      ~PowerSpectrum.loadFromHDF5
+      ~PowerSpectrum.saveToHDF5
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: growth_factor_z
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateLinearAndNonLinearPowerSpectra
+   .. automethod:: fromHDF5
+   .. automethod:: getResultsFromMatterPowerGenerator
+   .. automethod:: loadFromHDF5
+   .. automethod:: saveToHDF5

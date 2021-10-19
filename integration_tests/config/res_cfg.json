@@ -1,0 +1,81 @@
+{
+  "plot_settings": {
+    "dimensions": {
+    "fig_size_x_cm": 15,
+    "fig_size_y_cm": 15,
+    "subplots_spacing": {
+      "horizontal": 0.040,
+      "vertical": 0.040
+    }
+  },
+    "graphics": {
+      "dpi": 600,
+      "cl_alpha_dict": {
+        "gauss": {
+          "0.68": 0.25,
+          "0.95": 0.15
+        },
+        "ellipse": {
+          "0.68": 0.40,
+          "0.95": 0.20
+        }
+      },
+      "colors": {
+        "color_map": "from_color_list",
+        "color_list": [
+          "red",
+          "royalblue",
+          "darkgreen",
+          "darkorange",
+          "purple"
+        ]
+      }
+    },
+    "axes": {
+      "axes_label_size_relative_to_plot": 0.06,
+      "ticks": {
+        "width_relative_to_plot": 0.0050,
+        "length_relative_to_plot": 0.0150,
+        "label_size_relative_to_plot": 0.04,
+        "ticks_number": 3
+      }
+    },
+    "lines": {
+      "width": {
+        "borders_relative_to_plot": 0.0025,
+        "plot_lines_relative_to_plot": 0.0050
+      }
+    },
+    "legend": {
+      "loc": "upper left",
+      "bbox_to_anchor": [0.690, 0.80],
+      "fontsize_relative_to_figure": 0.020
+    }
+  },
+  "fishers_addends_list": [
+    ["PhotometricGalaxy"],
+    ["SpectroscopicGalaxy"],
+    ["PhotometricGalaxy+SpectroscopicGalaxy+XC"]],
+  "cosmologies": {
+    "LCDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8"],
+      "pars_to_plot": "all"
+    },
+    "mnu_LCDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "mnu"],
+      "pars_to_plot": "all"
+    },
+    "w0_wa_CDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "w0", "wa"],
+      "pars_to_plot": "all"
+    },
+    "mnu_w0_wa_CDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "mnu", "w0", "wa"],
+      "pars_to_plot": "all"
+    }
+  }
+}

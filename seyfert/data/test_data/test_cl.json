@@ -1,0 +1,4 @@
+{
+  "lensing_efficiency_integration_method": "simpson",
+  "power_spectrum_dir": "None"
+}

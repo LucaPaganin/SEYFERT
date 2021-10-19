@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+
+from typing import Union
+import subprocess
+import os
+import re
+from pathlib import Path
+import logging
+import datetime
+import argparse
+
+from seyfert.utils import general_utils as gu
+from seyfert.utils import filesystem_utils as fsu
+from seyfert.utils import formatters as fm
+
+logger = logging.getLogger()
+
+
+def program_options():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--execution", "-ex", required=True)
+    parser.add_argument("--config_dir", "-cfg", type=Path, required=True,
+                        help='Path to configuration directory')
+    parser.add_argument("--version1", "-v1", default="develop")
+    parser.add_argument("--version2", "-v2", default="develop")
+    parser.add_argument("--workdir", type=Path, default=Path("."))
+
+    return parser
+
+
+def do_integration_run(version: "str", exec_mode: "str", config_dir: "Union[str, Path]"):
+    begin_dir = os.getcwd()
+    input_data_dir = fsu.default_seyfert_input_data_dir()
+    seyf_path = Path(os.getenv("SEYFERT_PATH"))
+    os.chdir(seyf_path)
+
+    logger.info(f'Starting run with version {version}')
+    proc = subprocess.run("git branch", stdout=subprocess.PIPE, shell=True)
+    cur_branch = re.search(r'\* ([a-z]+)', proc.stdout.decode('utf-8')).groups()[0]
+
+    logger.info(f'Installing seyfert version {version}')
+    subprocess.run(f'git checkout {version} && python3 setup.py develop', shell=True)
+
+    logger.info(f'Returning to workdir {begin_dir}')
+    os.chdir(begin_dir)
+
+    cfg_params = {
+        Path(fname).stem: config_dir/fname
+        for fname in ['fcfg.xml', 'pmm_cfg.json', 'cl_cfg.json', 'der_cfg.json', 'fish_cfg.json', 'res_cfg.json']
+    }
+    cfg_files_str = f" ".join([f"-{key} {value}" for key, value in cfg_params.items()])
+
+    seyf_cmd = f'job_submitter -id seyfert_run_integration -i {input_data_dir} ' \
+               f'-pmm -cl -der -fish -ex {exec_mode} {cfg_files_str}'
+
+    logger.info(f"Running seyfert version {version}")
+    subprocess.run(seyf_cmd, shell=True)
+
+    logger.info(f"Done. Returning to branch {cur_branch}")
+    subprocess.run(f'cd {seyf_path} && git checkout {cur_branch} && cd -', shell=True)
+
+
+def main(args: "argparse.Namespace"):
+    cwd0 = Path(os.getcwd())
+
+    now = fm.datetime_str_format(datetime.datetime.now(), hour_sep='-')
+    v1, v2 = args.version1, args.version2
+    exec_mode = args.execution
+    cfg_dir = args.config_dir.absolute()
+
+    workdir = (args.workdir / f'integration_test_{args.version1}_vs_{args.version2}_{now}').absolute()
+    workdir.mkdir(exist_ok=True)
+    os.chdir(workdir)
+
+    gu.configure_logger(logger, 'logfile.log')
+
+    do_integration_run(version=v1, exec_mode=exec_mode, config_dir=cfg_dir)
+    do_integration_run(version=v2, exec_mode=exec_mode, config_dir=cfg_dir)
+
+    logger.info("Starting the comparison between the runs")
+    rundirs = list(workdir.glob("seyfert_run_integration*"))
+    if len(rundirs) != 2:
+        raise Exception(f"Cannot do the comparison with {len(rundirs)} run directories")
+
+    proc = subprocess.run(f"compare_runs {rundirs[0]} {rundirs[1]} -o {workdir}", shell=True, stdout=subprocess.PIPE)
+    logger.info(f'\n{proc.stdout.decode("utf-8")}')
+    os.chdir(cwd0)
+    logger.info("Done.")
+
+
+if __name__ == '__main__':
+    arguments = program_options().parse_args()
+    main(arguments)

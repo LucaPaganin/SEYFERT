@@ -1,0 +1,7 @@
+seyfert.utils.shortcuts module
+==============================
+
+.. automodule:: seyfert.utils.shortcuts
+   :members:
+   :undoc-members:
+   :show-inheritance:

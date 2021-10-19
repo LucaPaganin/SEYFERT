@@ -1,0 +1,19 @@
+ExternalBoltzmannSolver
+=======================
+
+.. currentmodule:: seyfert.cosmology.boltzmann_solver
+
+.. autoclass:: ExternalBoltzmannSolver
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ExternalBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra
+      ~ExternalBoltzmannSolver.run
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateLinearAndNonLinearPowerSpectra
+   .. automethod:: run

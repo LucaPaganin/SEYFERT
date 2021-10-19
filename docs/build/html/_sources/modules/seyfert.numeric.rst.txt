@@ -1,0 +1,19 @@
+seyfert.numeric package
+=======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.numeric.general
+   seyfert.numeric.integration
+
+Module contents
+---------------
+
+.. automodule:: seyfert.numeric
+   :members:
+   :undoc-members:
+   :show-inheritance:

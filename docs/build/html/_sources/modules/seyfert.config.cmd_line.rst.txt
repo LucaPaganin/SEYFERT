@@ -1,0 +1,7 @@
+seyfert.config.cmd\_line module
+===============================
+
+.. automodule:: seyfert.config.cmd_line
+   :members:
+   :undoc-members:
+   :show-inheritance:

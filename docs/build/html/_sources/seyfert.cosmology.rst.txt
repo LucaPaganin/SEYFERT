@@ -1,0 +1,85 @@
+seyfert.cosmology package
+=========================
+
+Submodules
+----------
+
+seyfert.cosmology.bias module
+-----------------------------
+
+.. automodule:: seyfert.cosmology.bias
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.boltzmann\_solver module
+------------------------------------------
+
+.. automodule:: seyfert.cosmology.boltzmann_solver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.c\_ells module
+--------------------------------
+
+.. automodule:: seyfert.cosmology.c_ells
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.cosmology module
+----------------------------------
+
+.. automodule:: seyfert.cosmology.cosmology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.kernel\_functions module
+------------------------------------------
+
+.. automodule:: seyfert.cosmology.kernel_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.parameter module
+----------------------------------
+
+.. automodule:: seyfert.cosmology.parameter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.power\_spectrum module
+----------------------------------------
+
+.. automodule:: seyfert.cosmology.power_spectrum
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.redshift\_density module
+------------------------------------------
+
+.. automodule:: seyfert.cosmology.redshift_density
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.cosmology.weight\_functions module
+------------------------------------------
+
+.. automodule:: seyfert.cosmology.weight_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.cosmology
+   :members:
+   :undoc-members:
+   :show-inheritance:

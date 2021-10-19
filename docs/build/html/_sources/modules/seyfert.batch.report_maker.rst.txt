@@ -1,0 +1,7 @@
+seyfert.batch.report\_maker module
+==================================
+
+.. automodule:: seyfert.batch.report_maker
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_computation module
+=========================================
+
+.. automodule:: seyfert.fisher.fisher_computation
+   :members:
+   :undoc-members:
+   :show-inheritance:

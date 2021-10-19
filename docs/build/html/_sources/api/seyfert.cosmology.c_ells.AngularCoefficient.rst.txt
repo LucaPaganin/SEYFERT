@@ -1,0 +1,69 @@
+AngularCoefficient
+==================
+
+.. currentmodule:: seyfert.cosmology.c_ells
+
+.. autoclass:: AngularCoefficient
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AngularCoefficient.integ_method
+      ~AngularCoefficient.is_auto_correlation
+      ~AngularCoefficient.n_ell
+      ~AngularCoefficient.n_i
+      ~AngularCoefficient.n_j
+      ~AngularCoefficient.n_z
+      ~AngularCoefficient.obs_key
+      ~AngularCoefficient.power_spectrum
+      ~AngularCoefficient.weight1
+      ~AngularCoefficient.weight2
+      ~AngularCoefficient.z_array
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AngularCoefficient.applyVoidsCutToLimberPowerSpectrum
+      ~AngularCoefficient.computeClIntegral
+      ~AngularCoefficient.evaluateAngularCorrelation
+      ~AngularCoefficient.evaluateLimberApproximatedPowerSpectrum
+      ~AngularCoefficient.fromHDF5
+      ~AngularCoefficient.getLimberRedshiftIntegrand
+      ~AngularCoefficient.getWeightFunction
+      ~AngularCoefficient.loadCosmology
+      ~AngularCoefficient.loadFromHDF5
+      ~AngularCoefficient.plot
+      ~AngularCoefficient.saveToHDF5
+      ~AngularCoefficient.setUp
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: integ_method
+   .. autoattribute:: is_auto_correlation
+   .. autoattribute:: n_ell
+   .. autoattribute:: n_i
+   .. autoattribute:: n_j
+   .. autoattribute:: n_z
+   .. autoattribute:: obs_key
+   .. autoattribute:: power_spectrum
+   .. autoattribute:: weight1
+   .. autoattribute:: weight2
+   .. autoattribute:: z_array
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: applyVoidsCutToLimberPowerSpectrum
+   .. automethod:: computeClIntegral
+   .. automethod:: evaluateAngularCorrelation
+   .. automethod:: evaluateLimberApproximatedPowerSpectrum
+   .. automethod:: fromHDF5
+   .. automethod:: getLimberRedshiftIntegrand
+   .. automethod:: getWeightFunction
+   .. automethod:: loadCosmology
+   .. automethod:: loadFromHDF5
+   .. automethod:: plot
+   .. automethod:: saveToHDF5
+   .. automethod:: setUp

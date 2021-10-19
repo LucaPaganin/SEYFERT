@@ -1,0 +1,22 @@
+seyfert.notebook\_helpers package
+=================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.notebook_helpers.barplots
+   seyfert.notebook_helpers.contours
+   seyfert.notebook_helpers.load_helpers
+   seyfert.notebook_helpers.misc
+   seyfert.notebook_helpers.table_helpers
+
+Module contents
+---------------
+
+.. automodule:: seyfert.notebook_helpers
+   :members:
+   :undoc-members:
+   :show-inheritance:

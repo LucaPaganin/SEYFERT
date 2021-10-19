@@ -1,0 +1,17 @@
+ConstantBias
+============
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: ConstantBias
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ConstantBias.computeBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias

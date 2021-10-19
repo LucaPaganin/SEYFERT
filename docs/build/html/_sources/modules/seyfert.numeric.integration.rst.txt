@@ -1,0 +1,7 @@
+seyfert.numeric.integration module
+==================================
+
+.. automodule:: seyfert.numeric.integration
+   :members:
+   :undoc-members:
+   :show-inheritance:

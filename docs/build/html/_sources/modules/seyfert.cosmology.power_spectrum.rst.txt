@@ -1,0 +1,7 @@
+seyfert.cosmology.power\_spectrum module
+========================================
+
+.. automodule:: seyfert.cosmology.power_spectrum
+   :members:
+   :undoc-members:
+   :show-inheritance:

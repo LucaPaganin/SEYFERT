@@ -1,0 +1,5 @@
+Angular power spectra
+=================
+
+.. automodapi:: seyfert.cosmology.c_ells
+   :members:

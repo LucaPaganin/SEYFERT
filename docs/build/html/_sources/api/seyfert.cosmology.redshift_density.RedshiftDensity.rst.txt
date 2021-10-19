@@ -1,0 +1,63 @@
+RedshiftDensity
+===============
+
+.. currentmodule:: seyfert.cosmology.redshift_density
+
+.. autoclass:: RedshiftDensity
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~RedshiftDensity.n_bins
+      ~RedshiftDensity.shot_noise
+      ~RedshiftDensity.z_bin_centers
+      ~RedshiftDensity.z_max
+      ~RedshiftDensity.z_min
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RedshiftDensity.computeBinNormFactor
+      ~RedshiftDensity.computeInstrumentResponse
+      ~RedshiftDensity.computeNormalizedDensityAtBinAndRedshift
+      ~RedshiftDensity.computeSurfaceDensityAtBin
+      ~RedshiftDensity.computeTotalGalaxyNumber
+      ~RedshiftDensity.convolvedNdzdOmegaWithInstrumentResponse
+      ~RedshiftDensity.evaluate
+      ~RedshiftDensity.evaluateBinNormFactors
+      ~RedshiftDensity.evaluateSurfaceDensity
+      ~RedshiftDensity.fromHDF5
+      ~RedshiftDensity.interpolateInput
+      ~RedshiftDensity.loadFromHDF5
+      ~RedshiftDensity.modifiedGaussianResponse
+      ~RedshiftDensity.saveToHDF5
+      ~RedshiftDensity.setUp
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: n_bins
+   .. autoattribute:: shot_noise
+   .. autoattribute:: z_bin_centers
+   .. autoattribute:: z_max
+   .. autoattribute:: z_min
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBinNormFactor
+   .. automethod:: computeInstrumentResponse
+   .. automethod:: computeNormalizedDensityAtBinAndRedshift
+   .. automethod:: computeSurfaceDensityAtBin
+   .. automethod:: computeTotalGalaxyNumber
+   .. automethod:: convolvedNdzdOmegaWithInstrumentResponse
+   .. automethod:: evaluate
+   .. automethod:: evaluateBinNormFactors
+   .. automethod:: evaluateSurfaceDensity
+   .. automethod:: fromHDF5
+   .. automethod:: interpolateInput
+   .. automethod:: loadFromHDF5
+   .. automethod:: modifiedGaussianResponse
+   .. automethod:: saveToHDF5
+   .. automethod:: setUp

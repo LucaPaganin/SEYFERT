@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+
+from typing import Union, List
+import argparse
+import time
+import logging
+from pathlib import Path
+
+from seyfert.utils import formatters, general_utils
+from seyfert.fisher import final_results_core as frc
+from seyfert.config import cmd_line
+from seyfert.main.bsub_utils import BsubInterface
+
+logger = logging.getLogger()
+
+
+def program_options():
+    parser = argparse.ArgumentParser(parents=[cmd_line.main_submitter_batch_options()])
+    parser.add_argument("--workdir", "-wd", required=False, default=Path("."), type=Path,
+                        help="Working directory in which to place logfile")
+    parser.add_argument('--input_rundirs', '-i', nargs="+", required=True,
+                        help="Path to the input rundir(s) with Fisher matrices. It can be a list of one or more paths "
+                             "or the path to a one or more json/txt files containing the ABSOLUTE PATHS of the run "
+                             "directories to use.")
+    parser.add_argument('--outdir_name', '-o', required=False, default="final_results",
+                        help="Name of the output directory.")
+    parser.add_argument('--silent', nargs='?', default=False, const=True, type=formatters.str_to_bool,
+                        help='Flag for being not verbose.')
+    parser.add_argument('--test', "-t", nargs='?', default=False, const=True, type=formatters.str_to_bool,
+                        help='Flag to trigger test mode.')
+    parser.add_argument('--overwrite', "-ow", nargs='?', default=False, const=True, type=formatters.str_to_bool,
+                        help='Flag to overwrite fisher matrices if existing')
+    parser.add_argument('--dont_wait_for_batch', '-nowait', nargs='?', default=False, const=True, type=formatters.str_to_bool,
+                        help='Flag to prevent waiting for the submitted batch jobs (for -ex batch mode).')
+
+    return parser
+
+
+def execute_in_batch(args: "argparse.Namespace", input_rundirs: "List[Union[str, Path]]"):
+    queue = args.queue
+    memory = args.memory
+    ncj = args.n_cores_per_job
+    bsub = BsubInterface()
+    bsub.setOptions(queue=queue, n_cores=ncj, memory_MB=memory)
+    args_dict = vars(args)
+    # change execution to interactive in order to execute on nodes in interactive way
+    args_dict['execution'] = 'interactive'
+    job_ids = []
+    for rundir in input_rundirs:
+        args_dict['input_rundirs'] = str(rundir)
+        arguments_str = " ".join([f"--{key} {value}" for key, value in args_dict.items()])
+        cmd_to_execute = f"evaluate_final_results {arguments_str}"
+        logs_path = Path(rundir) / args.outdir_name / "logs"
+        logs_path.mkdir(exist_ok=True, parents=True)
+        job_id = bsub.submitJob(cmd_to_execute=cmd_to_execute, logs_path=logs_path, test=args.test,
+                                logs_start_str="final_results")
+        job_ids.append(job_id)
+
+    do_wait = not args.dont_wait_for_batch
+    if do_wait:
+        bsub.waitForJobsToComplete(job_ids, check_time_resolution_secs=10)
+
+
+def main(args: "argparse.Namespace"):
+    t0 = time.time()
+    script_name = Path(__file__).name
+    workdir = args.workdir
+    general_utils.configure_logger(logger, logfile=workdir / f"logfile_{script_name}.log")
+    input_rundirs = cmd_line.get_paths_from_files_list(args.input_rundirs)
+    execution = args.execution
+
+    if execution == 'interactive':
+        logger.info("Execution is interactive")
+        for rundir in input_rundirs:
+            logger.info(f"Creating results for {rundir}")
+            frc.create_final_results(rundir=rundir, outdir_name=args.outdir_name, overwrite=args.overwrite)
+    elif execution == 'batch':
+        logger.info("Execution is batch")
+        execute_in_batch(args=args, input_rundirs=input_rundirs)
+    elif execution == 'no':
+        logger.info("Execution is no, skipping")
+    else:
+        raise Exception(f"Unrecognized execution mode: {execution}")
+
+    tf = time.time()
+    logger.info(f"evaluate_final_results elapsed time {formatters.string_time_format(tf - t0)}")
+
+
+if __name__ == '__main__':
+    arguments = program_options().parse_args()
+    for key, value in vars(arguments).items():
+        logger.info(f"{key}: {value}")
+
+    main(arguments)

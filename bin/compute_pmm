@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# Author: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+# Maintainer: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+
+from pathlib import Path
+import argparse
+from seyfert.config import cmd_line
+import seyfert.utils.filesystem_utils as fsu
+import seyfert.utils.general_utils as gu
+from seyfert.config import main_config as mcfg
+import logging
+from seyfert.cosmology.cosmology import Cosmology
+from seyfert.cosmology.parameter import PhysicalParametersCollection
+
+logger = logging.getLogger()
+
+
+def program_options():
+    general_opts = cmd_line.main_program_options()
+    parser = argparse.ArgumentParser(parents=[general_opts], description="Script for computing the Power Spectrum")
+    parser.add_argument("--main_config", "-mcfg", required=True, help="Path to the main config JSON file")
+
+    return parser
+
+
+def main(args_dict):
+    workdir = Path(args_dict['workdir'])
+    rundir = Path(args_dict['rundir'])
+    power_spectrum_config_file = workdir / args_dict['main_config']
+    gu.configure_logger(logger, args_dict['logfile'])
+
+    logger.info('Reading physical parameters file')
+    phys_pars = PhysicalParametersCollection.fromJSON(fsu.get_params_file_from_rundir(rundir))
+    logger.info(f'Loading power spectrum configuration')
+    power_spectrum_config = mcfg.PowerSpectrumConfig(json_input=power_spectrum_config_file)
+    logger.info(f'Physical parameters: {phys_pars}')
+
+    dvar, step = fsu.get_dvar_step_from_cosmology_jobdir_name(workdir.name)
+    phys_pars.updatePhysicalParametersForDvarStep(dvar=dvar, step=step)
+
+    cosmology = Cosmology(params=phys_pars.cosmological_parameters, flat=phys_pars.is_universe_flat,
+                          z_grid=power_spectrum_config.z_grid, model_name='CPL')
+    cosmology.evaluateOverRedshiftGrid()
+    cosmology.evaluatePowerSpectrum(workdir, power_spectrum_config)
+    p_mm_file = workdir / "p_mm.h5"
+    logger.info(f'Writing results to file {p_mm_file}')
+    cosmology.saveToHDF5(p_mm_file)
+
+
+if __name__ == '__main__':
+    arguments_dict = vars(program_options().parse_args())
+    main(arguments_dict)

@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import argparse
+import numpy as np
+
+from seyfert import PROBES_LONG_NAMES
+from seyfert.cosmology.redshift_density import RedshiftDensity
+
+
+default_instrument_responses = {
+    'phz': {
+        'f_out': 0.1,
+        'z_o': 0.1,
+        'z_b': 0.0,
+        'sigma_o': 0.050,
+        'sigma_b': 0.050,
+        'c_o': 1.0,
+        'c_b': 1.0
+    },
+    'spz': {
+        'f_out': 0.0,
+        'z_o': 0.1,
+        'z_b': 0.0,
+        'sigma_o': 0.050,
+        'sigma_b': 0.001,
+        'c_o': 1.0,
+        'c_b': 1.0
+    }
+}
+
+
+def program_options() -> "argparse.ArgumentParser":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('probe', type=str,
+                        help=f'Name of the probe associated to the density. Viable options are: {", ".join(PROBES_LONG_NAMES)}')
+    parser.add_argument('--instrument_response', '-ir', type=str, required=True,
+                        help='String representing the instrument response. Viable values are: phz, spz')
+    parser.add_argument('--has_niz', '-niz', action='store_true',
+                        help='Flag indicating if the density has n_i(z) already')
+    parser.add_argument('--density_file', '-df', type=Path, required=True,
+                        help='Path to *.npz archive file containing three arrays. The first two must always be '
+                             '"z" and "z_bin_edges", the third can be "dndzdomega_invsterad" if --has_niz is false, '
+                             '"niz" if it is true. ATTENTION: dndzdomega must be in INVERSE STERADIANS, so make sure '
+                             'to convert it. To know how to create an *.npz archive file with these keys see '
+                             'https://numpy.org/doc/stable/reference/generated/numpy.savez_compressed.html')
+    parser.add_argument('--catalog_sky_fraction', '-f_sky', required=True,
+                        help='Sky fraction of the catalog which the density has to be referred to.')
+    parser.add_argument('--outfile', '-o', type=Path, required=False, help='Path to the output file')
+
+    return parser
+
+
+def main(args: "argparse.Namespace"):
+    probe = args.probe
+    assert probe in PROBES_LONG_NAMES, f"invalid probe {probe}, must be one of {' '.join(PROBES_LONG_NAMES)}"
+    has_niz = args.has_niz
+    instr_resp_str = args.instrument_response
+    dens_data = np.load(args.density_file)
+    f_sky = args.catalog_sky_fraction
+    try:
+        f_sky = float(f_sky)
+    except ValueError:
+        f_sky = eval(f_sky)
+
+    outfile = args.outfile
+    if outfile is None:
+        outfile = f'{probe}_density.h5'
+
+    print(f'Creating redshift density object for probe {probe}')
+    print('Parameters: ')
+    for key, value in vars(args).items():
+        print(f"{key}: {value}")
+    d = RedshiftDensity(probe=probe)
+    d.input_z_domain = dens_data['z']
+    d.z_bin_edges = dens_data['z_bin_edges']
+    d.has_niz_from_input = has_niz
+    d.catalog_f_sky = f_sky
+    if has_niz:
+        d.input_n_iz = dens_data['niz']
+    else:
+        d.input_dN_dz_dOmega = dens_data['dndzdomega_invsterad']
+        d.instrument_response = default_instrument_responses[instr_resp_str]
+
+    print(f'Saving redshift density to HDF5 file {outfile}')
+    d.saveToHDF5(outfile)
+
+
+if __name__ == '__main__':
+    main(program_options().parse_args())

@@ -1,0 +1,32 @@
+{
+    "shortcuts":[
+        {
+            "command": "kernelmenu:restart-and-clear",
+            "keys": [
+                "Ctrl R"
+            ],
+            "selector": "[data-jp-kernel-user]:focus"
+        },
+        {
+            "command": "notebook:move-cell-up",
+            "keys": [
+                "Ctrl ArrowUp"
+            ],
+            "selector": "[data-jp-kernel-user]:focus"
+        },
+        {
+            "command": "notebook:move-cell-down",
+            "keys": [
+                "Ctrl ArrowDown"
+            ],
+            "selector": "[data-jp-kernel-user]:focus"
+        },
+        {
+            "command": "runmenu:restart-and-run-all",
+            "keys": [
+                "Alt A"
+            ],
+            "selector": "[data-jp-code-runner]"
+        }
+    ]
+}

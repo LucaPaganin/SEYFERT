@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import argparse
+import logging
+import json
+import datetime
+
+from seyfert.utils import general_utils as gu
+from seyfert.utils import formatters as fm
+from seyfert.config import cmd_line
+from seyfert.main import orchestration
+
+logger = logging.getLogger()
+
+
+def program_options() -> "argparse.ArgumentParser":
+    parser = argparse.ArgumentParser(parents=[cmd_line.batch_options(),
+                                              cmd_line.forecast_task_configs_options(),
+                                              cmd_line.forecast_task_flags()])
+
+    parser.add_argument("--execution", "-ex", required=False, default=None,
+                        help='String to decide how to run the jobs. Viable possibilities: "no" for not executing, '
+                             '"interactive" to run one job after another, "batch" for batch submission')
+    parser.add_argument('--create_config', '-ccfg', action='store_true',
+                        help='Flag for simply creating the config directory structure')
+    parser.add_argument('--powerspectra', '-pmms', type=Path, default=None,
+                        help='Path to power spectra directories. It can be a txt file or a single Path to a directory. '
+                             'In case it is a file, it must have extension "txt" and should contain the FULL PATHS '
+                             'to the power spectra directories to use.')
+    parser.add_argument("--input_data_dir", "-i", required=False, default=None,
+                        help="Path to the directory containing input data for the forecast")
+    parser.add_argument('--additional_flags', '-af', nargs='+', required=False, default=[],
+                        help='Additional flags to provide to single job_submitter command')
+    parser.add_argument("--forecast_configs", "-fcfgs", nargs="+", required=False, default=None,
+                        help='Forecast config files to use. It can be a txt file or a single Path to a directory. '
+                             'In case it is a file, it must have extension "txt" and should contain the paths to the '
+                             'to the forecast config files to use.')
+    parser.add_argument('--rundirs', '-rds', nargs="+", required=False, default=None,
+                        help='Existing run directories to use for partial runs of the forecast, e.g. computation of '
+                             'only fishers. It can be a list of one or more paths or the path to a one or more json/txt'
+                             ' files containing the paths of the run directories to use.')
+    parser.add_argument("--ini_file", "-ini", type=Path, required=False, default=None,
+                        help="OPTIONAL: Path to ini file for single run")
+
+    return parser
+
+
+def main(args):
+    now_str = fm.datetime_str_format(datetime.datetime.now())
+    workdir = Path().resolve()
+    create_cfg = args.create_config
+    config_dir = workdir / 'config'
+    ex = args.execution
+    fcfgs = args.forecast_configs
+
+    if not create_cfg:
+        if not any([args.angular, args.derivative, args.fisher]):
+            raise Exception("You must specify at least a task!")
+        if ex is None:
+            raise ValueError("execution mode is required")
+
+    if ex != 'no' and not create_cfg:
+        logfile = workdir / f'logfile_orchestrator_{now_str}.log'
+        gu.configure_logger(logger, logfile)
+    else:
+        gu.configure_logger(logger)
+
+    if create_cfg:
+        logger.info("Creating config directory structure")
+        orchestration.create_config_dir_tree(workdir=workdir, args=args)
+        logger.info("Done")
+    else:
+        configs = orchestration.get_configs(config_dir)
+        pmm_dirs = orchestration.get_pmm_dirs(args)
+        input_rundirs = args.rundirs
+
+        if input_rundirs is not None:
+            input_rundirs = cmd_line.get_paths_from_files_list(input_rundirs)
+            orchestration.do_multiple_seyfert_runs_on_existing_rundirs(args, input_rundirs=input_rundirs)
+        else:
+            # overwrite default forecast configs list if argument -fcfgs is passed
+            if fcfgs is not None:
+                configs['fcfg'] = cmd_line.get_paths_from_files_list(fcfgs)
+
+            run_ids = orchestration.do_multiple_new_seyfert_runs(pmm_dirs=pmm_dirs, configs=configs, args=args)
+
+            if ex != 'no':
+                rundirs = orchestration.collect_rundirs(workdir, run_ids)
+
+                rundirs_list_file = workdir / f"rundirs_{now_str}.json"
+                with open(rundirs_list_file, mode="w") as jsf:
+                    json.dump([str(x) for x in rundirs], jsf, indent=2)
+
+
+if __name__ == '__main__':
+    main(program_options().parse_args())

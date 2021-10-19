@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.file_io.ext_input module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.file_io.hdf5_io module" href="seyfert.file_io.hdf5_io.html" />
+    <link rel="prev" title="seyfert.file_io package" href="seyfert.file_io.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.file_io.html">seyfert.file_io package</a> &raquo;</li>
+        
+      <li>seyfert.file_io.ext_input module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.file_io.ext_input.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.file_io.ext_input">
+<span id="seyfert-file-io-ext-input-module"></span><h1>seyfert.file_io.ext_input module<a class="headerlink" href="#module-seyfert.file_io.ext_input" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.ext_input.</span></span><span class="sig-name descname"><span class="pre">ISTInputReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.OUR_PARAM_NAMES">
+<span class="sig-name descname"><span class="pre">OUR_PARAM_NAMES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['Omb',</span> <span class="pre">'OmDE',</span> <span class="pre">'Omm',</span> <span class="pre">'h',</span> <span class="pre">'ns',</span> <span class="pre">'sigma8',</span> <span class="pre">'w0',</span> <span class="pre">'wa']</span></em><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.OUR_PARAM_NAMES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.buildCosmoClsFilesDict">
+<span class="sig-name descname"><span class="pre">buildCosmoClsFilesDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.buildCosmoClsFilesDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.checkISTParams">
+<span class="sig-name descname"><span class="pre">checkISTParams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.checkISTParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.convertISTPowerSpectra">
+<span class="sig-name descname"><span class="pre">convertISTPowerSpectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.convertISTPowerSpectra" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.convertSCameraDerivativesInput">
+<span class="sig-name descname"><span class="pre">convertSCameraDerivativesInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.convertSCameraDerivativesInput" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.getIndicesFromSCameraClFileHeader">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getIndicesFromSCameraClFileHeader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.getIndicesFromSCameraClFileHeader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.pars">
+<span class="sig-name descname"><span class="pre">pars</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></a></em><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.pars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.parseISTCosmoString">
+<span class="sig-name descname"><span class="pre">parseISTCosmoString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.parseISTCosmoString" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readISTFisherMatrixFile">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">readISTFisherMatrixFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readISTFisherMatrixFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readISTPowerSpectrumTextFile">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">readISTPowerSpectrumTextFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readISTPowerSpectrumTextFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readSCameraClDerivatives">
+<span class="sig-name descname"><span class="pre">readSCameraClDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readSCameraClDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readSCameraClFile">
+<span class="sig-name descname"><span class="pre">readSCameraClFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readSCameraClFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.file_io.hdf5_io.html" class="btn btn-neutral float-right" title="seyfert.file_io.hdf5_io module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.file_io.html" class="btn btn-neutral float-left" title="seyfert.file_io package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

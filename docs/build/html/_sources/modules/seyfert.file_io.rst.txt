@@ -1,0 +1,21 @@
+seyfert.file\_io package
+========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.file_io.ext_input
+   seyfert.file_io.hdf5_io
+   seyfert.file_io.retro_comp
+   seyfert.file_io.xml_io
+
+Module contents
+---------------
+
+.. automodule:: seyfert.file_io
+   :members:
+   :undoc-members:
+   :show-inheritance:

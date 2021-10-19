@@ -1,0 +1,7 @@
+seyfert.cosmology.c\_ells module
+================================
+
+.. automodule:: seyfert.cosmology.c_ells
+   :members:
+   :undoc-members:
+   :show-inheritance:

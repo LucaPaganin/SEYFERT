@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_element module
+=====================================
+
+.. automodule:: seyfert.fisher.fisher_element
+   :members:
+   :undoc-members:
+   :show-inheritance:

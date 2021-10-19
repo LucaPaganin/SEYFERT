@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.utils.run_loader module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.utils.shortcuts module" href="seyfert.utils.shortcuts.html" />
+    <link rel="prev" title="seyfert.utils.ist_comparison module" href="seyfert.utils.ist_comparison.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.utils.html">seyfert.utils package</a> &raquo;</li>
+        
+      <li>seyfert.utils.run_loader module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.utils.run_loader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.utils.run_loader">
+<span id="seyfert-utils-run-loader-module"></span><h1>seyfert.utils.run_loader module<a class="headerlink" href="#module-seyfert.utils.run_loader" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.utils.run_loader.</span></span><span class="sig-name descname"><span class="pre">ComparisonMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rl1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rl1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.buildClDataMetrics">
+<span class="sig-name descname"><span class="pre">buildClDataMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coll1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coll2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.buildClDataMetrics" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.checkPadsDict">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">checkPadsDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pads_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.checkPadsDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.cls">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cls</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.cls" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.cosmos">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cosmos</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.cosmos" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.dcls">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dcls</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.dcls" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eval_pmm_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluateClDataMetrics">
+<span class="sig-name descname"><span class="pre">evaluateClDataMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluateClDataMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluateClDerivativesMetrics">
+<span class="sig-name descname"><span class="pre">evaluateClDerivativesMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluateClDerivativesMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluateCosmoMetrics">
+<span class="sig-name descname"><span class="pre">evaluateCosmoMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluateCosmoMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluateFisherMetrics">
+<span class="sig-name descname"><span class="pre">evaluateFisherMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluateFisherMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluateMargErrsMetrics">
+<span class="sig-name descname"><span class="pre">evaluateMargErrsMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluateMargErrsMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.evaluatePmmMetrics">
+<span class="sig-name descname"><span class="pre">evaluatePmmMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.evaluatePmmMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.fisher">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fisher</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.fisher" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.getComparisonKeys">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getComparisonKeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.getComparisonKeys" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.inverse_fisher">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">inverse_fisher</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.inverse_fisher" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.loadFromDisk">
+<span class="sig-name descname"><span class="pre">loadFromDisk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.loadFromDisk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.marg_errs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">marg_errs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.marg_errs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.pmms">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pmms</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.pmms" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.testAllMetrics">
+<span class="sig-name descname"><span class="pre">testAllMetrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.testAllMetrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.ComparisonMetrics.writeOnDisk">
+<span class="sig-name descname"><span class="pre">writeOnDisk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.ComparisonMetrics.writeOnDisk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.utils.run_loader.</span></span><span class="sig-name descname"><span class="pre">RunComparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">rundir1=None</span></em>, <em class="sig-param"><span class="pre">rundir2=None</span></em>, <em class="sig-param"><span class="pre">metric_func=&lt;function</span> <span class="pre">pad&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">rundir1=None</span></em>, <em class="sig-param"><span class="pre">rundir2=None</span></em>, <em class="sig-param"><span class="pre">metric_func=&lt;function</span> <span class="pre">pad&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.evaluateMetricsAndTest">
+<span class="sig-name descname"><span class="pre">evaluateMetricsAndTest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.evaluateMetricsAndTest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.loadComparisonData">
+<span class="sig-name descname"><span class="pre">loadComparisonData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.loadComparisonData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.loadRunData">
+<span class="sig-name descname"><span class="pre">loadRunData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.loadRunData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.metrics">
+<span class="sig-name descname"><span class="pre">metrics</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#seyfert.utils.run_loader.ComparisonMetrics" title="seyfert.utils.run_loader.ComparisonMetrics"><span class="pre">seyfert.utils.run_loader.ComparisonMetrics</span></a></em><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.metrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.rl1">
+<span class="sig-name descname"><span class="pre">rl1</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#seyfert.utils.run_loader.RunLoader" title="seyfert.utils.run_loader.RunLoader"><span class="pre">seyfert.utils.run_loader.RunLoader</span></a></em><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.rl1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.rl2">
+<span class="sig-name descname"><span class="pre">rl2</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#seyfert.utils.run_loader.RunLoader" title="seyfert.utils.run_loader.RunLoader"><span class="pre">seyfert.utils.run_loader.RunLoader</span></a></em><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.rl2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunComparison.saveComparisonData">
+<span class="sig-name descname"><span class="pre">saveComparisonData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_run_pickle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunComparison.saveComparisonData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.utils.run_loader.</span></span><span class="sig-name descname"><span class="pre">RunLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.cosmos">
+<span class="sig-name descname"><span class="pre">cosmos</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.cosmology.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><span class="pre">seyfert.cosmology.cosmology.Cosmology</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.cosmos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.fishers">
+<span class="sig-name descname"><span class="pre">fishers</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.fisher.fisher_matrix.html#seyfert.fisher.fisher_matrix.FisherMatrix" title="seyfert.fisher.fisher_matrix.FisherMatrix"><span class="pre">seyfert.fisher.fisher_matrix.FisherMatrix</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.fishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadClDerivatives">
+<span class="sig-name descname"><span class="pre">loadClDerivatives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadClDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadConfigs">
+<span class="sig-name descname"><span class="pre">loadConfigs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadConfigs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadCosmologiesAndCls">
+<span class="sig-name descname"><span class="pre">loadCosmologiesAndCls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadCosmologiesAndCls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadFishers">
+<span class="sig-name descname"><span class="pre">loadFishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadMetadata">
+<span class="sig-name descname"><span class="pre">loadMetadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadMetadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadPowerSpectra">
+<span class="sig-name descname"><span class="pre">loadPowerSpectra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadPowerSpectra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadResults">
+<span class="sig-name descname"><span class="pre">loadResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadResults" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.loadRunData">
+<span class="sig-name descname"><span class="pre">loadRunData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.loadRunData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.main_configs">
+<span class="sig-name descname"><span class="pre">main_configs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.MainConfig" title="seyfert.config.main_config.MainConfig"><span class="pre">seyfert.config.main_config.MainConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.main_configs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.marg_errs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">marg_errs</span></span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.marg_errs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.pickle_dump">
+<span class="sig-name descname"><span class="pre">pickle_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.pickle_dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.pickle_load">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">pickle_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.pickle_load" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.utils.run_loader.RunLoader" title="seyfert.utils.run_loader.RunLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">RunLoader</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.pmms">
+<span class="sig-name descname"><span class="pre">pmms</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.cosmology.power_spectrum.html#seyfert.cosmology.power_spectrum.PowerSpectrum" title="seyfert.cosmology.power_spectrum.PowerSpectrum"><span class="pre">seyfert.cosmology.power_spectrum.PowerSpectrum</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.pmms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.fisher.fisher_results.html#seyfert.fisher.fisher_results.FisherResultsCollector" title="seyfert.fisher.fisher_results.FisherResultsCollector"><span class="pre">seyfert.fisher.fisher_results.FisherResultsCollector</span></a></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.run_dir">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">run_dir</span></span><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.run_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.utils.run_loader.RunLoader.workspace">
+<span class="sig-name descname"><span class="pre">workspace</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.utils.workspace.html#seyfert.utils.workspace.WorkSpace" title="seyfert.utils.workspace.WorkSpace"><span class="pre">seyfert.utils.workspace.WorkSpace</span></a></em><a class="headerlink" href="#seyfert.utils.run_loader.RunLoader.workspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.utils.shortcuts.html" class="btn btn-neutral float-right" title="seyfert.utils.shortcuts module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.utils.ist_comparison.html" class="btn btn-neutral float-left" title="seyfert.utils.ist_comparison module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

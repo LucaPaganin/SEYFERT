@@ -1,0 +1,7 @@
+seyfert
+=======
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert

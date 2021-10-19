@@ -1,0 +1,6 @@
+DensityError
+============
+
+.. currentmodule:: seyfert.cosmology.redshift_density
+
+.. autoexception:: DensityError

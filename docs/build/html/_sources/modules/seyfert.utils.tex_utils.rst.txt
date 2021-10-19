@@ -1,0 +1,7 @@
+seyfert.utils.tex\_utils module
+===============================
+
+.. automodule:: seyfert.utils.tex_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

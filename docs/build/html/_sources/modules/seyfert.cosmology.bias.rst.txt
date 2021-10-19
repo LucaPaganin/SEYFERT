@@ -1,0 +1,7 @@
+seyfert.cosmology.bias module
+=============================
+
+.. automodule:: seyfert.cosmology.bias
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+seyfert.utils.formatters module
+===============================
+
+.. automodule:: seyfert.utils.formatters
+   :members:
+   :undoc-members:
+   :show-inheritance:

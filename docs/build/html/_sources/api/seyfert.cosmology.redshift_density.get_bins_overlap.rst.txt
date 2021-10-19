@@ -1,0 +1,6 @@
+get_bins_overlap
+================
+
+.. currentmodule:: seyfert.cosmology.redshift_density
+
+.. autofunction:: get_bins_overlap

@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_cl\_data module
+======================================
+
+.. automodule:: seyfert.fisher.fisher_cl_data
+   :members:
+   :undoc-members:
+   :show-inheritance:

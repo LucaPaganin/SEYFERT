@@ -1,0 +1,7 @@
+seyfert.notebook\_helpers.misc module
+=====================================
+
+.. automodule:: seyfert.notebook_helpers.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:

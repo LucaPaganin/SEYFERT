@@ -1,0 +1,17 @@
+FiducialGrowthVoidBias
+======================
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: FiducialGrowthVoidBias
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FiducialGrowthVoidBias.computeBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias

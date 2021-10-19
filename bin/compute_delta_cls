@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+import argparse
+import logging
+from pathlib import Path
+
+from seyfert.utils.workspace import WorkSpace
+from seyfert.main.cl_core import compute_delta_cls
+from seyfert.utils.general_utils import configure_logger
+
+logger = logging.getLogger()
+configure_logger(logger)
+
+
+def program_options() -> "argparse.ArgumentParser":
+    parser = argparse.ArgumentParser(description="Brief script to compute delta cls",
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument("rundir", type=Path, help="Path to the run directory")
+    
+    return parser
+
+
+def main(args):
+    ws = WorkSpace(args.rundir)
+    delta_cls = compute_delta_cls(ws)
+    delta_cls.saveToHDF5(ws.delta_cls_file)
+
+
+if __name__ == '__main__':
+    main(program_options().parse_args())

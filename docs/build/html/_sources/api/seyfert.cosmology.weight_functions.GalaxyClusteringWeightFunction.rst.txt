@@ -1,0 +1,17 @@
+GalaxyClusteringWeightFunction
+==============================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: GalaxyClusteringWeightFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GalaxyClusteringWeightFunction.setupBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setupBias

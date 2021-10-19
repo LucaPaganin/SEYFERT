@@ -1,0 +1,6 @@
+weight_cls_name_from_obs
+========================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autofunction:: weight_cls_name_from_obs

@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<ForecastConfig>
+	<Header>
+		<Author>lucapaganin</Author>
+		<CreationDate>2021-01-28T23:01:28.690159</CreationDate>
+		<Version>1.3.0</Version>
+	</Header>
+	<Data>
+		<Survey>
+			<SkyFraction dtype="float">0.3636102608321519</SkyFraction>
+		</Survey>
+		<Cosmology>
+			<CosmologicalModel dtype="str">CPL</CosmologicalModel>
+			<FlatUniverse dtype="bool">True</FlatUniverse>
+			<CosmologicalParameters>
+				<CosmologicalParameter name="h">
+					<fiducial dtype="float">0.67</fiducial>
+					<current_value dtype="float">0.67</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="w0">
+					<fiducial dtype="float">-1.0</fiducial>
+					<current_value dtype="float">-1.0</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="wa">
+					<fiducial dtype="float">0.0</fiducial>
+					<current_value dtype="float">0.0</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="OmDE">
+					<fiducial dtype="float">0.68</fiducial>
+					<current_value dtype="float">0.68</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">False</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="Omm">
+					<fiducial dtype="float">0.32</fiducial>
+					<current_value dtype="float">0.32</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="Omb">
+					<fiducial dtype="float">0.05</fiducial>
+					<current_value dtype="float">0.05</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="ns">
+					<fiducial dtype="float">0.96</fiducial>
+					<current_value dtype="float">0.96</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="sigma8">
+					<fiducial dtype="float">0.816</fiducial>
+					<current_value dtype="float">0.816</current_value>
+					<stem_factor dtype="float">1.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">None</units>
+				</CosmologicalParameter>
+				<CosmologicalParameter name="mnu">
+					<fiducial dtype="float">0.06</fiducial>
+					<current_value dtype="float">0.06</current_value>
+					<stem_factor dtype="float">7.0</stem_factor>
+					<derivative_method dtype="str">SteM</derivative_method>
+					<is_free_parameter dtype="bool">True</is_free_parameter>
+					<units dtype="str">eV</units>
+				</CosmologicalParameter>
+			</CosmologicalParameters>
+		</Cosmology>
+		<Probes>
+			<Probe name="Lensing" present="True">
+				<MultipolesBinning>
+					<l_min dtype="float">10.0</l_min>
+					<l_max dtype="float">750.0</l_max>
+					<MultipoleSelection dtype="str" n_ell="100">Logarithmic</MultipoleSelection>
+				</MultipolesBinning>
+				<DensityInitFile dtype="str">gcph_dndz_redbook.h5</DensityInitFile>
+				<SpecificSettings/>
+				<ExtraNuisanceParameters/>
+			</Probe>
+			<Probe name="PhotometricGalaxy" present="True">
+				<MultipolesBinning>
+					<l_min dtype="float">10.0</l_min>
+					<l_max dtype="float">750.0</l_max>
+					<MultipoleSelection dtype="str" n_ell="100">Logarithmic</MultipoleSelection>
+				</MultipolesBinning>
+				<DensityInitFile dtype="str">gcph_dndz_redbook.h5</DensityInitFile>
+				<BiasInitFile dtype="str">gcph_bias_piecewise.h5</BiasInitFile>
+				<BiasDerivativeMethod dtype="str">SteM</BiasDerivativeMethod>
+				<MarginalizeOverBias dtype="bool">True</MarginalizeOverBias>
+				<SpecificSettings/>
+				<ExtraNuisanceParameters/>
+			</Probe>
+			<Probe name="SpectroscopicGalaxy" present="True">
+				<MultipolesBinning>
+					<l_min dtype="float">10.0</l_min>
+					<l_max dtype="float">750.0</l_max>
+					<MultipoleSelection dtype="str" n_ell="100">Logarithmic</MultipoleSelection>
+				</MultipolesBinning>
+				<DensityInitFile dtype="str">gcsp_dndz_granett_fine_binning_model1.h5</DensityInitFile>
+				<BiasInitFile dtype="str">gcsp_bias_piecewise.h5</BiasInitFile>
+				<BiasDerivativeMethod dtype="str">SteM</BiasDerivativeMethod>
+				<MarginalizeOverBias dtype="bool">True</MarginalizeOverBias>
+				<SpecificSettings>
+					<ComputeOffDiagonalCls dtype="bool">True</ComputeOffDiagonalCls>
+				</SpecificSettings>
+				<ExtraNuisanceParameters/>
+			</Probe>
+			<Probe name="Void" present="True">
+				<MultipolesBinning>
+					<l_min dtype="float">10.0</l_min>
+					<l_max dtype="float">750.0</l_max>
+					<MultipoleSelection dtype="str" n_ell="100">Logarithmic</MultipoleSelection>
+				</MultipolesBinning>
+				<DensityInitFile dtype="str">voids_dndz_flagship_old.h5</DensityInitFile>
+				<BiasInitFile dtype="str">voids_bias_vdn.h5</BiasInitFile>
+				<MarginalizeOverBias dtype="bool">False</MarginalizeOverBias>
+				<SpecificSettings>
+					<PowerSpectrumKCut dtype="float" units="1/Mpc">0.35</PowerSpectrumKCut>
+					<PowerSpectrumKCutWidth dtype="float" units="1/Mpc">0.1</PowerSpectrumKCutWidth>
+				</SpecificSettings>
+				<ExtraNuisanceParameters/>
+			</Probe>
+		</Probes>
+		<DerivativeSettings>
+			<STEMPercentileDisplacements dtype="array">0.00625, 0.01250, 0.01875, 0.02500, 0.03750, 0.05000, 0.10000</STEMPercentileDisplacements>
+		</DerivativeSettings>
+	</Data>
+</ForecastConfig>

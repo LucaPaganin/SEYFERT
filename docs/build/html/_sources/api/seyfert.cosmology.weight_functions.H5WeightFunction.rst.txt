@@ -1,0 +1,21 @@
+H5WeightFunction
+================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: H5WeightFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5WeightFunction.readBuildingData
+      ~H5WeightFunction.writeObjectToFile
+      ~H5WeightFunction.writeToObject
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: readBuildingData
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

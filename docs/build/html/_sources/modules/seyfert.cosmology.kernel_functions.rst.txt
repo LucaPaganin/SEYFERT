@@ -1,0 +1,7 @@
+seyfert.cosmology.kernel\_functions module
+==========================================
+
+.. automodule:: seyfert.cosmology.kernel_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

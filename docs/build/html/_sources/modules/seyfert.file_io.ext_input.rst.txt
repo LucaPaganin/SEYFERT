@@ -1,0 +1,7 @@
+seyfert.file\_io.ext\_input module
+==================================
+
+.. automodule:: seyfert.file_io.ext_input
+   :members:
+   :undoc-members:
+   :show-inheritance:

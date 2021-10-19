@@ -1,0 +1,32 @@
+seyfert.utils package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.utils.array_utils
+   seyfert.utils.comparison_utils
+   seyfert.utils.converters
+   seyfert.utils.dir_explorer
+   seyfert.utils.encoders
+   seyfert.utils.filesystem_utils
+   seyfert.utils.formatters
+   seyfert.utils.general_utils
+   seyfert.utils.ist_comparison
+   seyfert.utils.run_loader
+   seyfert.utils.shortcuts
+   seyfert.utils.table_utils
+   seyfert.utils.tex_utils
+   seyfert.utils.type_helpers
+   seyfert.utils.workspace
+
+Module contents
+---------------
+
+.. automodule:: seyfert.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

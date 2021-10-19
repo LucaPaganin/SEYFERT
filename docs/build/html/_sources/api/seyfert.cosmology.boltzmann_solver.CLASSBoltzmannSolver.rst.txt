@@ -1,0 +1,21 @@
+CLASSBoltzmannSolver
+====================
+
+.. currentmodule:: seyfert.cosmology.boltzmann_solver
+
+.. autoclass:: CLASSBoltzmannSolver
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CLASSBoltzmannSolver.computeCLASSCosmologicalBasis
+      ~CLASSBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra
+      ~CLASSBoltzmannSolver.run
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeCLASSCosmologicalBasis
+   .. automethod:: evaluateLinearAndNonLinearPowerSpectra
+   .. automethod:: run

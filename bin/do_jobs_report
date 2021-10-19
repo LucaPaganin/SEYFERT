@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import argparse
+from seyfert.main.report_maker import RunReportMaker
+
+
+def program_options():
+    parser = argparse.ArgumentParser(description='Script to check errfiles for given rundir',
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('rundir', metavar='rundir', help='The workdir to search')
+    return parser
+
+
+def main(args):
+    rundir = Path(args.rundir).resolve()
+    rrm = RunReportMaker(rundir=rundir)
+    rrm.buildTaskReportMakers()
+    rrm.writeReportFiles()
+    print(rrm.run_summary)
+
+
+if __name__ == '__main__':
+    parser = program_options()
+    args = parser.parse_args()
+    main(args)

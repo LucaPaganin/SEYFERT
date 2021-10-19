@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>CAMBBoltzmannSolver &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CLASSBoltzmannSolver" href="seyfert.cosmology.boltzmann_solver.CLASSBoltzmannSolver.html" />
+    <link rel="prev" title="Boltzmann solver" href="../boltzmann_solver.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmology.html">Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameter.html">Physical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../power_spectrum.html">Power Spectrum</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../boltzmann_solver.html">Boltzmann solver</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../boltzmann_solver.html#module-seyfert.cosmology.boltzmann_solver">seyfert.cosmology.boltzmann_solver Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../boltzmann_solver.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CAMBBoltzmannSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.boltzmann_solver.CLASSBoltzmannSolver.html">CLASSBoltzmannSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.boltzmann_solver.ExternalBoltzmannSolver.html">ExternalBoltzmannSolver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boltzmann_solver.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../redshift_density.html">Redshift Density</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bias.html">Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weight_functions.html">Weight functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c_ells.html">Angular power spectra</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../boltzmann_solver.html">Boltzmann solver</a> &raquo;</li>
+        
+      <li>CAMBBoltzmannSolver</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cambboltzmannsolver">
+<h1>CAMBBoltzmannSolver<a class="headerlink" href="#cambboltzmannsolver" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.boltzmann_solver.</span></span><span class="sig-name descname"><span class="pre">CAMBBoltzmannSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.cosmology.boltzmann_solver.ExternalBoltzmannSolver.html#seyfert.cosmology.boltzmann_solver.ExternalBoltzmannSolver" title="seyfert.cosmology.boltzmann_solver.ExternalBoltzmannSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.boltzmann_solver.ExternalBoltzmannSolver</span></code></a></p>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBCosmologicalBasis" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBCosmologicalBasis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computeCAMBCosmologicalBasis</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBRedshiftGroupsNumber" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBRedshiftGroupsNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">computeCAMBRedshiftGroupsNumber</span></code></a>(n_redshifts)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluateLinearAndNonLinearPowerSpectra</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.finetuneScalarAmpFromSigma8" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.finetuneScalarAmpFromSigma8"><code class="xref py py-obj docutils literal notranslate"><span class="pre">finetuneScalarAmpFromSigma8</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.getTransferFunctionFromResults" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.getTransferFunctionFromResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransferFunctionFromResults</span></code></a>(camb_results)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.readCAMBIniFileToDict" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.readCAMBIniFileToDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readCAMBIniFileToDict</span></code></a>(ini_file)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.run" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([get_growth, get_transfer_func])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeDictToIniFile" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeDictToIniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeDictToIniFile</span></code></a>(ini_dict, file)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeUpdatedCAMBIniFile" title="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeUpdatedCAMBIniFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeUpdatedCAMBIniFile</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBCosmologicalBasis">
+<span class="sig-name descname"><span class="pre">computeCAMBCosmologicalBasis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBCosmologicalBasis" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBRedshiftGroupsNumber">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">computeCAMBRedshiftGroupsNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_redshifts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.computeCAMBRedshiftGroupsNumber" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra">
+<span class="sig-name descname"><span class="pre">evaluateLinearAndNonLinearPowerSpectra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.finetuneScalarAmpFromSigma8">
+<span class="sig-name descname"><span class="pre">finetuneScalarAmpFromSigma8</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.finetuneScalarAmpFromSigma8" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.getTransferFunctionFromResults">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getTransferFunctionFromResults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camb_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.getTransferFunctionFromResults" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.readCAMBIniFileToDict">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">readCAMBIniFileToDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ini_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.readCAMBIniFileToDict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_growth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_transfer_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeDictToIniFile">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">writeDictToIniFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ini_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeDictToIniFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeUpdatedCAMBIniFile">
+<span class="sig-name descname"><span class="pre">writeUpdatedCAMBIniFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.boltzmann_solver.CAMBBoltzmannSolver.writeUpdatedCAMBIniFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.cosmology.boltzmann_solver.CLASSBoltzmannSolver.html" class="btn btn-neutral float-right" title="CLASSBoltzmannSolver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../boltzmann_solver.html" class="btn btn-neutral float-left" title="Boltzmann solver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+EuclidFlagshipGCphBias
+======================
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: EuclidFlagshipGCphBias
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~EuclidFlagshipGCphBias.Aph
+      ~EuclidFlagshipGCphBias.Bph
+      ~EuclidFlagshipGCphBias.Cph
+      ~EuclidFlagshipGCphBias.Dph
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EuclidFlagshipGCphBias.computeBias
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: Aph
+   .. autoattribute:: Bph
+   .. autoattribute:: Cph
+   .. autoattribute:: Dph
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias

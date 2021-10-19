@@ -1,0 +1,6 @@
+BiasError
+=========
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoexception:: BiasError

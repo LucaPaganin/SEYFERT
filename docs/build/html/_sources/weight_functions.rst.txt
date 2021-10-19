@@ -1,0 +1,4 @@
+Weight functions
+=================
+
+.. automodapi:: seyfert.cosmology.weight_functions

@@ -1,0 +1,11 @@
+<map id="inheritancef865266724" name="inheritancef865266724">
+<area shape="rect" id="node1" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,62,59,81"/>
+<area shape="rect" id="node3" href="api/seyfert.cosmology.weight_functions.GalaxyClusteringWeightFunction.html#seyfert.cosmology.weight_functions.GalaxyClusteringWeightFunction" target="_top" title="GalaxyClusteringWeightFunction" alt="" coords="387,44,548,63"/>
+<area shape="rect" id="node4" href="api/seyfert.cosmology.weight_functions.WeightFunctionWithBias.html#seyfert.cosmology.weight_functions.WeightFunctionWithBias" target="_top" title="WeightFunctionWithBias" alt="" coords="225,81,351,100"/>
+<area shape="rect" id="node7" href="api/seyfert.cosmology.weight_functions.WeightFunction.html#seyfert.cosmology.weight_functions.WeightFunction" target="_top" title="WeightFunction" alt="" coords="99,120,184,139"/>
+<area shape="rect" id="node5" href="api/seyfert.cosmology.weight_functions.H5WeightFunction.html#seyfert.cosmology.weight_functions.H5WeightFunction" target="_top" title="H5WeightFunction" alt="" coords="239,4,337,23"/>
+<area shape="rect" id="node8" href="api/seyfert.cosmology.weight_functions.PhotometricGalaxyWeightFunction.html#seyfert.cosmology.weight_functions.PhotometricGalaxyWeightFunction" target="_top" title="PhotometricGalaxyWeightFunction" alt="" coords="590,25,759,45"/>
+<area shape="rect" id="node9" href="api/seyfert.cosmology.weight_functions.SpectroscopicGalaxyWeightFunction.html#seyfert.cosmology.weight_functions.SpectroscopicGalaxyWeightFunction" target="_top" title="SpectroscopicGalaxyWeightFunction" alt="" coords="585,63,764,82"/>
+<area shape="rect" id="node10" href="api/seyfert.cosmology.weight_functions.VoidWeightFunction.html#seyfert.cosmology.weight_functions.VoidWeightFunction" target="_top" title="VoidWeightFunction" alt="" coords="415,81,520,100"/>
+<area shape="rect" id="node6" href="api/seyfert.cosmology.weight_functions.LensingWeightFunction.html#seyfert.cosmology.weight_functions.LensingWeightFunction" target="_top" title="LensingWeightFunction" alt="" coords="228,120,348,139"/>
+</map>

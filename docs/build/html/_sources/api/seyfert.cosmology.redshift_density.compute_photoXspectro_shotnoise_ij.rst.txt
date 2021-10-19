@@ -1,0 +1,6 @@
+compute_photoXspectro_shotnoise_ij
+==================================
+
+.. currentmodule:: seyfert.cosmology.redshift_density
+
+.. autofunction:: compute_photoXspectro_shotnoise_ij

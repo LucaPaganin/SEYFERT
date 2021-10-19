@@ -1,0 +1,7 @@
+seyfert.utils.general\_utils module
+===================================
+
+.. automodule:: seyfert.utils.general_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

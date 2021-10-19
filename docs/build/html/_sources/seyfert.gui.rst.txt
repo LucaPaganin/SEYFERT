@@ -1,0 +1,29 @@
+seyfert.gui package
+===================
+
+Submodules
+----------
+
+seyfert.gui.gui\_core module
+----------------------------
+
+.. automodule:: seyfert.gui.gui_core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.gui.interface\_window module
+------------------------------------
+
+.. automodule:: seyfert.gui.interface_window
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

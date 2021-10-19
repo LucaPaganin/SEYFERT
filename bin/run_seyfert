@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+# coding: utf-8
+import re
+import time
+from pathlib import Path
+import datetime
+import logging
+import argparse
+
+from seyfert.config import cmd_line
+from seyfert.main import seyfert_core
+from seyfert.utils import general_utils as gu, filesystem_utils as fsu, formatters
+from seyfert.utils.tex_utils import TeXTranslator
+
+logger = logging.getLogger()
+transl = TeXTranslator()
+script_name = Path(__file__).name
+
+
+def program_options():
+    parser = argparse.ArgumentParser(parents=[cmd_line.forecast_task_configs_options(),
+                                              cmd_line.forecast_dirs_paths_options(),
+                                              cmd_line.main_submitter_batch_options()],
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument("--workdir", "-wd", type=Path, default=Path("."), required=False,
+                        help="OPTIONAL: Working directory")
+    parser.add_argument("--forecast_config", "-fcfg", required=True, nargs="+", type=Path,
+                        help="REQUIRED: path to the file(s) containing the forecast configuration")
+    parser.add_argument("--input_data_dir", "-i", required=False, type=Path,
+                        default=fsu.default_seyfert_input_data_dir(),
+                        help="REQUIRED: path to the directory containing input data for the forecast")
+    parser.add_argument("--test_batch", nargs='?', default=False, const=True,
+                        help="Flag for testing batch mode")
+    parser.add_argument("--is_batch_job", nargs='?', default=False, const=True,
+                        help="Flag to signal if the script has been submitted by bsub")
+
+    return parser
+
+
+def main(args_dict):
+    now = datetime.datetime.now()
+    t_begin = time.time()
+    logfile_name = f"logfile_{script_name}_{args_dict['execution']}_{formatters.datetime_str_format(now)}.log"
+    logfile = args_dict['workdir'] / logfile_name
+    gu.configure_logger(logger, logfile=logfile)
+    gu.print_script_login(script_name, logger)
+    logger.info("Parameters:")
+    for key, value in args_dict.items():
+        logger.info(f"{key}: {value}")
+
+    forecast_configs = cmd_line.get_paths_from_files_list(args_dict['forecast_config'])
+    try:
+        forecast_configs.sort(key=lambda x: int(re.search(r"([0-9]+)_sp_bins", x.name).groups()[0]))
+    except AttributeError:
+        forecast_configs.sort()
+
+    if args_dict['execution'] == 'interactive':
+        seyfert_core.execute_interactively(args_dict, forecast_configs, logfile)
+    elif args_dict['execution'] == 'batch':
+        seyfert_core.submit_batch_jobs(args_dict, forecast_configs)
+    elif args_dict['execution'] == 'no':
+        logger.info('Execution is "no", skipping')
+    else:
+        raise ValueError(f"Invalid execution mode: {args_dict['execution']}")
+
+    t_end = time.time()
+    logger.info(f"RUN SEYFERT total elapsed time {formatters.string_time_format(t_end - t_begin)}")
+
+    gu.print_script_logout(Path(__file__).name, logger)
+
+
+if __name__ == '__main__':
+    main(vars(program_options().parse_args()))

@@ -1,0 +1,101 @@
+seyfert.fisher package
+======================
+
+Submodules
+----------
+
+seyfert.fisher.calculate\_fisher\_core module
+---------------------------------------------
+
+.. automodule:: seyfert.fisher.calculate_fisher_core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.delta\_cl module
+-------------------------------
+
+.. automodule:: seyfert.fisher.delta_cl
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_analysis module
+--------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_cl\_data module
+--------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_cl_data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_computation module
+-----------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_computation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_element module
+-------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_element
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_matrix module
+------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_matrix
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_plot module
+----------------------------------
+
+.. automodule:: seyfert.fisher.fisher_plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_results module
+-------------------------------------
+
+.. automodule:: seyfert.fisher.fisher_results
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.fisher\_utils module
+-----------------------------------
+
+.. automodule:: seyfert.fisher.fisher_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.fisher.linalg\_tools module
+-----------------------------------
+
+.. automodule:: seyfert.fisher.linalg_tools
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.fisher
+   :members:
+   :undoc-members:
+   :show-inheritance:

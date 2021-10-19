@@ -1,0 +1,21 @@
+H5Cosmology
+===========
+
+.. currentmodule:: seyfert.cosmology.cosmology
+
+.. autoclass:: H5Cosmology
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5Cosmology.readBuildingData
+      ~H5Cosmology.writeObjectToFile
+      ~H5Cosmology.writeToObject
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: readBuildingData
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

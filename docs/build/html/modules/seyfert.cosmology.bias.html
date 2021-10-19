@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.cosmology.bias module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.cosmology.boltzmann_solver module" href="seyfert.cosmology.boltzmann_solver.html" />
+    <link rel="prev" title="seyfert.cosmology package" href="seyfert.cosmology.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.cosmology.html">seyfert.cosmology package</a> &raquo;</li>
+        
+      <li>seyfert.cosmology.bias module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.cosmology.bias.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.cosmology.bias">
+<span id="seyfert-cosmology-bias-module"></span><h1>seyfert.cosmology.bias module<a class="headerlink" href="#module-seyfert.cosmology.bias" title="Permalink to this headline">¶</a></h1>
+<p>Module hosting the bias class and the implemented bias models.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">Bias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_bin_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class managing the bias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – instance of <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiasModel</span></code></a>. It defines the model with which to compute the
+bias as a function of the redshift.</p></li>
+<li><p><strong>nuisance_parameters</strong> – a Dict[str, float] of nuisance parameters for the bias. It should contain the updated
+values of the nuisance parameters, since these may be let free to vary.</p></li>
+<li><p><strong>additional_parameters</strong> – a Dict[str, float] of additional parameters for the bias. These are kept constant and not
+let free to vary as it happens for nuisance parameters</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_bin_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.additional_parameters">
+<span class="sig-name descname"><span class="pre">additional_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.additional_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.b_i_z">
+<span class="sig-name descname"><span class="pre">b_i_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.b_i_z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.evaluateBias">
+<span class="sig-name descname"><span class="pre">evaluateBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.evaluateBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.fromHDF5">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">fromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.fromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.bias.Bias" title="seyfert.cosmology.bias.Bias"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bias</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.has_output">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">has_output</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.has_output" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.initBiasModel">
+<span class="sig-name descname"><span class="pre">initBiasModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.initBiasModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for initializing the bias model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> – generic keyword arguments parameters. These depend on the particular model that is being
+instantiated.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.loadFromHDF5">
+<span class="sig-name descname"><span class="pre">loadFromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.loadFromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><span class="pre">seyfert.cosmology.bias.BiasModel</span></a></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.model_name">
+<span class="sig-name descname"><span class="pre">model_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.model_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.nuisance_parameters">
+<span class="sig-name descname"><span class="pre">nuisance_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.nuisance_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.saveToHDF5">
+<span class="sig-name descname"><span class="pre">saveToHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.Bias.saveToHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.Bias.z_grid">
+<span class="sig-name descname"><span class="pre">z_grid</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.Bias.z_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">BiasError</span></span><a class="headerlink" href="#seyfert.cosmology.bias.BiasError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">BiasModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_bin_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nuisance_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_bin_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nuisance_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.computeBias">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.n_bins">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_bins</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.n_bins" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.z_bin_centers">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_bin_centers</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.z_bin_centers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.BiasModel.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.BiasModel.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.ConstantBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">ConstantBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.ConstantBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.ConstantBias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.ConstantBias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.ConstantBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.ConstantBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.ConstantBias.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.ConstantBias.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.ConstantBias.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.ConstantBias.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">EuclidFlagshipGCphBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.Aph">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Aph</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.Aph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.Bph">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Bph</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.Bph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.Cph">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Cph</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.Cph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.Dph">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">Dph</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.Dph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.EuclidFlagshipGCphBias.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.EuclidFlagshipGCphBias.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.FiducialGrowthVoidBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">FiducialGrowthVoidBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.FiducialGrowthVoidBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.FiducialGrowthVoidBias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.FiducialGrowthVoidBias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.FiducialGrowthVoidBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.FiducialGrowthVoidBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.FiducialGrowthVoidBias.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.FiducialGrowthVoidBias.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.FiducialGrowthVoidBias.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.FiducialGrowthVoidBias.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">H5Bias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.file_io.hdf5_io.html#seyfert.file_io.hdf5_io.AbstractH5FileIO" title="seyfert.file_io.hdf5_io.AbstractH5FileIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.file_io.hdf5_io.AbstractH5FileIO</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.build_data">
+<span class="sig-name descname"><span class="pre">build_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.builder_func">
+<span class="sig-name descname"><span class="pre">builder_func</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.builder_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">Path</span></em><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.writeObjectToFile">
+<span class="sig-name descname"><span class="pre">writeObjectToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.writeObjectToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.H5Bias.writeToObject">
+<span class="sig-name descname"><span class="pre">writeToObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.H5Bias.writeToObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">PiecewiseBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias.getSortedBiasValues">
+<span class="sig-name descname"><span class="pre">getSortedBiasValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias.getSortedBiasValues" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.PiecewiseBias.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.PiecewiseBias.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.bias.</span></span><span class="sig-name descname"><span class="pre">VdnVoidBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.cosmology.bias.BiasModel</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">R_max_Mpc</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.R_max_Mpc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">R_min_Mpc</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.R_min_Mpc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeBias">
+<span class="sig-name descname"><span class="pre">computeBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeBias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction">
+<span class="sig-name descname"><span class="pre">computeVdnSizeFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_v_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmaR</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeVdnSizeFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity">
+<span class="sig-name descname"><span class="pre">computeVoidMultiplicity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_v_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmaR</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.computeVoidMultiplicity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <span class="pre">Cosmology</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.delta_c0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delta_c0</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.delta_c0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.delta_v0">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delta_v0</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.delta_v0" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.n_R">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_R</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.n_R" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">voidMultiplicity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.voidMultiplicity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.z_bin_edges">
+<span class="sig-name descname"><span class="pre">z_bin_edges</span></span><em class="property"><span class="pre">:</span> <span class="pre">np.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.z_bin_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.bias.VdnVoidBias.z_grid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_grid</span></span><a class="headerlink" href="#seyfert.cosmology.bias.VdnVoidBias.z_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.cosmology.boltzmann_solver.html" class="btn btn-neutral float-right" title="seyfert.cosmology.boltzmann_solver module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.cosmology.html" class="btn btn-neutral float-left" title="seyfert.cosmology package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

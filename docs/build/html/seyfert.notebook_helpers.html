@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.notebook_helpers package &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">seyfert.notebook_helpers package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers.barplots">seyfert.notebook_helpers.barplots module</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers.contours">seyfert.notebook_helpers.contours module</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers.load_helpers">seyfert.notebook_helpers.load_helpers module</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers.misc">seyfert.notebook_helpers.misc module</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers.table_helpers">seyfert.notebook_helpers.table_helpers module</a></li>
+<li><a class="reference internal" href="#module-seyfert.notebook_helpers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>seyfert.notebook_helpers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/seyfert.notebook_helpers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seyfert-notebook-helpers-package">
+<h1>seyfert.notebook_helpers package<a class="headerlink" href="#seyfert-notebook-helpers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-seyfert.notebook_helpers.barplots">
+<span id="seyfert-notebook-helpers-barplots-module"></span><h2>seyfert.notebook_helpers.barplots module<a class="headerlink" href="#module-seyfert.notebook_helpers.barplots" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.barplots.</span></span><span class="sig-name descname"><span class="pre">ErrorBarPlotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.axes_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">axes_opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.axes_opts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.doGridErrorBarPlot">
+<span class="sig-name descname"><span class="pre">doGridErrorBarPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.doGridErrorBarPlot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.doSingleErrorBarPlot">
+<span class="sig-name descname"><span class="pre">doSingleErrorBarPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_legend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usetex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.doSingleErrorBarPlot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Axes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.figure_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">figure_opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.figure_opts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.legend_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">legend_opts</span></span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.legend_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.legend_title">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">legend_title</span></span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.legend_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.opts">
+<span class="sig-name descname"><span class="pre">opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.res">
+<span class="sig-name descname"><span class="pre">res</span></span><em class="property"><span class="pre">:</span> <span class="pre">pandas.core.frame.DataFrame</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.res" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.setSinglePlotOpts">
+<span class="sig-name descname"><span class="pre">setSinglePlotOpts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.setSinglePlotOpts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.subplots_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">subplots_opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.subplots_opts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.text_box_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">text_box_opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.text_box_opts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.ErrorBarPlotter.ticks_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ticks_opts</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.notebook_helpers.barplots.ErrorBarPlotter.ticks_opts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.do_error_barplot">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.barplots.</span></span><span class="sig-name descname"><span class="pre">do_error_barplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usetex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.do_error_barplot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.do_grid_error_plot">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.barplots.</span></span><span class="sig-name descname"><span class="pre">do_grid_error_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.do_grid_error_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.barplots.do_single_error_barplot">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.barplots.</span></span><span class="sig-name descname"><span class="pre">do_single_error_barplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_legend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.barplots.do_single_error_barplot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.notebook_helpers.contours">
+<span id="seyfert-notebook-helpers-contours-module"></span><h2>seyfert.notebook_helpers.contours module<a class="headerlink" href="#module-seyfert.notebook_helpers.contours" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.contours.build_plotter">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.contours.</span></span><span class="sig-name descname"><span class="pre">build_plotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pars_to_plot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_ticks_fmts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.contours.build_plotter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.contours.build_plotter_and_do_plot">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.contours.</span></span><span class="sig-name descname"><span class="pre">build_plotter_and_do_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pars_to_plot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.contours.build_plotter_and_do_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.contours.do_tri_plot">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.contours.</span></span><span class="sig-name descname"><span class="pre">do_tri_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.contours.do_tri_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.contours.get_config_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.contours.</span></span><span class="sig-name descname"><span class="pre">get_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars_to_plot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.contours.get_config_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.contours.save_figure">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.contours.</span></span><span class="sig-name descname"><span class="pre">save_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pars_to_plot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plots_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.contours.save_figure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.notebook_helpers.load_helpers">
+<span id="seyfert-notebook-helpers-load-helpers-module"></span><h2>seyfert.notebook_helpers.load_helpers module<a class="headerlink" href="#module-seyfert.notebook_helpers.load_helpers" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.load_helpers.invert_fishers_and_compute_errors">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.load_helpers.</span></span><span class="sig-name descname"><span class="pre">invert_fishers_and_compute_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.load_helpers.invert_fishers_and_compute_errors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.load_helpers.invert_fishers_in_all_analyses">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.load_helpers.</span></span><span class="sig-name descname"><span class="pre">invert_fishers_in_all_analyses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.load_helpers.invert_fishers_in_all_analyses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.load_helpers.load_fisher_analyses_for_scenario">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.load_helpers.</span></span><span class="sig-name descname"><span class="pre">load_fisher_analyses_for_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gcph_sub_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.load_helpers.load_fisher_analyses_for_scenario" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="seyfert.fisher.html#seyfert.fisher.fisher_analysis.FisherAnalysis" title="seyfert.fisher.fisher_analysis.FisherAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherAnalysis</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.load_helpers.load_workspaces_for_scenario">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.load_helpers.</span></span><span class="sig-name descname"><span class="pre">load_workspaces_for_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scenario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gcph_sub_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.load_helpers.load_workspaces_for_scenario" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="seyfert.utils.html#seyfert.utils.workspace.WorkSpace" title="seyfert.utils.workspace.WorkSpace"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkSpace</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.load_helpers.replace_hybrid_fishers_with_4_bins_equivalents">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.load_helpers.</span></span><span class="sig-name descname"><span class="pre">replace_hybrid_fishers_with_4_bins_equivalents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.load_helpers.replace_hybrid_fishers_with_4_bins_equivalents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.notebook_helpers.misc">
+<span id="seyfert-notebook-helpers-misc-module"></span><h2>seyfert.notebook_helpers.misc module<a class="headerlink" href="#module-seyfert.notebook_helpers.misc" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.misc.get_subdf_for_bins">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.misc.</span></span><span class="sig-name descname"><span class="pre">get_subdf_for_bins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.misc.get_subdf_for_bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function slicing the results dataframe to get the rows corresponding to the desired nbins and fishers.
+The FoM is added dividing it by the maximum value of the sliced dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.misc.get_subset_analyses_for_fishers">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.misc.</span></span><span class="sig-name descname"><span class="pre">get_subset_analyses_for_fishers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisher_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.misc.get_subset_analyses_for_fishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.misc.remove_spaces">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.misc.</span></span><span class="sig-name descname"><span class="pre">remove_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.misc.remove_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.notebook_helpers.table_helpers">
+<span id="seyfert-notebook-helpers-table-helpers-module"></span><h2>seyfert.notebook_helpers.table_helpers module<a class="headerlink" href="#module-seyfert.notebook_helpers.table_helpers" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.table_helpers.get_latex_row">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.table_helpers.</span></span><span class="sig-name descname"><span class="pre">get_latex_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%.4f'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_fom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.table_helpers.get_latex_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.table_helpers.sort_df_by_fisher_categorical_names">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.table_helpers.</span></span><span class="sig-name descname"><span class="pre">sort_df_by_fisher_categorical_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordered_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.table_helpers.sort_df_by_fisher_categorical_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.table_helpers.write_excel_table">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.table_helpers.</span></span><span class="sig-name descname"><span class="pre">write_excel_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.table_helpers.write_excel_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.notebook_helpers.table_helpers.write_latex_table">
+<span class="sig-prename descclassname"><span class="pre">seyfert.notebook_helpers.table_helpers.</span></span><span class="sig-name descname"><span class="pre">write_latex_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ret_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.notebook_helpers.table_helpers.write_latex_table" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.notebook_helpers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seyfert.notebook_helpers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+seyfert.fisher.calculate\_fisher\_core module
+=============================================
+
+.. automodule:: seyfert.fisher.calculate_fisher_core
+   :members:
+   :undoc-members:
+   :show-inheritance:

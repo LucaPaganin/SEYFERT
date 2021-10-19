@@ -1,0 +1,19 @@
+seyfert.base\_structs package
+=============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.base_structs.cl_dict
+   seyfert.base_structs.generic_dict
+
+Module contents
+---------------
+
+.. automodule:: seyfert.base_structs
+   :members:
+   :undoc-members:
+   :show-inheritance:

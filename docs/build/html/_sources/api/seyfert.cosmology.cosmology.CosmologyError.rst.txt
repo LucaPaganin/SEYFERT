@@ -1,0 +1,6 @@
+CosmologyError
+==============
+
+.. currentmodule:: seyfert.cosmology.cosmology
+
+.. autoexception:: CosmologyError

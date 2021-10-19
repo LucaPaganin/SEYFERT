@@ -1,0 +1,18 @@
+{
+    "PhotometricGalaxy_PhotometricGalaxy": "phph",
+    "PhotometricGalaxy_SpectroscopicGalaxy": "phsp",
+    "PhotometricGalaxy_Lensing": "phwl",
+    "PhotometricGalaxy_Void": "phvd",
+    "SpectroscopicGalaxy_PhotometricGalaxy": "spph",
+    "SpectroscopicGalaxy_SpectroscopicGalaxy": "spsp",
+    "SpectroscopicGalaxy_Lensing": "spwl",
+    "SpectroscopicGalaxy_Void": "spvd",
+    "Lensing_PhotometricGalaxy": "wlph",
+    "Lensing_SpectroscopicGalaxy": "wlsp",
+    "Lensing_Lensing": "wlwl",
+    "Lensing_Void": "wlvd",
+    "Void_PhotometricGalaxy": "vdph",
+    "Void_SpectroscopicGalaxy": "vdsp",
+    "Void_Lensing": "vdwl",
+    "Void_Void": "vdvd"
+}

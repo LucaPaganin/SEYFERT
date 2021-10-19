@@ -1,0 +1,66 @@
+{
+    "phph": [
+        "GCph",
+        "GCph"
+    ],
+    "phsp": [
+        "GCph",
+        "GCsp"
+    ],
+    "phwl": [
+        "GCph",
+        "WL"
+    ],
+    "phvd": [
+        "GCph",
+        "V"
+    ],
+    "spph": [
+        "GCsp",
+        "GCph"
+    ],
+    "spsp": [
+        "GCsp",
+        "GCsp"
+    ],
+    "spwl": [
+        "GCsp",
+        "WL"
+    ],
+    "spvd": [
+        "GCsp",
+        "V"
+    ],
+    "wlph": [
+        "WL",
+        "GCph"
+    ],
+    "wlsp": [
+        "WL",
+        "GCsp"
+    ],
+    "wlwl": [
+        "WL",
+        "WL"
+    ],
+    "wlvd": [
+        "WL",
+        "V"
+    ],
+    "vdph": [
+        "V",
+        "GCph"
+    ],
+    "vdsp": [
+        "V",
+        "GCsp"
+    ],
+    "vdwl": [
+        "V",
+        "WL"
+    ],
+    "vdvd": [
+        "V",
+        "V"
+    ]
+}

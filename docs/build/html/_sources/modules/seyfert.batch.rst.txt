@@ -1,0 +1,20 @@
+seyfert.batch package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.batch.orchestration
+   seyfert.batch.report_maker
+   seyfert.batch.submit_utils
+
+Module contents
+---------------
+
+.. automodule:: seyfert.batch
+   :members:
+   :undoc-members:
+   :show-inheritance:

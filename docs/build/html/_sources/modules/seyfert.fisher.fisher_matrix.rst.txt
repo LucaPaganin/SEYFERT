@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_matrix module
+====================================
+
+.. automodule:: seyfert.fisher.fisher_matrix
+   :members:
+   :undoc-members:
+   :show-inheritance:

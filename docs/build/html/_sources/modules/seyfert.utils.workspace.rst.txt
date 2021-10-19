@@ -1,0 +1,7 @@
+seyfert.utils.workspace module
+==============================
+
+.. automodule:: seyfert.utils.workspace
+   :members:
+   :undoc-members:
+   :show-inheritance:

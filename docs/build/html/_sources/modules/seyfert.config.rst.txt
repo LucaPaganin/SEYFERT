@@ -1,0 +1,21 @@
+seyfert.config package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.config.cmd_line
+   seyfert.config.forecast_config
+   seyfert.config.main_config
+   seyfert.config.probe_config
+
+Module contents
+---------------
+
+.. automodule:: seyfert.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

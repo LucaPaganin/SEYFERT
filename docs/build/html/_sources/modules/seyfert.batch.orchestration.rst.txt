@@ -1,0 +1,7 @@
+seyfert.batch.orchestration module
+==================================
+
+.. automodule:: seyfert.batch.orchestration
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,53 @@
+PhysicalParameter
+=================
+
+.. currentmodule:: seyfert.cosmology.parameter
+
+.. autoclass:: PhysicalParameter
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~PhysicalParameter.COSMO_PAR_STRING
+      ~PhysicalParameter.NUISANCE_PAR_STRING
+      ~PhysicalParameter.is_cosmological
+      ~PhysicalParameter.is_galaxy_bias_parameter
+      ~PhysicalParameter.is_nuisance
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PhysicalParameter.computeSteMValues
+      ~PhysicalParameter.computeValueForDisplacement
+      ~PhysicalParameter.createCosmologicalParameter
+      ~PhysicalParameter.createNuisanceParameter
+      ~PhysicalParameter.fromJSON
+      ~PhysicalParameter.from_dict
+      ~PhysicalParameter.resetCurrentValueToFiducial
+      ~PhysicalParameter.to_JSON
+      ~PhysicalParameter.to_dict
+      ~PhysicalParameter.updateValueForDisplacement
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: COSMO_PAR_STRING
+   .. autoattribute:: NUISANCE_PAR_STRING
+   .. autoattribute:: is_cosmological
+   .. autoattribute:: is_galaxy_bias_parameter
+   .. autoattribute:: is_nuisance
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeSteMValues
+   .. automethod:: computeValueForDisplacement
+   .. automethod:: createCosmologicalParameter
+   .. automethod:: createNuisanceParameter
+   .. automethod:: fromJSON
+   .. automethod:: from_dict
+   .. automethod:: resetCurrentValueToFiducial
+   .. automethod:: to_JSON
+   .. automethod:: to_dict
+   .. automethod:: updateValueForDisplacement

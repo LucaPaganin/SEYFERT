@@ -1,0 +1,29 @@
+BiasModel
+=========
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: BiasModel
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~BiasModel.n_bins
+      ~BiasModel.z_bin_centers
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BiasModel.computeBias
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: n_bins
+   .. autoattribute:: z_bin_centers
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias

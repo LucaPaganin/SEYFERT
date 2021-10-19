@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.fisher.fisher_analysis module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.fisher.fisher_cl_data module" href="seyfert.fisher.fisher_cl_data.html" />
+    <link rel="prev" title="seyfert.fisher.delta_cl module" href="seyfert.fisher.delta_cl.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.fisher.html">seyfert.fisher package</a> &raquo;</li>
+        
+      <li>seyfert.fisher.fisher_analysis module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.fisher.fisher_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.fisher.fisher_analysis">
+<span id="seyfert-fisher-fisher-analysis-module"></span><h1>seyfert.fisher.fisher_analysis module<a class="headerlink" href="#module-seyfert.fisher.fisher_analysis" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_analysis.</span></span><span class="sig-name descname"><span class="pre">FisherAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fishers_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisher_matrices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_pars_fiducial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marginalize_nuisance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fishers_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisher_matrices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_pars_fiducial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marginalize_nuisance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.base_fishers">
+<span class="sig-name descname"><span class="pre">base_fishers</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.fisher.fisher_matrix.html#seyfert.fisher.fisher_matrix.FisherMatrix" title="seyfert.fisher.fisher_matrix.FisherMatrix"><span class="pre">seyfert.fisher.fisher_matrix.FisherMatrix</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.base_fishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.computeEllipseInfoDictForObsAndCL">
+<span class="sig-name descname"><span class="pre">computeEllipseInfoDictForObsAndCL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CL</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.computeEllipseInfoDictForObsAndCL" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.computeGaussianInfoDictForObsAndCL">
+<span class="sig-name descname"><span class="pre">computeGaussianInfoDictForObsAndCL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.computeGaussianInfoDictForObsAndCL" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.computeParameterRangeForObsAtCL">
+<span class="sig-name descname"><span class="pre">computeParameterRangeForObsAtCL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CL</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.computeParameterRangeForObsAtCL" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.correlation_matrices">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">correlation_matrices</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">pandas.core.frame.DataFrame]</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.correlation_matrices" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_fiducials">
+<span class="sig-name descname"><span class="pre">cosmo_pars_fiducials</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_fiducials" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cosmo_pars_names</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_names" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_set">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cosmo_pars_set</span></span><em class="property"><span class="pre">:</span> <span class="pre">Set</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.cosmo_pars_set" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateFishersFromAddendsList">
+<span class="sig-name descname"><span class="pre">evaluateFishersFromAddendsList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fisher_addends_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateFishersFromAddendsList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateMarginalizedErrors">
+<span class="sig-name descname"><span class="pre">evaluateMarginalizedErrors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateMarginalizedErrors" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateRelativeMarginalizedErrors">
+<span class="sig-name descname"><span class="pre">evaluateRelativeMarginalizedErrors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.evaluateRelativeMarginalizedErrors" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.fisher_matrices">
+<span class="sig-name descname"><span class="pre">fisher_matrices</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.fisher.fisher_matrix.html#seyfert.fisher.fisher_matrix.FisherMatrix" title="seyfert.fisher.fisher_matrix.FisherMatrix"><span class="pre">seyfert.fisher.fisher_matrix.FisherMatrix</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.fisher_matrices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.fisher_names">
+<span class="sig-name descname"><span class="pre">fisher_names</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.fisher_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.fishers_order">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fishers_order</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.fishers_order" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.fromFishersDir">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromFishersDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fishers_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.fromFishersDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.fisher.fisher_analysis.FisherAnalysis" title="seyfert.fisher.fisher_analysis.FisherAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherAnalysis</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.fromRundir">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromRundir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rundir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_base_fishers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.fromRundir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.fisher.fisher_analysis.FisherAnalysis" title="seyfert.fisher.fisher_analysis.FisherAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherAnalysis</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.getParFiducialValue">
+<span class="sig-name descname"><span class="pre">getParFiducialValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.getParFiducialValue" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.getSubsetAnalysis">
+<span class="sig-name descname"><span class="pre">getSubsetAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fisher_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.getSubsetAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.fisher.fisher_analysis.FisherAnalysis" title="seyfert.fisher.fisher_analysis.FisherAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherAnalysis</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.invertFishers">
+<span class="sig-name descname"><span class="pre">invertFishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.invertFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.loadBaseFishersFromDir">
+<span class="sig-name descname"><span class="pre">loadBaseFishersFromDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fishers_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.loadBaseFishersFromDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.loadFromRundir">
+<span class="sig-name descname"><span class="pre">loadFromRundir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rundir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_base_fishers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.loadFromRundir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.marginalizeFishers">
+<span class="sig-name descname"><span class="pre">marginalizeFishers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.marginalizeFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.marginalized_errors">
+<span class="sig-name descname"><span class="pre">marginalized_errors</span></span><em class="property"><span class="pre">:</span> <span class="pre">pandas.core.frame.DataFrame</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.marginalized_errors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.n_sigma_range">
+<span class="sig-name descname"><span class="pre">n_sigma_range</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.n_sigma_range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.prepareFisherMatrices">
+<span class="sig-name descname"><span class="pre">prepareFisherMatrices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.prepareFisherMatrices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.saveFishersToDisk">
+<span class="sig-name descname"><span class="pre">saveFishersToDisk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.saveFishersToDisk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.sliceBaseFishers">
+<span class="sig-name descname"><span class="pre">sliceBaseFishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.sliceBaseFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.sliceFishers">
+<span class="sig-name descname"><span class="pre">sliceFishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.sliceFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.useBaseFishers">
+<span class="sig-name descname"><span class="pre">useBaseFishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.useBaseFishers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.writeCorrelationMatricesToFiles">
+<span class="sig-name descname"><span class="pre">writeCorrelationMatricesToFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.writeCorrelationMatricesToFiles" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.writeMarginalizedErrorsToFile">
+<span class="sig-name descname"><span class="pre">writeMarginalizedErrorsToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.writeMarginalizedErrorsToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysis.writeRelativeMarginalizedErrorsToFiles">
+<span class="sig-name descname"><span class="pre">writeRelativeMarginalizedErrorsToFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysis.writeRelativeMarginalizedErrorsToFiles" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_analysis.FisherAnalysisError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_analysis.</span></span><span class="sig-name descname"><span class="pre">FisherAnalysisError</span></span><a class="headerlink" href="#seyfert.fisher.fisher_analysis.FisherAnalysisError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.fisher.fisher_cl_data.html" class="btn btn-neutral float-right" title="seyfert.fisher.fisher_cl_data module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.fisher.delta_cl.html" class="btn btn-neutral float-left" title="seyfert.fisher.delta_cl module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

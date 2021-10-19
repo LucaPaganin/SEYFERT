@@ -1,0 +1,8 @@
+# Custom
+rundir_test
+sample_output
+run_scenario*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+

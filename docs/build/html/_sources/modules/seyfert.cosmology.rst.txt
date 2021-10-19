@@ -1,0 +1,26 @@
+seyfert.cosmology package
+=========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.cosmology.bias
+   seyfert.cosmology.boltzmann_solver
+   seyfert.cosmology.c_ells
+   seyfert.cosmology.cosmology
+   seyfert.cosmology.kernel_functions
+   seyfert.cosmology.parameter
+   seyfert.cosmology.power_spectrum
+   seyfert.cosmology.redshift_density
+   seyfert.cosmology.weight_functions
+
+Module contents
+---------------
+
+.. automodule:: seyfert.cosmology
+   :members:
+   :undoc-members:
+   :show-inheritance:

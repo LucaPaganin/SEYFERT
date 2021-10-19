@@ -1,0 +1,45 @@
+seyfert.file\_io package
+========================
+
+Submodules
+----------
+
+seyfert.file\_io.ext\_input module
+----------------------------------
+
+.. automodule:: seyfert.file_io.ext_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.file\_io.hdf5\_io module
+--------------------------------
+
+.. automodule:: seyfert.file_io.hdf5_io
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.file\_io.retro\_comp module
+-----------------------------------
+
+.. automodule:: seyfert.file_io.retro_comp
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.file\_io.xml\_io module
+-------------------------------
+
+.. automodule:: seyfert.file_io.xml_io
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.file_io
+   :members:
+   :undoc-members:
+   :show-inheritance:

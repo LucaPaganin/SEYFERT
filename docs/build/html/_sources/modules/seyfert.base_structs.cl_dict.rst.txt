@@ -1,0 +1,7 @@
+seyfert.base\_structs.cl\_dict module
+=====================================
+
+.. automodule:: seyfert.base_structs.cl_dict
+   :members:
+   :undoc-members:
+   :show-inheritance:

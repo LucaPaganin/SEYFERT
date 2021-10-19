@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Angular power spectra &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cl_key_long_to_short" href="api/seyfert.cosmology.c_ells.cl_key_long_to_short.html" />
+    <link rel="prev" title="WeightFunctionWithBias" href="api/seyfert.cosmology.weight_functions.WeightFunctionWithBias.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">Physical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power_spectrum.html">Power Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boltzmann_solver.html">Boltzmann solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redshift_density.html">Redshift Density</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bias.html">Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weight_functions.html">Weight functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Angular power spectra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-seyfert.cosmology.c_ells">seyfert.cosmology.c_ells Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.cl_key_long_to_short.html">cl_key_long_to_short</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.cl_key_short_to_long.html">cl_key_short_to_long</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.AngularCoefficient.html">AngularCoefficient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.AngularCoefficientsCollector.html">AngularCoefficientsCollector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.ClError.html">ClError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.H5Cl.html">H5Cl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.c_ells.H5ClCollection.html">H5ClCollection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Angular power spectra</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/c_ells.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="angular-power-spectra">
+<h1>Angular power spectra<a class="headerlink" href="#angular-power-spectra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-seyfert.cosmology.c_ells">
+<span id="seyfert-cosmology-c-ells-module"></span><h2>seyfert.cosmology.c_ells Module<a class="headerlink" href="#module-seyfert.cosmology.c_ells" title="Permalink to this headline">¶</a></h2>
+<p>Module hosting the classes for computing and storing the angular power spectra.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.cl_key_long_to_short.html#seyfert.cosmology.c_ells.cl_key_long_to_short" title="seyfert.cosmology.c_ells.cl_key_long_to_short"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cl_key_long_to_short</span></code></a>(cl_long_key)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.cl_key_short_to_long.html#seyfert.cosmology.c_ells.cl_key_short_to_long" title="seyfert.cosmology.c_ells.cl_key_short_to_long"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cl_key_short_to_long</span></code></a>(cl_short_key)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_plot</span></code>(x, y[, label, axes, idx_fontsize, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">join</span></code>(a, *p)</p></td>
+<td><p>Join two or more pathname components, inserting ‘/’ as needed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AbstractH5FileIO</span></code>([root])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.AngularCoefficient.html#seyfert.cosmology.c_ells.AngularCoefficient" title="seyfert.cosmology.c_ells.AngularCoefficient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AngularCoefficient</span></code></a>([probe1, probe2, kernel, …])</p></td>
+<td><p>Class representing a particular kind of angular power spectrum (i.e.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.AngularCoefficientsCollector.html#seyfert.cosmology.c_ells.AngularCoefficientsCollector" title="seyfert.cosmology.c_ells.AngularCoefficientsCollector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AngularCoefficientsCollector</span></code></a>([phys_params, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AngularConfig</span></code>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.ClError.html#seyfert.cosmology.c_ells.ClError" title="seyfert.cosmology.c_ells.ClError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClError</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositeNewtonCotesIntegrator</span></code>(x, y, order)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cosmology</span></code>([params, flat, model_name, …])</p></td>
+<td><p>Class for managing the cosmology.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ForecastConfig</span></code>([input_xml, input_data_dir])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.H5Cl.html#seyfert.cosmology.c_ells.H5Cl" title="seyfert.cosmology.c_ells.H5Cl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">H5Cl</span></code></a>([probe1, probe2])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.c_ells.H5ClCollection.html#seyfert.cosmology.c_ells.H5ClCollection" title="seyfert.cosmology.c_ells.H5ClCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">H5ClCollection</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Path</span></code>(*args, **kwargs)</p></td>
+<td><p>PurePath subclass that can make system calls.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code>([…])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RedshiftDensity</span></code>([probe])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<div class="graphviz"><img src="_images/inheritance-1690f39b2eb9d196192093018a0569a02f54ef33.png" alt="Inheritance diagram of seyfert.cosmology.c_ells.AngularCoefficient, seyfert.cosmology.c_ells.AngularCoefficientsCollector, seyfert.cosmology.c_ells.ClError, seyfert.cosmology.c_ells.H5Cl, seyfert.cosmology.c_ells.H5ClCollection" usemap="#inheritanceb416ccea71" class="inheritance graphviz" /></div>
+<map id="inheritanceb416ccea71" name="inheritanceb416ccea71">
+<area shape="rect" id="node6" href="api/seyfert.cosmology.c_ells.H5Cl.html#seyfert.cosmology.c_ells.H5Cl" target="_top" title="H5Cl" alt="" coords="430,128,502,153"/>
+<area shape="rect" id="node7" href="api/seyfert.cosmology.c_ells.H5ClCollection.html#seyfert.cosmology.c_ells.H5ClCollection" target="_top" title="H5ClCollection" alt="" coords="411,177,521,203"/>
+<area shape="rect" id="node3" href="api/seyfert.cosmology.c_ells.AngularCoefficient.html#seyfert.cosmology.c_ells.AngularCoefficient" target="_top" title="Class representing a particular kind of angular power spectrum (i.e. auto&#45;correlation or cross&#45;correlation." alt="" coords="35,104,163,129"/>
+<area shape="rect" id="node4" href="api/seyfert.cosmology.c_ells.AngularCoefficientsCollector.html#seyfert.cosmology.c_ells.AngularCoefficientsCollector" target="_top" title="AngularCoefficientsCollector" alt="" coords="5,55,192,80"/>
+<area shape="rect" id="node5" href="api/seyfert.cosmology.c_ells.ClError.html#seyfert.cosmology.c_ells.ClError" target="_top" title="ClError" alt="" coords="63,5,135,31"/>
+</map></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api/seyfert.cosmology.c_ells.cl_key_long_to_short.html" class="btn btn-neutral float-right" title="cl_key_long_to_short" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api/seyfert.cosmology.weight_functions.WeightFunctionWithBias.html" class="btn btn-neutral float-left" title="WeightFunctionWithBias" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

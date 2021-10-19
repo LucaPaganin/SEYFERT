@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from PyQt5 import QtWidgets
+from seyfert.gui.interface_window import ConfigGUIWindow
+import sys
+import argparse
+
+
+def program_options() -> "argparse.ArgumentParser":
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--no_datetime", nargs="?", default=False, const=True,
+                        help="Flag to prevent usage of datetime in config filename")
+
+    return parser
+
+
+def main(args: "argparse.Namespace"):
+    app = QtWidgets.QApplication(sys.argv)
+    window = ConfigGUIWindow(args)
+    window.show()
+    sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main(program_options().parse_args())

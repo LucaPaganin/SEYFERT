@@ -1,0 +1,7 @@
+seyfert.utils.filesystem\_utils module
+======================================
+
+.. automodule:: seyfert.utils.filesystem_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

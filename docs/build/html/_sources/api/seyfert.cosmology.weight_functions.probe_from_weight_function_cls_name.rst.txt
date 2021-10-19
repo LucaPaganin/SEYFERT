@@ -1,0 +1,6 @@
+probe_from_weight_function_cls_name
+===================================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autofunction:: probe_from_weight_function_cls_name

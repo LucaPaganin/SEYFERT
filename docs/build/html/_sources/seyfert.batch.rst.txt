@@ -1,0 +1,37 @@
+seyfert.batch package
+=====================
+
+Submodules
+----------
+
+seyfert.batch.orchestration module
+----------------------------------
+
+.. automodule:: seyfert.batch.orchestration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.batch.report\_maker module
+----------------------------------
+
+.. automodule:: seyfert.batch.report_maker
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.batch.submit\_utils module
+----------------------------------
+
+.. automodule:: seyfert.batch.submit_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.batch
+   :members:
+   :undoc-members:
+   :show-inheritance:

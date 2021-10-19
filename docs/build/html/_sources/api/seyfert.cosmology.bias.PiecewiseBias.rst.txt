@@ -1,0 +1,19 @@
+PiecewiseBias
+=============
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: PiecewiseBias
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PiecewiseBias.computeBias
+      ~PiecewiseBias.getSortedBiasValues
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias
+   .. automethod:: getSortedBiasValues

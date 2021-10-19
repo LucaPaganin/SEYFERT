@@ -1,0 +1,7 @@
+seyfert.config.main\_config module
+==================================
+
+.. automodule:: seyfert.config.main_config
+   :members:
+   :undoc-members:
+   :show-inheritance:

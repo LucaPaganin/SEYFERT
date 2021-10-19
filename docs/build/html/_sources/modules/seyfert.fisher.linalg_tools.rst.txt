@@ -1,0 +1,7 @@
+seyfert.fisher.linalg\_tools module
+===================================
+
+.. automodule:: seyfert.fisher.linalg_tools
+   :members:
+   :undoc-members:
+   :show-inheritance:

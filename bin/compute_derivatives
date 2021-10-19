@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+# Author: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+# Maintainer:  Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+import logging
+from typing import Dict
+from pathlib import Path
+import argparse
+import seyfert.utils.general_utils as gu
+from seyfert.config import forecast_config as fcfg
+from seyfert.derivatives import cl_derivative as ders
+from seyfert.utils.workspace import WorkSpace
+from seyfert.config import cmd_line
+
+logger = logging.getLogger()
+
+
+def program_params() -> "argparse.ArgumentParser":
+    general_opts = cmd_line.main_program_options()
+    parser = argparse.ArgumentParser(parents=[general_opts], description="Script for computing the Cl derivatives")
+    parser.add_argument("--main_config", "-mcfg", required=True, help="Path to the main config JSON file")
+    parser.add_argument("--angular_dir", "-cl_dir",
+                        help="Path to power spectra directory (for standalone mode)")
+    parser.add_argument("--dvar", "-dvar", type=str,
+                        help="Name of varied parameter")
+
+    return parser
+
+
+def main(args_dict: "Dict"):
+    cli_args = cmd_line.ClDerivativeCLIArgs(args_dict)
+    workdir = cli_args.workdir
+    gu.configure_logger(logger, cli_args.logfile)
+
+    logger.info(f'Loading forecast configuration')
+    if cli_args.standalone:
+        needed_args = [cli_args.dvar, cli_args.angular_dir, cli_args.forecast_config]
+        if any([x is None for x in needed_args]):
+            raise ValueError("dvar, cl_dir, forecast_config, input_data_dir are all required in standalone mode")
+        angular_dir = cli_args.angular_dir
+        forecast_config = fcfg.ForecastConfig(input_file=cli_args.forecast_config,
+                                              input_data_dir=cli_args.input_data_dir)
+        forecast_config.loadPhysicalParametersFromJSONConfig()
+        dvar = cli_args.dvar
+        workspace = WorkSpace(Path(angular_dir).parent)
+    else:
+        rundir = cli_args.rundir
+        workspace = WorkSpace(rundir)
+        forecast_config = workspace.getForecastConfiguration()
+        dvar = workspace.getDvarFromDerivativeDirName(workdir.name)
+
+    dcl_coll = ders.ClDerivativeCollector(dvar=dvar, workspace=workspace)
+    dcl_coll.setUp()
+    dcl_coll.evaluateDerivatives()
+    outfile_name = f'cl_derivatives_{dvar}_{"_".join(forecast_config.present_probes)}.h5'
+    outfile = workdir / outfile_name
+    logger.info(f'Writing results to file {outfile}')
+    dcl_coll.writeToFile(outfile)
+
+
+if __name__ == '__main__':
+    arguments_dict = vars(program_params().parse_args())
+    main(arguments_dict)

@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_results module
+=====================================
+
+.. automodule:: seyfert.fisher.fisher_results
+   :members:
+   :undoc-members:
+   :show-inheritance:

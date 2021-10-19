@@ -1,0 +1,967 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.file_io package &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">seyfert.file_io package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-seyfert.file_io.ext_input">seyfert.file_io.ext_input module</a></li>
+<li><a class="reference internal" href="#module-seyfert.file_io.hdf5_io">seyfert.file_io.hdf5_io module</a></li>
+<li><a class="reference internal" href="#module-seyfert.file_io.retro_comp">seyfert.file_io.retro_comp module</a></li>
+<li><a class="reference internal" href="#module-seyfert.file_io.xml_io">seyfert.file_io.xml_io module</a></li>
+<li><a class="reference internal" href="#module-seyfert.file_io">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>seyfert.file_io package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/seyfert.file_io.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seyfert-file-io-package">
+<h1>seyfert.file_io package<a class="headerlink" href="#seyfert-file-io-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-seyfert.file_io.ext_input">
+<span id="seyfert-file-io-ext-input-module"></span><h2>seyfert.file_io.ext_input module<a class="headerlink" href="#module-seyfert.file_io.ext_input" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.ext_input.</span></span><span class="sig-name descname"><span class="pre">ISTInputReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.OUR_PARAM_NAMES">
+<span class="sig-name descname"><span class="pre">OUR_PARAM_NAMES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['Omb',</span> <span class="pre">'OmDE',</span> <span class="pre">'Omm',</span> <span class="pre">'h',</span> <span class="pre">'ns',</span> <span class="pre">'sigma8',</span> <span class="pre">'w0',</span> <span class="pre">'wa']</span></em><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.OUR_PARAM_NAMES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.buildCosmoClsFilesDict">
+<span class="sig-name descname"><span class="pre">buildCosmoClsFilesDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.buildCosmoClsFilesDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.checkISTParams">
+<span class="sig-name descname"><span class="pre">checkISTParams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.checkISTParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.convertISTPowerSpectra">
+<span class="sig-name descname"><span class="pre">convertISTPowerSpectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.convertISTPowerSpectra" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.convertSCameraDerivativesInput">
+<span class="sig-name descname"><span class="pre">convertSCameraDerivativesInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.convertSCameraDerivativesInput" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.getIndicesFromSCameraClFileHeader">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getIndicesFromSCameraClFileHeader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.getIndicesFromSCameraClFileHeader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.pars">
+<span class="sig-name descname"><span class="pre">pars</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></a></em><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.pars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.parseISTCosmoString">
+<span class="sig-name descname"><span class="pre">parseISTCosmoString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.parseISTCosmoString" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readISTFisherMatrixFile">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">readISTFisherMatrixFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readISTFisherMatrixFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readISTPowerSpectrumTextFile">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">readISTPowerSpectrumTextFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readISTPowerSpectrumTextFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readSCameraClDerivatives">
+<span class="sig-name descname"><span class="pre">readSCameraClDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readSCameraClDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.ext_input.ISTInputReader.readSCameraClFile">
+<span class="sig-name descname"><span class="pre">readSCameraClFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.ext_input.ISTInputReader.readSCameraClFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.file_io.hdf5_io">
+<span id="seyfert-file-io-hdf5-io-module"></span><h2>seyfert.file_io.hdf5_io module<a class="headerlink" href="#module-seyfert.file_io.hdf5_io" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.hdf5_io.</span></span><span class="sig-name descname"><span class="pre">AbstractH5FileIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.DATASET_DTYPES">
+<span class="sig-name descname"><span class="pre">DATASET_DTYPES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'float'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.ndarray'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.bool_'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.int64'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.float64'&gt;)</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.DATASET_DTYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.HDF5_ARRAY_OPTS">
+<span class="sig-name descname"><span class="pre">HDF5_ARRAY_OPTS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'compression':</span> <span class="pre">'gzip',</span> <span class="pre">'compression_opts':</span> <span class="pre">9,</span> <span class="pre">'dtype':</span> <span class="pre">'f8'}</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.HDF5_ARRAY_OPTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.attrs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">attrs</span></span><em class="property"><span class="pre">:</span> <span class="pre">h5py._hl.attrs.AttributeManager</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.attrs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AttributeManager</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.build_data">
+<span class="sig-name descname"><span class="pre">build_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.builder_func">
+<span class="sig-name descname"><span class="pre">builder_func</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.builder_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.closeFile">
+<span class="sig-name descname"><span class="pre">closeFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.closeFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.createDataset">
+<span class="sig-name descname"><span class="pre">createDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_grp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">try_link_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.createDataset" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">SoftLink</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.createDatasets">
+<span class="sig-name descname"><span class="pre">createDatasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_grp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.createDatasets" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.createGroup">
+<span class="sig-name descname"><span class="pre">createGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_grp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">try_link_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.createGroup" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.findDataset">
+<span class="sig-name descname"><span class="pre">findDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_wanted</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.findDataset" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.findGroup">
+<span class="sig-name descname"><span class="pre">findGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_wanted</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.findGroup" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.load" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.openFile">
+<span class="sig-name descname"><span class="pre">openFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.openFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.populateObject">
+<span class="sig-name descname"><span class="pre">populateObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_grp_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.populateObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.readBuildingData">
+<span class="sig-name descname"><span class="pre">readBuildingData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.readBuildingData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.root">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">root</span></span><em class="property"><span class="pre">:</span> <span class="pre">h5py._hl.group.Group</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.root" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.root_path">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">root_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.root_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.writeObjectToFile">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">writeObjectToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.writeObjectToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.AbstractH5FileIO.writeToObject">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">writeToObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.hdf5_io.AbstractH5FileIO.writeToObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.H5FileModeError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.hdf5_io.</span></span><span class="sig-name descname"><span class="pre">H5FileModeError</span></span><a class="headerlink" href="#seyfert.file_io.hdf5_io.H5FileModeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.file_io.hdf5_io.H5KeyError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.hdf5_io.</span></span><span class="sig-name descname"><span class="pre">H5KeyError</span></span><a class="headerlink" href="#seyfert.file_io.hdf5_io.H5KeyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.file_io.retro_comp">
+<span id="seyfert-file-io-retro-comp-module"></span><h2>seyfert.file_io.retro_comp module<a class="headerlink" href="#module-seyfert.file_io.retro_comp" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_cls_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_cls_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_cls_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_cosmo_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_cosmo_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_power_spectrum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_cosmo_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_dcl_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_dcl_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_dcl_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_v104_cls_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_v104_cls_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_v104_cls_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_v104_cosmo_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_v104_cosmo_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_v104_cosmo_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cosmology</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.read_v110_cosmo_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">read_v110_cosmo_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.read_v110_cosmo_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cosmology</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.file_io.retro_comp.write_old_cosmo_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.file_io.retro_comp.</span></span><span class="sig-name descname"><span class="pre">write_old_cosmo_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cosmo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.retro_comp.write_old_cosmo_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.file_io.xml_io">
+<span id="seyfert-file-io-xml-io-module"></span><h2>seyfert.file_io.xml_io module<a class="headerlink" href="#module-seyfert.file_io.xml_io" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.xml_io.</span></span><span class="sig-name descname"><span class="pre">ForecastConfigXMLIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.file_io.xml_io.GenericXMLIO" title="seyfert.file_io.xml_io.GenericXMLIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.file_io.xml_io.GenericXMLIO</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.createRoot">
+<span class="sig-name descname"><span class="pre">createRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.createRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getCosmologicalParameters">
+<span class="sig-name descname"><span class="pre">getCosmologicalParameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getCosmologicalParameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getPhysicalParameterDictFromElement">
+<span class="sig-name descname"><span class="pre">getPhysicalParameterDictFromElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_par_el</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getPhysicalParameterDictFromElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getPresentProbes">
+<span class="sig-name descname"><span class="pre">getPresentProbes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getPresentProbes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasDiffMethod">
+<span class="sig-name descname"><span class="pre">getProbeBiasDiffMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasDiffMethod" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasFlag">
+<span class="sig-name descname"><span class="pre">getProbeBiasFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasFlag" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasInitFile">
+<span class="sig-name descname"><span class="pre">getProbeBiasInitFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeBiasInitFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeDensityInitFileName">
+<span class="sig-name descname"><span class="pre">getProbeDensityInitFileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeDensityInitFileName" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeElement">
+<span class="sig-name descname"><span class="pre">getProbeElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeExtraNuisanceParameters">
+<span class="sig-name descname"><span class="pre">getProbeExtraNuisanceParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeExtraNuisanceParameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeMultipoleBinning">
+<span class="sig-name descname"><span class="pre">getProbeMultipoleBinning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeMultipoleBinning" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeSpecificSettings">
+<span class="sig-name descname"><span class="pre">getProbeSpecificSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeSpecificSettings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#seyfert.file_io.xml_io.XMLEntry" title="seyfert.file_io.xml_io.XMLEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLEntry</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeXPath">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">getProbeXPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getProbeXPath" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getSTEMDisplacements">
+<span class="sig-name descname"><span class="pre">getSTEMDisplacements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getSTEMDisplacements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getShotNoiseFile">
+<span class="sig-name descname"><span class="pre">getShotNoiseFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getShotNoiseFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.getSurveySkyFraction">
+<span class="sig-name descname"><span class="pre">getSurveySkyFraction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.getSurveySkyFraction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.input_file">
+<span class="sig-name descname"><span class="pre">input_file</span></span><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.input_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.is_universe_flat">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_universe_flat</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.is_universe_flat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.ForecastConfigXMLIO.root">
+<span class="sig-name descname"><span class="pre">root</span></span><em class="property"><span class="pre">:</span> <span class="pre">xml.etree.ElementTree.Element</span></em><a class="headerlink" href="#seyfert.file_io.xml_io.ForecastConfigXMLIO.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.xml_io.</span></span><span class="sig-name descname"><span class="pre">GenericXMLIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.XmlToString">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">XmlToString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">el</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.XmlToString" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.createDataElement">
+<span class="sig-name descname"><span class="pre">createDataElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.createDataElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.createElement">
+<span class="sig-name descname"><span class="pre">createElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.createElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.createRoot">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">createRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.createRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.find" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.findall">
+<span class="sig-name descname"><span class="pre">findall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.findall" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.fromXMLTree">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromXMLTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.fromXMLTree" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.file_io.xml_io.GenericXMLIO" title="seyfert.file_io.xml_io.GenericXMLIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">GenericXMLIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getChildEntry">
+<span class="sig-name descname"><span class="pre">getChildEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getChildEntry" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.file_io.xml_io.XMLEntry" title="seyfert.file_io.xml_io.XMLEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLEntry</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getChildValue">
+<span class="sig-name descname"><span class="pre">getChildValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getChildValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getElementValue">
+<span class="sig-name descname"><span class="pre">getElementValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getElementValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getEntryFromElement">
+<span class="sig-name descname"><span class="pre">getEntryFromElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getEntryFromElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.file_io.xml_io.XMLEntry" title="seyfert.file_io.xml_io.XMLEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLEntry</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getEntryFromXPath">
+<span class="sig-name descname"><span class="pre">getEntryFromXPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getEntryFromXPath" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.file_io.xml_io.XMLEntry" title="seyfert.file_io.xml_io.XMLEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">XMLEntry</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.getValueFromXPath">
+<span class="sig-name descname"><span class="pre">getValueFromXPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.getValueFromXPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.input_file">
+<span class="sig-name descname"><span class="pre">input_file</span></span><em class="property"><span class="pre">:</span> <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.input_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.parseValue">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">parseValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.parseValue" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.parseXML">
+<span class="sig-name descname"><span class="pre">parseXML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.parseXML" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.root">
+<span class="sig-name descname"><span class="pre">root</span></span><em class="property"><span class="pre">:</span> <span class="pre">xml.etree.ElementTree.Element</span></em><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.GenericXMLIO.writeToXMLFile">
+<span class="sig-name descname"><span class="pre">writeToXMLFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettyxml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.GenericXMLIO.writeToXMLFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLEntry">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.xml_io.</span></span><span class="sig-name descname"><span class="pre">XMLEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLEntry.attrib">
+<span class="sig-name descname"><span class="pre">attrib</span></span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLEntry.attrib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLEntry.dtype">
+<span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLEntry.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLEntry.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLEntry.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLEntry.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLEntry.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.file_io.xml_io.XMLParsingError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.file_io.xml_io.</span></span><span class="sig-name descname"><span class="pre">XMLParsingError</span></span><a class="headerlink" href="#seyfert.file_io.xml_io.XMLParsingError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.file_io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seyfert.file_io" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

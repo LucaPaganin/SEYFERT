@@ -1,0 +1,7 @@
+seyfert.batch.submit\_utils module
+==================================
+
+.. automodule:: seyfert.batch.submit_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

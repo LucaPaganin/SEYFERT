@@ -1,0 +1,7 @@
+seyfert.plot\_utils.colors module
+=================================
+
+.. automodule:: seyfert.plot_utils.colors
+   :members:
+   :undoc-members:
+   :show-inheritance:

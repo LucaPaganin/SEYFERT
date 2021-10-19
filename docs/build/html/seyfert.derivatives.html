@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.derivatives package &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">seyfert.derivatives package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-seyfert.derivatives.cl_derivative">seyfert.derivatives.cl_derivative module</a></li>
+<li><a class="reference internal" href="#module-seyfert.derivatives.differentiator">seyfert.derivatives.differentiator module</a></li>
+<li><a class="reference internal" href="#module-seyfert.derivatives">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>seyfert.derivatives package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/seyfert.derivatives.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seyfert-derivatives-package">
+<h1>seyfert.derivatives package<a class="headerlink" href="#seyfert-derivatives-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-seyfert.derivatives.cl_derivative">
+<span id="seyfert-derivatives-cl-derivative-module"></span><h2>seyfert.derivatives.cl_derivative module<a class="headerlink" href="#module-seyfert.derivatives.cl_derivative" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.cl_derivative.</span></span><span class="sig-name descname"><span class="pre">ClDerivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.c_dvar_lij">
+<span class="sig-name descname"><span class="pre">c_dvar_lij</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.c_dvar_lij" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.dc_lij">
+<span class="sig-name descname"><span class="pre">dc_lij</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.dc_lij" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.dvar">
+<span class="sig-name descname"><span class="pre">dvar</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.dvar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.is_cross_correlation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_cross_correlation</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.is_cross_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.l_bin_centers">
+<span class="sig-name descname"><span class="pre">l_bin_centers</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.l_bin_centers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.obs_key">
+<span class="sig-name descname"><span class="pre">obs_key</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.obs_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivative.probe_key">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">probe_key</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivative.probe_key" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.cl_derivative.</span></span><span class="sig-name descname"><span class="pre">ClDerivativeCollector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.dcl_dict">
+<span class="sig-name descname"><span class="pre">dcl_dict</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.derivatives.cl_derivative.ClDerivative" title="seyfert.derivatives.cl_derivative.ClDerivative"><span class="pre">seyfert.derivatives.cl_derivative.ClDerivative</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.dcl_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.dvar">
+<span class="sig-name descname"><span class="pre">dvar</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.dvar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.evaluateDerivatives">
+<span class="sig-name descname"><span class="pre">evaluateDerivatives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.evaluateDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.fromHDF5">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.fromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector" title="seyfert.derivatives.cl_derivative.ClDerivativeCollector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClDerivativeCollector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.loadFromFile">
+<span class="sig-name descname"><span class="pre">loadFromFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.loadFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.param">
+<span class="sig-name descname"><span class="pre">param</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></a></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.param" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.phys_pars">
+<span class="sig-name descname"><span class="pre">phys_pars</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></a></em><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.phys_pars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.ClDerivativeCollector.writeToFile">
+<span class="sig-name descname"><span class="pre">writeToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.ClDerivativeCollector.writeToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.derivatives.cl_derivative.collect_cl_derivatives">
+<span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.cl_derivative.</span></span><span class="sig-name descname"><span class="pre">collect_cl_derivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">der_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.cl_derivative.collect_cl_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.derivatives.differentiator">
+<span id="seyfert-derivatives-differentiator-module"></span><h2>seyfert.derivatives.differentiator module<a class="headerlink" href="#module-seyfert.derivatives.differentiator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.differentiator.</span></span><span class="sig-name descname"><span class="pre">AnalyticClDifferentiator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.derivatives.differentiator.ClDifferentiator" title="seyfert.derivatives.differentiator.ClDifferentiator"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.derivatives.differentiator.ClDifferentiator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.doComputeDerivative">
+<span class="sig-name descname"><span class="pre">doComputeDerivative</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.doComputeDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.fiducial_cl">
+<span class="sig-name descname"><span class="pre">fiducial_cl</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.c_ells.AngularCoefficient" title="seyfert.cosmology.c_ells.AngularCoefficient"><span class="pre">seyfert.cosmology.c_ells.AngularCoefficient</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.fiducial_cl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.loadClData">
+<span class="sig-name descname"><span class="pre">loadClData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.loadClData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.param">
+<span class="sig-name descname"><span class="pre">param</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.param" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.AnalyticClDifferentiator.workspace">
+<span class="sig-name descname"><span class="pre">workspace</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.utils.html#seyfert.utils.workspace.WorkSpace" title="seyfert.utils.workspace.WorkSpace"><span class="pre">seyfert.utils.workspace.WorkSpace</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.AnalyticClDifferentiator.workspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.differentiator.</span></span><span class="sig-name descname"><span class="pre">ClDifferentiator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.computeDerivative">
+<span class="sig-name descname"><span class="pre">computeDerivative</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.computeDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.doComputeDerivative">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">doComputeDerivative</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.doComputeDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.fiducial_cl">
+<span class="sig-name descname"><span class="pre">fiducial_cl</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.c_ells.AngularCoefficient" title="seyfert.cosmology.c_ells.AngularCoefficient"><span class="pre">seyfert.cosmology.c_ells.AngularCoefficient</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.fiducial_cl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.loadClData">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">loadClData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.loadClData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.param">
+<span class="sig-name descname"><span class="pre">param</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.param" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.ClDifferentiator.workspace">
+<span class="sig-name descname"><span class="pre">workspace</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.utils.html#seyfert.utils.workspace.WorkSpace" title="seyfert.utils.workspace.WorkSpace"><span class="pre">seyfert.utils.workspace.WorkSpace</span></a></em><a class="headerlink" href="#seyfert.derivatives.differentiator.ClDifferentiator.workspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.DifferentiationError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.differentiator.</span></span><span class="sig-name descname"><span class="pre">DifferentiationError</span></span><a class="headerlink" href="#seyfert.derivatives.differentiator.DifferentiationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.derivatives.differentiator.</span></span><span class="sig-name descname"><span class="pre">SteMClDifferentiator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phys_pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.derivatives.differentiator.ClDifferentiator" title="seyfert.derivatives.differentiator.ClDifferentiator"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.derivatives.differentiator.ClDifferentiator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.STEM_derivative">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">STEM_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.STEM_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phys_pars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.c_dvar_lij">
+<span class="sig-name descname"><span class="pre">c_dvar_lij</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.c_dvar_lij" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.collectClVariationsFiles">
+<span class="sig-name descname"><span class="pre">collectClVariationsFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.collectClVariationsFiles" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.doComputeDerivative">
+<span class="sig-name descname"><span class="pre">doComputeDerivative</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.doComputeDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.loadClData">
+<span class="sig-name descname"><span class="pre">loadClData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.loadClData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.derivatives.differentiator.SteMClDifferentiator.vectorizedSteM">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">vectorizedSteM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_dvar_lij</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.derivatives.differentiator.SteMClDifferentiator.vectorizedSteM" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.derivatives">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seyfert.derivatives" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

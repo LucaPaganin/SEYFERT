@@ -1,0 +1,33 @@
+H5Cl
+====
+
+.. currentmodule:: seyfert.cosmology.c_ells
+
+.. autoclass:: H5Cl
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~H5Cl.absolute_main_path
+      ~H5Cl.main_path_rel_to_root
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5Cl.readBuildingData
+      ~H5Cl.writeObjectToFile
+      ~H5Cl.writeToObject
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: absolute_main_path
+   .. autoattribute:: main_path_rel_to_root
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: readBuildingData
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

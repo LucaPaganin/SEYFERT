@@ -1,0 +1,7 @@
+seyfert.utils.dir\_explorer module
+==================================
+
+.. automodule:: seyfert.utils.dir_explorer
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,61 @@
+PhysicalParametersCollection
+============================
+
+.. currentmodule:: seyfert.cosmology.parameter
+
+.. autoclass:: PhysicalParametersCollection
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~PhysicalParametersCollection.cosmo_pars_current_values
+      ~PhysicalParametersCollection.cosmo_pars_fiducials
+      ~PhysicalParametersCollection.cosmological_parameters
+      ~PhysicalParametersCollection.free_cosmo_pars_fiducials
+      ~PhysicalParametersCollection.free_cosmological_parameters
+      ~PhysicalParametersCollection.free_physical_parameters
+      ~PhysicalParametersCollection.nuisance_parameters
+      ~PhysicalParametersCollection.params
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PhysicalParametersCollection.computePhysParSTEMValues
+      ~PhysicalParametersCollection.fromJSON
+      ~PhysicalParametersCollection.from_dict_list
+      ~PhysicalParametersCollection.getFreeNuisanceParametersForProbe
+      ~PhysicalParametersCollection.getNuisanceParametersForProbe
+      ~PhysicalParametersCollection.getParamsDictFromDictList
+      ~PhysicalParametersCollection.loadStemDisplacements
+      ~PhysicalParametersCollection.readJSON
+      ~PhysicalParametersCollection.resetPhysicalParametersToFiducial
+      ~PhysicalParametersCollection.updatePhysicalParametersForDvarStep
+      ~PhysicalParametersCollection.writeJSON
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: cosmo_pars_current_values
+   .. autoattribute:: cosmo_pars_fiducials
+   .. autoattribute:: cosmological_parameters
+   .. autoattribute:: free_cosmo_pars_fiducials
+   .. autoattribute:: free_cosmological_parameters
+   .. autoattribute:: free_physical_parameters
+   .. autoattribute:: nuisance_parameters
+   .. autoattribute:: params
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computePhysParSTEMValues
+   .. automethod:: fromJSON
+   .. automethod:: from_dict_list
+   .. automethod:: getFreeNuisanceParametersForProbe
+   .. automethod:: getNuisanceParametersForProbe
+   .. automethod:: getParamsDictFromDictList
+   .. automethod:: loadStemDisplacements
+   .. automethod:: readJSON
+   .. automethod:: resetPhysicalParametersToFiducial
+   .. automethod:: updatePhysicalParametersForDvarStep
+   .. automethod:: writeJSON

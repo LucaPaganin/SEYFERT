@@ -1,0 +1,7 @@
+seyfert.gui.interface\_window module
+====================================
+
+.. automodule:: seyfert.gui.interface_window
+   :members:
+   :undoc-members:
+   :show-inheritance:

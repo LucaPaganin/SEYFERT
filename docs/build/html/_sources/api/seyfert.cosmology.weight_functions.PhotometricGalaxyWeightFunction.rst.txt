@@ -1,0 +1,17 @@
+PhotometricGalaxyWeightFunction
+===============================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: PhotometricGalaxyWeightFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PhotometricGalaxyWeightFunction.setupBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setupBias

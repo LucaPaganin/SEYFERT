@@ -1,0 +1,272 @@
+\indexentry{module@\spxentry{module}!seyfert.cosmology.cosmology@\spxentry{seyfert.cosmology.cosmology}|hyperpage}{3}
+\indexentry{seyfert.cosmology.cosmology@\spxentry{seyfert.cosmology.cosmology}!module@\spxentry{module}|hyperpage}{3}
+\indexentry{Cosmology (class in seyfert.cosmology.cosmology)@\spxentry{Cosmology}\spxextra{class in seyfert.cosmology.cosmology}|hyperpage}{4}
+\indexentry{E\_z (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{E\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{H0 (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{H0}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{H\_z (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{H\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{OmDE (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{OmDE}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{OmK (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{OmK}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{Omb (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{Omb}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{Omm (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{Omm}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{cosmo\_pars\_current (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{cosmo\_pars\_current}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{growth\_factor\_z (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{growth\_factor\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{h (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{h}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{k\_grid (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{k\_grid}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{mnu (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{mnu}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{ns (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{ns}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{r\_tilde\_z (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{r\_tilde\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{6}
+\indexentry{r\_z (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{r\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{7}
+\indexentry{sigma8 (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{sigma8}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{7}
+\indexentry{transfer\_function\_k (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{transfer\_function\_k}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{7}
+\indexentry{w0 (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{w0}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{7}
+\indexentry{wa (seyfert.cosmology.cosmology.Cosmology attribute)@\spxentry{wa}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}|hyperpage}{7}
+\indexentry{checkParameters() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{checkParameters()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeComovingDistance() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeComovingDistance()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeDimensionlessComovingDistance() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeDimensionlessComovingDistance()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeDimensionlessHubbleParameter() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeDimensionlessHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeHubbleParameter() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeReciprocalDimensionlessHubbleParameter() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeReciprocalDimensionlessHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{7}
+\indexentry{computeSigmaR() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{computeSigmaR()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{8}
+\indexentry{evaluateOverRedshiftGrid() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{8}
+\indexentry{evaluatePowerSpectrum() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{evaluatePowerSpectrum()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{8}
+\indexentry{fromHDF5() (seyfert.cosmology.cosmology.Cosmology class method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology class method}|hyperpage}{8}
+\indexentry{loadFromHDF5() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{8}
+\indexentry{saveToHDF5() (seyfert.cosmology.cosmology.Cosmology method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}|hyperpage}{8}
+\indexentry{sigmaR() (seyfert.cosmology.cosmology.Cosmology static method)@\spxentry{sigmaR()}\spxextra{seyfert.cosmology.cosmology.Cosmology static method}|hyperpage}{8}
+\indexentry{CosmologyError@\spxentry{CosmologyError}|hyperpage}{9}
+\indexentry{H5Cosmology (class in seyfert.cosmology.cosmology)@\spxentry{H5Cosmology}\spxextra{class in seyfert.cosmology.cosmology}|hyperpage}{9}
+\indexentry{readBuildingData() (seyfert.cosmology.cosmology.H5Cosmology method)@\spxentry{readBuildingData()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}|hyperpage}{9}
+\indexentry{writeObjectToFile() (seyfert.cosmology.cosmology.H5Cosmology method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}|hyperpage}{9}
+\indexentry{writeToObject() (seyfert.cosmology.cosmology.H5Cosmology method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.parameter@\spxentry{seyfert.cosmology.parameter}|hyperpage}{10}
+\indexentry{seyfert.cosmology.parameter@\spxentry{seyfert.cosmology.parameter}!module@\spxentry{module}|hyperpage}{10}
+\indexentry{ParameterError@\spxentry{ParameterError}|hyperpage}{10}
+\indexentry{PhysicalParameter (class in seyfert.cosmology.parameter)@\spxentry{PhysicalParameter}\spxextra{class in seyfert.cosmology.parameter}|hyperpage}{11}
+\indexentry{COSMO\_PAR\_STRING (seyfert.cosmology.parameter.PhysicalParameter attribute)@\spxentry{COSMO\_PAR\_STRING}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}|hyperpage}{12}
+\indexentry{NUISANCE\_PAR\_STRING (seyfert.cosmology.parameter.PhysicalParameter attribute)@\spxentry{NUISANCE\_PAR\_STRING}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}|hyperpage}{12}
+\indexentry{is\_cosmological (seyfert.cosmology.parameter.PhysicalParameter attribute)@\spxentry{is\_cosmological}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}|hyperpage}{12}
+\indexentry{is\_galaxy\_bias\_parameter (seyfert.cosmology.parameter.PhysicalParameter attribute)@\spxentry{is\_galaxy\_bias\_parameter}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}|hyperpage}{12}
+\indexentry{is\_nuisance (seyfert.cosmology.parameter.PhysicalParameter attribute)@\spxentry{is\_nuisance}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}|hyperpage}{12}
+\indexentry{computeSteMValues() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{computeSteMValues()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{12}
+\indexentry{computeValueForDisplacement() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{computeValueForDisplacement()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{12}
+\indexentry{createCosmologicalParameter() (seyfert.cosmology.parameter.PhysicalParameter class method)@\spxentry{createCosmologicalParameter()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}|hyperpage}{12}
+\indexentry{createNuisanceParameter() (seyfert.cosmology.parameter.PhysicalParameter class method)@\spxentry{createNuisanceParameter()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}|hyperpage}{12}
+\indexentry{fromJSON() (seyfert.cosmology.parameter.PhysicalParameter class method)@\spxentry{fromJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}|hyperpage}{12}
+\indexentry{from\_dict() (seyfert.cosmology.parameter.PhysicalParameter class method)@\spxentry{from\_dict()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}|hyperpage}{12}
+\indexentry{resetCurrentValueToFiducial() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{resetCurrentValueToFiducial()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{12}
+\indexentry{to\_JSON() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{to\_JSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{13}
+\indexentry{to\_dict() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{to\_dict()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{13}
+\indexentry{updateValueForDisplacement() (seyfert.cosmology.parameter.PhysicalParameter method)@\spxentry{updateValueForDisplacement()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}|hyperpage}{13}
+\indexentry{PhysicalParametersCollection (class in seyfert.cosmology.parameter)@\spxentry{PhysicalParametersCollection}\spxextra{class in seyfert.cosmology.parameter}|hyperpage}{13}
+\indexentry{cosmo\_pars\_current\_values (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{cosmo\_pars\_current\_values}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{14}
+\indexentry{cosmo\_pars\_fiducials (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{cosmo\_pars\_fiducials}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{14}
+\indexentry{cosmological\_parameters (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{cosmological\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{14}
+\indexentry{free\_cosmo\_pars\_fiducials (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{free\_cosmo\_pars\_fiducials}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{14}
+\indexentry{free\_cosmological\_parameters (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{free\_cosmological\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{14}
+\indexentry{free\_physical\_parameters (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{free\_physical\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{15}
+\indexentry{nuisance\_parameters (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{nuisance\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{15}
+\indexentry{params (seyfert.cosmology.parameter.PhysicalParametersCollection attribute)@\spxentry{params}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}|hyperpage}{15}
+\indexentry{computePhysParSTEMValues() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{computePhysParSTEMValues()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{fromJSON() (seyfert.cosmology.parameter.PhysicalParametersCollection class method)@\spxentry{fromJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection class method}|hyperpage}{15}
+\indexentry{from\_dict\_list() (seyfert.cosmology.parameter.PhysicalParametersCollection class method)@\spxentry{from\_dict\_list()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection class method}|hyperpage}{15}
+\indexentry{getFreeNuisanceParametersForProbe() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{getFreeNuisanceParametersForProbe()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{getNuisanceParametersForProbe() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{getNuisanceParametersForProbe()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{getParamsDictFromDictList() (seyfert.cosmology.parameter.PhysicalParametersCollection static method)@\spxentry{getParamsDictFromDictList()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection static method}|hyperpage}{15}
+\indexentry{loadStemDisplacements() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{loadStemDisplacements()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{readJSON() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{readJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{resetPhysicalParametersToFiducial() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{resetPhysicalParametersToFiducial()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{updatePhysicalParametersForDvarStep() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{updatePhysicalParametersForDvarStep()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{writeJSON() (seyfert.cosmology.parameter.PhysicalParametersCollection method)@\spxentry{writeJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.power\_spectrum@\spxentry{seyfert.cosmology.power\_spectrum}|hyperpage}{16}
+\indexentry{seyfert.cosmology.power\_spectrum@\spxentry{seyfert.cosmology.power\_spectrum}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{H5PowerSpectrum (class in seyfert.cosmology.power\_spectrum)@\spxentry{H5PowerSpectrum}\spxextra{class in seyfert.cosmology.power\_spectrum}|hyperpage}{17}
+\indexentry{writeObjectToFile() (seyfert.cosmology.power\_spectrum.H5PowerSpectrum method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.power\_spectrum.H5PowerSpectrum method}|hyperpage}{17}
+\indexentry{writeToObject() (seyfert.cosmology.power\_spectrum.H5PowerSpectrum method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.power\_spectrum.H5PowerSpectrum method}|hyperpage}{17}
+\indexentry{PowerSpectrum (class in seyfert.cosmology.power\_spectrum)@\spxentry{PowerSpectrum}\spxextra{class in seyfert.cosmology.power\_spectrum}|hyperpage}{17}
+\indexentry{growth\_factor\_z (seyfert.cosmology.power\_spectrum.PowerSpectrum attribute)@\spxentry{growth\_factor\_z}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum attribute}|hyperpage}{18}
+\indexentry{evaluateLinearAndNonLinearPowerSpectra() (seyfert.cosmology.power\_spectrum.PowerSpectrum method)@\spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}|hyperpage}{18}
+\indexentry{fromHDF5() (seyfert.cosmology.power\_spectrum.PowerSpectrum class method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum class method}|hyperpage}{18}
+\indexentry{getResultsFromMatterPowerGenerator() (seyfert.cosmology.power\_spectrum.PowerSpectrum method)@\spxentry{getResultsFromMatterPowerGenerator()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}|hyperpage}{18}
+\indexentry{loadFromHDF5() (seyfert.cosmology.power\_spectrum.PowerSpectrum method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}|hyperpage}{18}
+\indexentry{saveToHDF5() (seyfert.cosmology.power\_spectrum.PowerSpectrum method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.boltzmann\_solver@\spxentry{seyfert.cosmology.boltzmann\_solver}|hyperpage}{19}
+\indexentry{seyfert.cosmology.boltzmann\_solver@\spxentry{seyfert.cosmology.boltzmann\_solver}!module@\spxentry{module}|hyperpage}{19}
+\indexentry{CAMBBoltzmannSolver (class in seyfert.cosmology.boltzmann\_solver)@\spxentry{CAMBBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}|hyperpage}{19}
+\indexentry{computeCAMBCosmologicalBasis() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method)@\spxentry{computeCAMBCosmologicalBasis()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}|hyperpage}{20}
+\indexentry{computeCAMBRedshiftGroupsNumber() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method)@\spxentry{computeCAMBRedshiftGroupsNumber()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}|hyperpage}{20}
+\indexentry{evaluateLinearAndNonLinearPowerSpectra() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method)@\spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}|hyperpage}{20}
+\indexentry{finetuneScalarAmpFromSigma8() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method)@\spxentry{finetuneScalarAmpFromSigma8()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}|hyperpage}{20}
+\indexentry{getTransferFunctionFromResults() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method)@\spxentry{getTransferFunctionFromResults()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}|hyperpage}{20}
+\indexentry{readCAMBIniFileToDict() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method)@\spxentry{readCAMBIniFileToDict()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}|hyperpage}{20}
+\indexentry{run() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method)@\spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}|hyperpage}{20}
+\indexentry{writeDictToIniFile() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method)@\spxentry{writeDictToIniFile()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}|hyperpage}{20}
+\indexentry{writeUpdatedCAMBIniFile() (seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method)@\spxentry{writeUpdatedCAMBIniFile()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}|hyperpage}{21}
+\indexentry{CLASSBoltzmannSolver (class in seyfert.cosmology.boltzmann\_solver)@\spxentry{CLASSBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}|hyperpage}{21}
+\indexentry{computeCLASSCosmologicalBasis() (seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method)@\spxentry{computeCLASSCosmologicalBasis()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}|hyperpage}{21}
+\indexentry{evaluateLinearAndNonLinearPowerSpectra() (seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method)@\spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}|hyperpage}{21}
+\indexentry{run() (seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method)@\spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}|hyperpage}{21}
+\indexentry{ExternalBoltzmannSolver (class in seyfert.cosmology.boltzmann\_solver)@\spxentry{ExternalBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}|hyperpage}{21}
+\indexentry{evaluateLinearAndNonLinearPowerSpectra() (seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method)@\spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method}|hyperpage}{22}
+\indexentry{run() (seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method)@\spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method}|hyperpage}{22}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.redshift\_density@\spxentry{seyfert.cosmology.redshift\_density}|hyperpage}{22}
+\indexentry{seyfert.cosmology.redshift\_density@\spxentry{seyfert.cosmology.redshift\_density}!module@\spxentry{module}|hyperpage}{22}
+\indexentry{compute\_photoXspectro\_shotnoise\_ij() (in module seyfert.cosmology.redshift\_density)@\spxentry{compute\_photoXspectro\_shotnoise\_ij()}\spxextra{in module seyfert.cosmology.redshift\_density}|hyperpage}{22}
+\indexentry{get\_bins\_overlap() (in module seyfert.cosmology.redshift\_density)@\spxentry{get\_bins\_overlap()}\spxextra{in module seyfert.cosmology.redshift\_density}|hyperpage}{23}
+\indexentry{DensityError@\spxentry{DensityError}|hyperpage}{23}
+\indexentry{H5Density (class in seyfert.cosmology.redshift\_density)@\spxentry{H5Density}\spxextra{class in seyfert.cosmology.redshift\_density}|hyperpage}{23}
+\indexentry{writeObjectToFile() (seyfert.cosmology.redshift\_density.H5Density method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.redshift\_density.H5Density method}|hyperpage}{24}
+\indexentry{writeToObject() (seyfert.cosmology.redshift\_density.H5Density method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.redshift\_density.H5Density method}|hyperpage}{24}
+\indexentry{RedshiftDensity (class in seyfert.cosmology.redshift\_density)@\spxentry{RedshiftDensity}\spxextra{class in seyfert.cosmology.redshift\_density}|hyperpage}{24}
+\indexentry{n\_bins (seyfert.cosmology.redshift\_density.RedshiftDensity attribute)@\spxentry{n\_bins}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}|hyperpage}{25}
+\indexentry{shot\_noise (seyfert.cosmology.redshift\_density.RedshiftDensity attribute)@\spxentry{shot\_noise}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}|hyperpage}{25}
+\indexentry{z\_bin\_centers (seyfert.cosmology.redshift\_density.RedshiftDensity attribute)@\spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}|hyperpage}{25}
+\indexentry{z\_max (seyfert.cosmology.redshift\_density.RedshiftDensity attribute)@\spxentry{z\_max}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}|hyperpage}{25}
+\indexentry{z\_min (seyfert.cosmology.redshift\_density.RedshiftDensity attribute)@\spxentry{z\_min}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}|hyperpage}{25}
+\indexentry{computeBinNormFactor() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{computeBinNormFactor()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{computeInstrumentResponse() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{computeInstrumentResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{computeNormalizedDensityAtBinAndRedshift() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{computeNormalizedDensityAtBinAndRedshift()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{computeSurfaceDensityAtBin() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{computeSurfaceDensityAtBin()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{computeTotalGalaxyNumber() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{computeTotalGalaxyNumber()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{convolvedNdzdOmegaWithInstrumentResponse() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{convolvedNdzdOmegaWithInstrumentResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{evaluate() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{evaluate()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{evaluateBinNormFactors() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{evaluateBinNormFactors()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{evaluateSurfaceDensity() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{evaluateSurfaceDensity()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{fromHDF5() (seyfert.cosmology.redshift\_density.RedshiftDensity static method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity static method}|hyperpage}{26}
+\indexentry{interpolateInput() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{interpolateInput()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{loadFromHDF5() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{modifiedGaussianResponse() (seyfert.cosmology.redshift\_density.RedshiftDensity static method)@\spxentry{modifiedGaussianResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity static method}|hyperpage}{26}
+\indexentry{saveToHDF5() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{26}
+\indexentry{setUp() (seyfert.cosmology.redshift\_density.RedshiftDensity method)@\spxentry{setUp()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}|hyperpage}{27}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.bias@\spxentry{seyfert.cosmology.bias}|hyperpage}{27}
+\indexentry{seyfert.cosmology.bias@\spxentry{seyfert.cosmology.bias}!module@\spxentry{module}|hyperpage}{27}
+\indexentry{Bias (class in seyfert.cosmology.bias)@\spxentry{Bias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{28}
+\indexentry{has\_output (seyfert.cosmology.bias.Bias attribute)@\spxentry{has\_output}\spxextra{seyfert.cosmology.bias.Bias attribute}|hyperpage}{29}
+\indexentry{evaluateBias() (seyfert.cosmology.bias.Bias method)@\spxentry{evaluateBias()}\spxextra{seyfert.cosmology.bias.Bias method}|hyperpage}{29}
+\indexentry{fromHDF5() (seyfert.cosmology.bias.Bias static method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.bias.Bias static method}|hyperpage}{29}
+\indexentry{initBiasModel() (seyfert.cosmology.bias.Bias method)@\spxentry{initBiasModel()}\spxextra{seyfert.cosmology.bias.Bias method}|hyperpage}{29}
+\indexentry{loadFromHDF5() (seyfert.cosmology.bias.Bias method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.bias.Bias method}|hyperpage}{29}
+\indexentry{saveToHDF5() (seyfert.cosmology.bias.Bias method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.bias.Bias method}|hyperpage}{29}
+\indexentry{BiasError@\spxentry{BiasError}|hyperpage}{29}
+\indexentry{BiasModel (class in seyfert.cosmology.bias)@\spxentry{BiasModel}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{29}
+\indexentry{n\_bins (seyfert.cosmology.bias.BiasModel attribute)@\spxentry{n\_bins}\spxextra{seyfert.cosmology.bias.BiasModel attribute}|hyperpage}{30}
+\indexentry{z\_bin\_centers (seyfert.cosmology.bias.BiasModel attribute)@\spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.bias.BiasModel attribute}|hyperpage}{30}
+\indexentry{computeBias() (seyfert.cosmology.bias.BiasModel method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.BiasModel method}|hyperpage}{30}
+\indexentry{ConstantBias (class in seyfert.cosmology.bias)@\spxentry{ConstantBias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{30}
+\indexentry{computeBias() (seyfert.cosmology.bias.ConstantBias method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.ConstantBias method}|hyperpage}{30}
+\indexentry{EuclidFlagshipGCphBias (class in seyfert.cosmology.bias)@\spxentry{EuclidFlagshipGCphBias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{31}
+\indexentry{Aph (seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute)@\spxentry{Aph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}|hyperpage}{31}
+\indexentry{Bph (seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute)@\spxentry{Bph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}|hyperpage}{31}
+\indexentry{Cph (seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute)@\spxentry{Cph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}|hyperpage}{31}
+\indexentry{Dph (seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute)@\spxentry{Dph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}|hyperpage}{31}
+\indexentry{computeBias() (seyfert.cosmology.bias.EuclidFlagshipGCphBias method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias method}|hyperpage}{32}
+\indexentry{FiducialGrowthVoidBias (class in seyfert.cosmology.bias)@\spxentry{FiducialGrowthVoidBias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{32}
+\indexentry{computeBias() (seyfert.cosmology.bias.FiducialGrowthVoidBias method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.FiducialGrowthVoidBias method}|hyperpage}{32}
+\indexentry{H5Bias (class in seyfert.cosmology.bias)@\spxentry{H5Bias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{32}
+\indexentry{writeObjectToFile() (seyfert.cosmology.bias.H5Bias method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.bias.H5Bias method}|hyperpage}{33}
+\indexentry{writeToObject() (seyfert.cosmology.bias.H5Bias method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.bias.H5Bias method}|hyperpage}{33}
+\indexentry{PiecewiseBias (class in seyfert.cosmology.bias)@\spxentry{PiecewiseBias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{33}
+\indexentry{computeBias() (seyfert.cosmology.bias.PiecewiseBias method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.PiecewiseBias method}|hyperpage}{33}
+\indexentry{getSortedBiasValues() (seyfert.cosmology.bias.PiecewiseBias method)@\spxentry{getSortedBiasValues()}\spxextra{seyfert.cosmology.bias.PiecewiseBias method}|hyperpage}{33}
+\indexentry{VdnVoidBias (class in seyfert.cosmology.bias)@\spxentry{VdnVoidBias}\spxextra{class in seyfert.cosmology.bias}|hyperpage}{34}
+\indexentry{R\_max\_Mpc (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{R\_max\_Mpc}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{34}
+\indexentry{R\_min\_Mpc (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{R\_min\_Mpc}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{34}
+\indexentry{delta\_c0 (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{delta\_c0}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{34}
+\indexentry{delta\_v0 (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{delta\_v0}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{35}
+\indexentry{n\_R (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{n\_R}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{35}
+\indexentry{z\_grid (seyfert.cosmology.bias.VdnVoidBias attribute)@\spxentry{z\_grid}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}|hyperpage}{35}
+\indexentry{computeBias() (seyfert.cosmology.bias.VdnVoidBias method)@\spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}|hyperpage}{35}
+\indexentry{computeVdnSizeFunction() (seyfert.cosmology.bias.VdnVoidBias method)@\spxentry{computeVdnSizeFunction()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}|hyperpage}{35}
+\indexentry{computeVoidMultiplicity() (seyfert.cosmology.bias.VdnVoidBias method)@\spxentry{computeVoidMultiplicity()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}|hyperpage}{35}
+\indexentry{voidMultiplicity() (seyfert.cosmology.bias.VdnVoidBias static method)@\spxentry{voidMultiplicity()}\spxextra{seyfert.cosmology.bias.VdnVoidBias static method}|hyperpage}{35}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.weight\_functions@\spxentry{seyfert.cosmology.weight\_functions}|hyperpage}{36}
+\indexentry{seyfert.cosmology.weight\_functions@\spxentry{seyfert.cosmology.weight\_functions}!module@\spxentry{module}|hyperpage}{36}
+\indexentry{probe\_from\_weight\_function\_cls\_name() (in module seyfert.cosmology.weight\_functions)@\spxentry{probe\_from\_weight\_function\_cls\_name()}\spxextra{in module seyfert.cosmology.weight\_functions}|hyperpage}{36}
+\indexentry{weight\_cls\_name\_from\_obs() (in module seyfert.cosmology.weight\_functions)@\spxentry{weight\_cls\_name\_from\_obs()}\spxextra{in module seyfert.cosmology.weight\_functions}|hyperpage}{36}
+\indexentry{weight\_function\_for\_probe() (in module seyfert.cosmology.weight\_functions)@\spxentry{weight\_function\_for\_probe()}\spxextra{in module seyfert.cosmology.weight\_functions}|hyperpage}{36}
+\indexentry{GalaxyClusteringWeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{GalaxyClusteringWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{37}
+\indexentry{setupBias() (seyfert.cosmology.weight\_functions.GalaxyClusteringWeightFunction method)@\spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.GalaxyClusteringWeightFunction method}|hyperpage}{37}
+\indexentry{H5WeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{H5WeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{38}
+\indexentry{readBuildingData() (seyfert.cosmology.weight\_functions.H5WeightFunction method)@\spxentry{readBuildingData()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}|hyperpage}{38}
+\indexentry{writeObjectToFile() (seyfert.cosmology.weight\_functions.H5WeightFunction method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}|hyperpage}{38}
+\indexentry{writeToObject() (seyfert.cosmology.weight\_functions.H5WeightFunction method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}|hyperpage}{38}
+\indexentry{LensingWeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{LensingWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{38}
+\indexentry{H0 (seyfert.cosmology.weight\_functions.LensingWeightFunction attribute)@\spxentry{H0}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}|hyperpage}{39}
+\indexentry{Omm (seyfert.cosmology.weight\_functions.LensingWeightFunction attribute)@\spxentry{Omm}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}|hyperpage}{39}
+\indexentry{c\_km\_s (seyfert.cosmology.weight\_functions.LensingWeightFunction attribute)@\spxentry{c\_km\_s}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}|hyperpage}{39}
+\indexentry{computeIntrinsicAlignmentContribution() (seyfert.cosmology.weight\_functions.LensingWeightFunction method)@\spxentry{computeIntrinsicAlignmentContribution()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}|hyperpage}{39}
+\indexentry{computeLensingEfficiency() (seyfert.cosmology.weight\_functions.LensingWeightFunction method)@\spxentry{computeLensingEfficiency()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}|hyperpage}{39}
+\indexentry{computeLensingEfficiencyAtBin() (seyfert.cosmology.weight\_functions.LensingWeightFunction method)@\spxentry{computeLensingEfficiencyAtBin()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}|hyperpage}{39}
+\indexentry{evaluateOverRedshiftGrid() (seyfert.cosmology.weight\_functions.LensingWeightFunction method)@\spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}|hyperpage}{39}
+\indexentry{PhotometricGalaxyWeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{PhotometricGalaxyWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{40}
+\indexentry{setupBias() (seyfert.cosmology.weight\_functions.PhotometricGalaxyWeightFunction method)@\spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.PhotometricGalaxyWeightFunction method}|hyperpage}{40}
+\indexentry{SpectroscopicGalaxyWeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{SpectroscopicGalaxyWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{40}
+\indexentry{setupBias() (seyfert.cosmology.weight\_functions.SpectroscopicGalaxyWeightFunction method)@\spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.SpectroscopicGalaxyWeightFunction method}|hyperpage}{40}
+\indexentry{VoidWeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{VoidWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{41}
+\indexentry{setupBias() (seyfert.cosmology.weight\_functions.VoidWeightFunction method)@\spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.VoidWeightFunction method}|hyperpage}{41}
+\indexentry{WeightFunction (class in seyfert.cosmology.weight\_functions)@\spxentry{WeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{41}
+\indexentry{H\_z (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{H\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{is\_evaluated (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{is\_evaluated}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{n\_bins (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{n\_bins}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{n\_i\_z (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{n\_i\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{probe (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{probe}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{r\_tilde\_z (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{r\_tilde\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{z\_bin\_centers (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{z\_bin\_edges (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{z\_bin\_edges}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{z\_max (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{z\_max}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{z\_min (seyfert.cosmology.weight\_functions.WeightFunction attribute)@\spxentry{z\_min}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}|hyperpage}{42}
+\indexentry{evaluateOverRedshiftGrid() (seyfert.cosmology.weight\_functions.WeightFunction method)@\spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}|hyperpage}{43}
+\indexentry{fromHDF5() (seyfert.cosmology.weight\_functions.WeightFunction class method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction class method}|hyperpage}{43}
+\indexentry{loadFromHDF5() (seyfert.cosmology.weight\_functions.WeightFunction method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}|hyperpage}{43}
+\indexentry{saveToHDF5() (seyfert.cosmology.weight\_functions.WeightFunction method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}|hyperpage}{43}
+\indexentry{setUp() (seyfert.cosmology.weight\_functions.WeightFunction method)@\spxentry{setUp()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}|hyperpage}{43}
+\indexentry{WeightFunctionWithBias (class in seyfert.cosmology.weight\_functions)@\spxentry{WeightFunctionWithBias}\spxextra{class in seyfert.cosmology.weight\_functions}|hyperpage}{43}
+\indexentry{evaluateOverRedshiftGrid() (seyfert.cosmology.weight\_functions.WeightFunctionWithBias method)@\spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}|hyperpage}{43}
+\indexentry{setUp() (seyfert.cosmology.weight\_functions.WeightFunctionWithBias method)@\spxentry{setUp()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}|hyperpage}{43}
+\indexentry{setupBias() (seyfert.cosmology.weight\_functions.WeightFunctionWithBias method)@\spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}|hyperpage}{43}
+\indexentry{module@\spxentry{module}!seyfert.cosmology.c\_ells@\spxentry{seyfert.cosmology.c\_ells}|hyperpage}{44}
+\indexentry{seyfert.cosmology.c\_ells@\spxentry{seyfert.cosmology.c\_ells}!module@\spxentry{module}|hyperpage}{44}
+\indexentry{cl\_key\_long\_to\_short() (in module seyfert.cosmology.c\_ells)@\spxentry{cl\_key\_long\_to\_short()}\spxextra{in module seyfert.cosmology.c\_ells}|hyperpage}{44}
+\indexentry{cl\_key\_short\_to\_long() (in module seyfert.cosmology.c\_ells)@\spxentry{cl\_key\_short\_to\_long()}\spxextra{in module seyfert.cosmology.c\_ells}|hyperpage}{45}
+\indexentry{AngularCoefficient (class in seyfert.cosmology.c\_ells)@\spxentry{AngularCoefficient}\spxextra{class in seyfert.cosmology.c\_ells}|hyperpage}{45}
+\indexentry{integ\_method (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{integ\_method}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{is\_auto\_correlation (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{is\_auto\_correlation}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{n\_ell (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{n\_ell}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{n\_i (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{n\_i}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{n\_j (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{n\_j}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{n\_z (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{n\_z}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{47}
+\indexentry{obs\_key (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{obs\_key}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{48}
+\indexentry{power\_spectrum (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{power\_spectrum}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{48}
+\indexentry{weight1 (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{weight1}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{48}
+\indexentry{weight2 (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{weight2}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{48}
+\indexentry{z\_array (seyfert.cosmology.c\_ells.AngularCoefficient attribute)@\spxentry{z\_array}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}|hyperpage}{48}
+\indexentry{applyVoidsCutToLimberPowerSpectrum() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{applyVoidsCutToLimberPowerSpectrum()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{computeClIntegral() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{computeClIntegral()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{evaluateAngularCorrelation() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{evaluateAngularCorrelation()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{evaluateLimberApproximatedPowerSpectrum() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{evaluateLimberApproximatedPowerSpectrum()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{fromHDF5() (seyfert.cosmology.c\_ells.AngularCoefficient class method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient class method}|hyperpage}{48}
+\indexentry{getLimberRedshiftIntegrand() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{getLimberRedshiftIntegrand()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{getWeightFunction() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{getWeightFunction()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{loadCosmology() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{loadCosmology()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{48}
+\indexentry{loadFromHDF5() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{49}
+\indexentry{plot() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{plot()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{49}
+\indexentry{saveToHDF5() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{49}
+\indexentry{setUp() (seyfert.cosmology.c\_ells.AngularCoefficient method)@\spxentry{setUp()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}|hyperpage}{49}
+\indexentry{AngularCoefficientsCollector (class in seyfert.cosmology.c\_ells)@\spxentry{AngularCoefficientsCollector}\spxextra{class in seyfert.cosmology.c\_ells}|hyperpage}{49}
+\indexentry{probes (seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute)@\spxentry{probes}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}|hyperpage}{50}
+\indexentry{probes\_combinations (seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute)@\spxentry{probes\_combinations}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}|hyperpage}{50}
+\indexentry{short\_keys (seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute)@\spxentry{short\_keys}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}|hyperpage}{50}
+\indexentry{evaluateAngularCoefficients() (seyfert.cosmology.c\_ells.AngularCoefficientsCollector method)@\spxentry{evaluateAngularCoefficients()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}|hyperpage}{50}
+\indexentry{fromHDF5() (seyfert.cosmology.c\_ells.AngularCoefficientsCollector class method)@\spxentry{fromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector class method}|hyperpage}{50}
+\indexentry{loadFromHDF5() (seyfert.cosmology.c\_ells.AngularCoefficientsCollector method)@\spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}|hyperpage}{50}
+\indexentry{saveToHDF5() (seyfert.cosmology.c\_ells.AngularCoefficientsCollector method)@\spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}|hyperpage}{50}
+\indexentry{setUp() (seyfert.cosmology.c\_ells.AngularCoefficientsCollector method)@\spxentry{setUp()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}|hyperpage}{50}
+\indexentry{ClError@\spxentry{ClError}|hyperpage}{50}
+\indexentry{H5Cl (class in seyfert.cosmology.c\_ells)@\spxentry{H5Cl}\spxextra{class in seyfert.cosmology.c\_ells}|hyperpage}{51}
+\indexentry{absolute\_main\_path (seyfert.cosmology.c\_ells.H5Cl attribute)@\spxentry{absolute\_main\_path}\spxextra{seyfert.cosmology.c\_ells.H5Cl attribute}|hyperpage}{51}
+\indexentry{main\_path\_rel\_to\_root (seyfert.cosmology.c\_ells.H5Cl attribute)@\spxentry{main\_path\_rel\_to\_root}\spxextra{seyfert.cosmology.c\_ells.H5Cl attribute}|hyperpage}{51}
+\indexentry{readBuildingData() (seyfert.cosmology.c\_ells.H5Cl method)@\spxentry{readBuildingData()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}|hyperpage}{51}
+\indexentry{writeObjectToFile() (seyfert.cosmology.c\_ells.H5Cl method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}|hyperpage}{51}
+\indexentry{writeToObject() (seyfert.cosmology.c\_ells.H5Cl method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}|hyperpage}{51}
+\indexentry{H5ClCollection (class in seyfert.cosmology.c\_ells)@\spxentry{H5ClCollection}\spxextra{class in seyfert.cosmology.c\_ells}|hyperpage}{52}
+\indexentry{writeObjectToFile() (seyfert.cosmology.c\_ells.H5ClCollection method)@\spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.c\_ells.H5ClCollection method}|hyperpage}{52}
+\indexentry{writeToObject() (seyfert.cosmology.c\_ells.H5ClCollection method)@\spxentry{writeToObject()}\spxextra{seyfert.cosmology.c\_ells.H5ClCollection method}|hyperpage}{52}

@@ -1,0 +1,37 @@
+seyfert.plot\_utils package
+===========================
+
+Submodules
+----------
+
+seyfert.plot\_utils.cl\_plot module
+-----------------------------------
+
+.. automodule:: seyfert.plot_utils.cl_plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.plot\_utils.colors module
+---------------------------------
+
+.. automodule:: seyfert.plot_utils.colors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.plot\_utils.misc module
+-------------------------------
+
+.. automodule:: seyfert.plot_utils.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.plot_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_analysis module
+======================================
+
+.. automodule:: seyfert.fisher.fisher_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:

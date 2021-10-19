@@ -1,0 +1,19 @@
+H5PowerSpectrum
+===============
+
+.. currentmodule:: seyfert.cosmology.power_spectrum
+
+.. autoclass:: H5PowerSpectrum
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5PowerSpectrum.writeObjectToFile
+      ~H5PowerSpectrum.writeToObject
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

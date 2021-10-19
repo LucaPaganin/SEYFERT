@@ -1,0 +1,7 @@
+seyfert.fisher.delta\_cl module
+===============================
+
+.. automodule:: seyfert.fisher.delta_cl
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+seyfert.notebook\_helpers.table\_helpers module
+===============================================
+
+.. automodule:: seyfert.notebook_helpers.table_helpers
+   :members:
+   :undoc-members:
+   :show-inheritance:

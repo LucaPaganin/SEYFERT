@@ -1,0 +1,33 @@
+CAMBBoltzmannSolver
+===================
+
+.. currentmodule:: seyfert.cosmology.boltzmann_solver
+
+.. autoclass:: CAMBBoltzmannSolver
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CAMBBoltzmannSolver.computeCAMBCosmologicalBasis
+      ~CAMBBoltzmannSolver.computeCAMBRedshiftGroupsNumber
+      ~CAMBBoltzmannSolver.evaluateLinearAndNonLinearPowerSpectra
+      ~CAMBBoltzmannSolver.finetuneScalarAmpFromSigma8
+      ~CAMBBoltzmannSolver.getTransferFunctionFromResults
+      ~CAMBBoltzmannSolver.readCAMBIniFileToDict
+      ~CAMBBoltzmannSolver.run
+      ~CAMBBoltzmannSolver.writeDictToIniFile
+      ~CAMBBoltzmannSolver.writeUpdatedCAMBIniFile
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeCAMBCosmologicalBasis
+   .. automethod:: computeCAMBRedshiftGroupsNumber
+   .. automethod:: evaluateLinearAndNonLinearPowerSpectra
+   .. automethod:: finetuneScalarAmpFromSigma8
+   .. automethod:: getTransferFunctionFromResults
+   .. automethod:: readCAMBIniFileToDict
+   .. automethod:: run
+   .. automethod:: writeDictToIniFile
+   .. automethod:: writeUpdatedCAMBIniFile

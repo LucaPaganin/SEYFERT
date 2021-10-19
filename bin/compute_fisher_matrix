@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+# Author: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+# Maintainer: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+import logging
+import argparse
+from pathlib import Path
+import time
+
+import seyfert.utils.general_utils as gu
+from seyfert.utils import formatters as fm
+from seyfert.utils.workspace import WorkSpace
+from seyfert.config import cmd_line
+from seyfert.main import fisher_core
+
+logger = logging.getLogger()
+
+
+def program_options() -> "argparse.ArgumentParser":
+    general_opts = cmd_line.main_program_options()
+    parser = argparse.ArgumentParser(parents=[general_opts], description="Script for computing fisher matrices")
+    parser.add_argument("fisher_data_vectors", nargs="+",
+                        help="Data-vectors for which to compute Fisher, in the brief string form. For example: "
+                             "wlwl_phph_wlph for WL+GCph+XC(WL,GCph).")
+    parser.add_argument('--shot_noise_file', '-sn', type=Path, required=False, default=None,
+                        help='Path to the shot noise HDF5 file. If not passed it will be taken from forecast config. '
+                             'If also here it is not specified, the code will simply default to the already computed '
+                             'delta cls.')
+    parser.add_argument('--outdir', '-o', type=Path, required=False, default=None,
+                        help='Path to the output directory. Default is <rundir>/base_fishers')
+
+    return parser
+
+
+def main(args_dict):
+    t0 = time.time()
+    cli_args = cmd_line.FisherCLIArgs(args_dict)
+    rundir = cli_args.rundir
+    shot_noise_file = cli_args.shot_noise_file
+    outdir = cli_args.outdir
+    brief_str_data_vectors = cli_args.fisher_data_vectors
+
+    gu.configure_logger(logger, cli_args.logfile)
+    logger.info(f"Passed data_vectors {brief_str_data_vectors}")
+    ws = WorkSpace(rundir)
+    phys_pars = ws.getParamsCollection()
+    if outdir is None:
+        outdir = ws.base_fishers_dir
+    outdir.mkdir(exist_ok=True)
+
+    delta_cls, dcoll_dvar_dict = fisher_core.prepare_inputs(ws, shot_noise_file=shot_noise_file)
+
+    fisher_core.compute_and_save_fishers(brief_str_data_vectors, outdir, ws, phys_pars, delta_cls, dcoll_dvar_dict)
+
+    tf = time.time()
+    logger.info("Done.")
+    logger.info(f"Elapsed time: {fm.string_time_format(tf-t0)}")
+
+
+if __name__ == '__main__':
+    arguments_dict = vars(program_options().parse_args())
+    for key, value in arguments_dict.items():
+        logger.info(f"{key}: {value}")
+    main(arguments_dict)

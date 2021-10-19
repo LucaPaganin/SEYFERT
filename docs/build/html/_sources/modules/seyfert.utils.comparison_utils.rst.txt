@@ -1,0 +1,7 @@
+seyfert.utils.comparison\_utils module
+======================================
+
+.. automodule:: seyfert.utils.comparison_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

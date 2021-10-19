@@ -1,0 +1,16 @@
+figure.figsize : 10, 8
+axes.titlesize : 20
+axes.labelsize : 16
+lines.linewidth : 2
+lines.markersize : 10
+xtick.labelsize : 16
+ytick.labelsize : 16
+axes.grid: True
+grid.alpha: 0.20
+legend.fontsize: 16
+legend.title_fontsize: 20
+legend.frameon: True
+legend.framealpha: 0.5
+legend.loc: lower left
+text.usetex: False
+savefig.bbox: tight

@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "author": "lucapaganin",
+    "creation_date": "2021-06-23T12:38:58.034512",
+    "version": "1.3.7"
+  },
+  "synthetic_opts": {
+    "scenario": "optimistic",
+    "n_sp_bins": 4,
+    "shot_noise_sp_reduced": false,
+    "gcph_minus_gcsp": false
+  },
+  "survey": {
+    "f_sky": 0.363610260832152,
+    "shot_noise_file": null
+  },
+  "cosmology": {
+    "model_name": "CPL",
+    "flat": true,
+    "parameters": [
+      {
+        "name": "h",
+        "fiducial": 0.67,
+        "current_value": 0.67,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "w0",
+        "fiducial": -1.0,
+        "current_value": -1.0,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "wa",
+        "fiducial": 0.0,
+        "current_value": 0.0,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "OmDE",
+        "fiducial": 0.68,
+        "current_value": 0.68,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": false,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "Omm",
+        "fiducial": 0.32,
+        "current_value": 0.32,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "Omb",
+        "fiducial": 0.05,
+        "current_value": 0.05,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "ns",
+        "fiducial": 0.96,
+        "current_value": 0.96,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "sigma8",
+        "fiducial": 0.816,
+        "current_value": 0.816,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": true,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      },
+      {
+        "name": "mnu",
+        "fiducial": 0.06,
+        "current_value": 0.06,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": false,
+        "stem_factor": 7.0,
+        "derivative_method": "SteM",
+        "units": "eV"
+      },
+      {
+        "name": "gamma",
+        "fiducial": 0.55,
+        "current_value": 0.55,
+        "kind": "CosmologicalParameter",
+        "is_free_parameter": false,
+        "stem_factor": 1.0,
+        "derivative_method": "SteM"
+      }
+    ]
+  },
+  "probes": {
+    "WL": {
+      "long_name": "Lensing",
+      "presence_flag": true,
+      "ell_external_filename": "wl_optm_ells_10_3000_log_nell_100_and_3000_5000_lin.txt",
+      "density_file": "gcph_dndz_redbook.h5",
+      "extra_nuisance_parameters": [
+        {
+          "name": "aIA",
+          "fiducial": 1.72,
+          "current_value": 1.72,
+          "kind": "NuisanceParameter",
+          "is_free_parameter": true,
+          "stem_factor": 1.0,
+          "derivative_method": "SteM",
+          "probe": "Lensing"
+          },
+        {
+          "name": "cIA",
+          "fiducial": 0.0134,
+          "current_value": 0.0134,
+          "kind": "NuisanceParameter",
+          "is_free_parameter": false,
+          "stem_factor": 1.0,
+          "derivative_method": "SteM",
+          "probe": "Lensing"
+        },
+        {
+          "name": "etaIA",
+          "fiducial": -0.41,
+          "current_value": -0.41,
+          "kind": "NuisanceParameter",
+          "is_free_parameter": true,
+          "stem_factor": 1.0,
+          "derivative_method": "SteM",
+          "probe": "Lensing"
+        }
+      ],
+      "specific_settings": {
+        "include_IA": true
+      }
+    },
+    "GCph": {
+      "long_name": "PhotometricGalaxy",
+      "presence_flag": true,
+      "ell_external_filename": null,
+      "l_min": 10,
+      "l_max": 3000,
+      "ell_log_selection": true,
+      "log_l_number": 100,
+      "density_file": "gcph_dndz_redbook.h5",
+      "bias_file": "gcph_bias_piecewise.h5",
+      "bias_derivative_method": "SteM",
+      "marginalize_bias_flag": true,
+      "extra_nuisance_parameters": [],
+      "specific_settings": {}
+    },
+    "GCsp": {
+      "long_name": "SpectroscopicGalaxy",
+      "presence_flag": true,
+      "ell_external_filename": null,
+      "l_min": 10,
+      "l_max": 3000,
+      "ell_log_selection": true,
+      "log_l_number": 100,
+      "density_file": "gcsp_dndz_4_bins.h5",
+      "bias_file": "gcsp_bias_piecewise_4_bins.h5",
+      "bias_derivative_method": "SteM",
+      "marginalize_bias_flag": true,
+      "extra_nuisance_parameters": [],
+      "specific_settings": {
+        "compute_gcsp_cl_offdiag": false
+      }
+    },
+    "V": {
+      "long_name": "Void",
+      "presence_flag": true,
+      "ell_external_filename": null,
+      "l_min": 10,
+      "l_max": 3000,
+      "ell_log_selection": true,
+      "log_l_number": 100,
+      "density_file": "voids_dndz_flagship_old.h5",
+      "bias_file": "voids_bias_vdn.h5",
+      "bias_derivative_method": "SteM",
+      "marginalize_bias_flag": true,
+      "specific_settings": {
+        "void_kcut_invMpc": 0.35,
+        "void_kcut_width_invMpc": 0.10
+      }
+    }
+  },
+  "derivative_settings": {
+    "base_stem_disps": [
+      0.00625,
+      0.0125,
+      0.01875,
+      0.025,
+      0.0375,
+      0.05,
+      0.1
+    ]
+  }
+}

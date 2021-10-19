@@ -1,0 +1,17 @@
+VoidWeightFunction
+==================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: VoidWeightFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~VoidWeightFunction.setupBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setupBias

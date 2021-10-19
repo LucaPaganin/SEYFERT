@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.batch.submit_utils module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.config package" href="seyfert.config.html" />
+    <link rel="prev" title="seyfert.batch.report_maker module" href="seyfert.batch.report_maker.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.batch.html">seyfert.batch package</a> &raquo;</li>
+        
+      <li>seyfert.batch.submit_utils module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.batch.submit_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.batch.submit_utils">
+<span id="seyfert-batch-submit-utils-module"></span><h1>seyfert.batch.submit_utils module<a class="headerlink" href="#module-seyfert.batch.submit_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">AngularJobSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.batch.submit_utils.JobSubmitter" title="seyfert.batch.submit_utils.JobSubmitter"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.batch.submit_utils.JobSubmitter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.AngularConfig" title="seyfert.config.main_config.AngularConfig"><span class="pre">seyfert.config.main_config.AngularConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter.createAndFillJobDir">
+<span class="sig-name descname"><span class="pre">createAndFillJobDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter.createAndFillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter.createJobDirStructure">
+<span class="sig-name descname"><span class="pre">createJobDirStructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter.createJobDirStructure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.AngularJobSubmitter.getJobDirName">
+<span class="sig-name descname"><span class="pre">getJobDirName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.AngularJobSubmitter.getJobDirName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">DerivativeJobSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.batch.submit_utils.JobSubmitter" title="seyfert.batch.submit_utils.JobSubmitter"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.batch.submit_utils.JobSubmitter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.DerivativeConfig" title="seyfert.config.main_config.DerivativeConfig"><span class="pre">seyfert.config.main_config.DerivativeConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter.createAndFillJobDir">
+<span class="sig-name descname"><span class="pre">createAndFillJobDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter.createAndFillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter.createJobDirStructure">
+<span class="sig-name descname"><span class="pre">createJobDirStructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter.createJobDirStructure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.DerivativeJobSubmitter.getJobDirName">
+<span class="sig-name descname"><span class="pre">getJobDirName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.DerivativeJobSubmitter.getJobDirName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">FisherJobSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.batch.submit_utils.JobSubmitter" title="seyfert.batch.submit_utils.JobSubmitter"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.batch.submit_utils.JobSubmitter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.FisherConfig" title="seyfert.config.main_config.FisherConfig"><span class="pre">seyfert.config.main_config.FisherConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.createAndFillJobDir">
+<span class="sig-name descname"><span class="pre">createAndFillJobDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.createAndFillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.createJobDirStructure">
+<span class="sig-name descname"><span class="pre">createJobDirStructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.createJobDirStructure" title="Permalink to this definition">¶</a></dt>
+<dd><p>super(FisherJobSubmitter, self).createJobDirStructure()
+combos = list(itertools.combinations_with_replacement(</p>
+<blockquote>
+<div><p>self.phys_pars.free_physical_parameters.keys(), 2))</p>
+</div></blockquote>
+<dl class="simple">
+<dt>for dvar_1, dvar_2 in combos:</dt><dd><p>self.createAndFillJobDir(dvar_1=dvar_1, dvar_2=dvar_2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.getJobDirName">
+<span class="sig-name descname"><span class="pre">getJobDirName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.getJobDirName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.FisherJobSubmitter.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.FisherJobSubmitter.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">ForecastRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_line_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rundir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_line_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rundir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.buildJobSubmitters">
+<span class="sig-name descname"><span class="pre">buildJobSubmitters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.buildJobSubmitters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.buildTasks">
+<span class="sig-name descname"><span class="pre">buildTasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.buildTasks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.computeDeltaCls">
+<span class="sig-name descname"><span class="pre">computeDeltaCls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.computeDeltaCls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.computeDensities">
+<span class="sig-name descname"><span class="pre">computeDensities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.computeDensities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.createInputFilesDir">
+<span class="sig-name descname"><span class="pre">createInputFilesDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.createInputFilesDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.createRundir">
+<span class="sig-name descname"><span class="pre">createRundir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.createRundir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.createSingleTask">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">createSingleTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_line_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.createSingleTask" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.batch.submit_utils.Task" title="seyfert.batch.submit_utils.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.fisher_config">
+<span class="sig-name descname"><span class="pre">fisher_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.FisherConfig" title="seyfert.config.main_config.FisherConfig"><span class="pre">seyfert.config.main_config.FisherConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.fisher_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.forecast_config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.prepareWorkspace">
+<span class="sig-name descname"><span class="pre">prepareWorkspace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.prepareWorkspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.readCmdLineArgs">
+<span class="sig-name descname"><span class="pre">readCmdLineArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_line_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.readCmdLineArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.rundir">
+<span class="sig-name descname"><span class="pre">rundir</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.rundir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.submitters_dict">
+<span class="sig-name descname"><span class="pre">submitters_dict</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.batch.submit_utils.JobSubmitter" title="seyfert.batch.submit_utils.JobSubmitter"><span class="pre">seyfert.batch.submit_utils.JobSubmitter</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.submitters_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.tasks">
+<span class="sig-name descname"><span class="pre">tasks</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.batch.submit_utils.Task" title="seyfert.batch.submit_utils.Task"><span class="pre">seyfert.batch.submit_utils.Task</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.tasks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.workspace">
+<span class="sig-name descname"><span class="pre">workspace</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.utils.workspace.html#seyfert.utils.workspace.WorkSpace" title="seyfert.utils.workspace.WorkSpace"><span class="pre">seyfert.utils.workspace.WorkSpace</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.workspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.ForecastRunner.writeRunMetadata">
+<span class="sig-name descname"><span class="pre">writeRunMetadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.ForecastRunner.writeRunMetadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobFailError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">JobFailError</span></span><a class="headerlink" href="#seyfert.batch.submit_utils.JobFailError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">JobSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.checkBatch">
+<span class="sig-name descname"><span class="pre">checkBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.checkBatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.checkDoctor">
+<span class="sig-name descname"><span class="pre">checkDoctor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.checkDoctor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.checkErrFiles">
+<span class="sig-name descname"><span class="pre">checkErrFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.checkErrFiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.checkSingleJobStatus">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">checkSingleJobStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.checkSingleJobStatus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.checktime_resolution_secs">
+<span class="sig-name descname"><span class="pre">checktime_resolution_secs</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.checktime_resolution_secs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.collectShellScripts">
+<span class="sig-name descname"><span class="pre">collectShellScripts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.collectShellScripts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.MainConfig" title="seyfert.config.main_config.MainConfig"><span class="pre">seyfert.config.main_config.MainConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.countDown">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">countDown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.countDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.createAndFillJobDir">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">createAndFillJobDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.createAndFillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.createJobDirStructure">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">createJobDirStructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.createJobDirStructure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.err_files_path">
+<span class="sig-name descname"><span class="pre">err_files_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.err_files_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.executeJob">
+<span class="sig-name descname"><span class="pre">executeJob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sh_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sh_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.executeJob" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.fillJobDir">
+<span class="sig-name descname"><span class="pre">fillJobDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobdir_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.fillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.forecast_config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.getJobDirName">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">getJobDirName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.getJobDirName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.getTaskKindFromClassName">
+<span class="sig-name descname"><span class="pre">getTaskKindFromClassName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.getTaskKindFromClassName" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.outdir">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">outdir</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.outdir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.outfile_pattern">
+<span class="sig-name descname"><span class="pre">outfile_pattern</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.outfile_pattern" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.phys_pars">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">phys_pars</span></span><em class="property"><span class="pre">:</span> <span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.phys_pars" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.rundir">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rundir</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.rundir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.submitJob">
+<span class="sig-name descname"><span class="pre">submitJob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sh_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.submitJob" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.verbose">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">verbose</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.verbose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.waitForJobsExecution">
+<span class="sig-name descname"><span class="pre">waitForJobsExecution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.waitForJobsExecution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.JobSubmitter.writeJobShellScript">
+<span class="sig-name descname"><span class="pre">writeJobShellScript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobdir_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.JobSubmitter.writeJobShellScript" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">PowerSpectrumJobSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.batch.submit_utils.JobSubmitter" title="seyfert.batch.submit_utils.JobSubmitter"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.batch.submit_utils.JobSubmitter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.PowerSpectrumConfig" title="seyfert.config.main_config.PowerSpectrumConfig"><span class="pre">seyfert.config.main_config.PowerSpectrumConfig</span></a></em><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.createAndFillJobDir">
+<span class="sig-name descname"><span class="pre">createAndFillJobDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.createAndFillJobDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.createJobDirStructure">
+<span class="sig-name descname"><span class="pre">createJobDirStructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.createJobDirStructure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.getJobDirName">
+<span class="sig-name descname"><span class="pre">getJobDirName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.getJobDirName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.setInputDirs">
+<span class="sig-name descname"><span class="pre">setInputDirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dirs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.PowerSpectrumJobSubmitter.setInputDirs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.Task">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_present</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.Task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.Task.external_dir">
+<span class="sig-name descname"><span class="pre">external_dir</span></span><a class="headerlink" href="#seyfert.batch.submit_utils.Task.external_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.Task.input_file">
+<span class="sig-name descname"><span class="pre">input_file</span></span><a class="headerlink" href="#seyfert.batch.submit_utils.Task.input_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.Task.is_present">
+<span class="sig-name descname"><span class="pre">is_present</span></span><a class="headerlink" href="#seyfert.batch.submit_utils.Task.is_present" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.Task.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#seyfert.batch.submit_utils.Task.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.execute_bsub_cmd">
+<span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">execute_bsub_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_to_execute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_datetime_to_logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.execute_bsub_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.batch.submit_utils.set_num_threads">
+<span class="sig-prename descclassname"><span class="pre">seyfert.batch.submit_utils.</span></span><span class="sig-name descname"><span class="pre">set_num_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_threads</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.batch.submit_utils.set_num_threads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.config.html" class="btn btn-neutral float-right" title="seyfert.config package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.batch.report_maker.html" class="btn btn-neutral float-left" title="seyfert.batch.report_maker module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

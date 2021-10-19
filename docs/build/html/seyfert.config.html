@@ -1,0 +1,943 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.config package &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">seyfert.config package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-seyfert.config.cmd_line">seyfert.config.cmd_line module</a></li>
+<li><a class="reference internal" href="#module-seyfert.config.forecast_config">seyfert.config.forecast_config module</a></li>
+<li><a class="reference internal" href="#module-seyfert.config.main_config">seyfert.config.main_config module</a></li>
+<li><a class="reference internal" href="#module-seyfert.config.probe_config">seyfert.config.probe_config module</a></li>
+<li><a class="reference internal" href="#module-seyfert.config">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>seyfert.config package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/seyfert.config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seyfert-config-package">
+<h1>seyfert.config package<a class="headerlink" href="#seyfert-config-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-seyfert.config.cmd_line">
+<span id="seyfert-config-cmd-line-module"></span><h2>seyfert.config.cmd_line module<a class="headerlink" href="#module-seyfert.config.cmd_line" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.ClCLIArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">ClCLIArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.ClCLIArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs" title="seyfert.config.cmd_line.MainProgramCommandLineArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.config.cmd_line.MainProgramCommandLineArgs</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.ClCLIArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.ClCLIArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.ClCLIArgs.castArgTypes">
+<span class="sig-name descname"><span class="pre">castArgTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.ClCLIArgs.castArgTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.ClDerivativeCLIArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">ClDerivativeCLIArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.ClDerivativeCLIArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs" title="seyfert.config.cmd_line.MainProgramCommandLineArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.config.cmd_line.MainProgramCommandLineArgs</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.ClDerivativeCLIArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.ClDerivativeCLIArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.FisherCLIArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">FisherCLIArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.FisherCLIArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs" title="seyfert.config.cmd_line.MainProgramCommandLineArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.config.cmd_line.MainProgramCommandLineArgs</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.FisherCLIArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.FisherCLIArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.GenericCommandLineArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">GenericCommandLineArgs</span></span><a class="headerlink" href="#seyfert.config.cmd_line.GenericCommandLineArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.base_structs.html#seyfert.base_structs.generic_dict.DictLike" title="seyfert.base_structs.generic_dict.DictLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict.DictLike</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.GenericCommandLineArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.GenericCommandLineArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.GenericCommandLineArgs.castArgTypes">
+<span class="sig-name descname"><span class="pre">castArgTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.GenericCommandLineArgs.castArgTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.GenericCommandLineArgs.readArgs">
+<span class="sig-name descname"><span class="pre">readArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.GenericCommandLineArgs.readArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.JobSubmitterCommandLineArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">JobSubmitterCommandLineArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.JobSubmitterCommandLineArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.config.cmd_line.GenericCommandLineArgs" title="seyfert.config.cmd_line.GenericCommandLineArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.config.cmd_line.GenericCommandLineArgs</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.JobSubmitterCommandLineArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.JobSubmitterCommandLineArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.JobSubmitterCommandLineArgs.castArgTypes">
+<span class="sig-name descname"><span class="pre">castArgTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.JobSubmitterCommandLineArgs.castArgTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.MainProgramCommandLineArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">MainProgramCommandLineArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seyfert.config.cmd_line.GenericCommandLineArgs" title="seyfert.config.cmd_line.GenericCommandLineArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.config.cmd_line.GenericCommandLineArgs</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.MainProgramCommandLineArgs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.MainProgramCommandLineArgs.castArgTypes">
+<span class="sig-name descname"><span class="pre">castArgTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.MainProgramCommandLineArgs.castArgTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.batch_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">batch_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.batch_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.forecast_dirs_paths_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">forecast_dirs_paths_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.forecast_dirs_paths_options" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.forecast_task_configs_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">forecast_task_configs_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.forecast_task_configs_options" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.forecast_task_flags">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">forecast_task_flags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.forecast_task_flags" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.get_paths_from_files_list">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">get_paths_from_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.get_paths_from_files_list" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.main_job_batch_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">main_job_batch_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.main_job_batch_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.main_program_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">main_program_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.main_program_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.main_submitter_batch_options">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">main_submitter_batch_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.main_submitter_batch_options" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.cmd_line.read_json_txt_list_file">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.cmd_line.</span></span><span class="sig-name descname"><span class="pre">read_json_txt_list_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.cmd_line.read_json_txt_list_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.config.forecast_config">
+<span id="seyfert-config-forecast-config-module"></span><h2>seyfert.config.forecast_config module<a class="headerlink" href="#module-seyfert.config.forecast_config" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ConfigError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.forecast_config.</span></span><span class="sig-name descname"><span class="pre">ConfigError</span></span><a class="headerlink" href="#seyfert.config.forecast_config.ConfigError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.forecast_config.</span></span><span class="sig-name descname"><span class="pre">ForecastConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.checkProbesMultipoles">
+<span class="sig-name descname"><span class="pre">checkProbesMultipoles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.checkProbesMultipoles" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.cosmo_pars_fiducials">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cosmo_pars_fiducials</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">float]</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.cosmo_pars_fiducials" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.fc_io">
+<span class="sig-name descname"><span class="pre">fc_io</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.file_io.html#seyfert.file_io.xml_io.ForecastConfigXMLIO" title="seyfert.file_io.xml_io.ForecastConfigXMLIO"><span class="pre">seyfert.file_io.xml_io.ForecastConfigXMLIO</span></a></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.fc_io" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.getMultipoleArraysForProbeComb">
+<span class="sig-name descname"><span class="pre">getMultipoleArraysForProbeComb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.getMultipoleArraysForProbeComb" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.input_data_dir">
+<span class="sig-name descname"><span class="pre">input_data_dir</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.input_data_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.is_universe_flat">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_universe_flat</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.is_universe_flat" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.loadConfiguration">
+<span class="sig-name descname"><span class="pre">loadConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_phys_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.loadConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.loadPhysicalParametersFromXMLIO">
+<span class="sig-name descname"><span class="pre">loadPhysicalParametersFromXMLIO</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.loadPhysicalParametersFromXMLIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.loadProbeConfigurationsFromJSONConfig">
+<span class="sig-name descname"><span class="pre">loadProbeConfigurationsFromJSONConfig</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.loadProbeConfigurationsFromJSONConfig" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.loadXMLTree">
+<span class="sig-name descname"><span class="pre">loadXMLTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.loadXMLTree" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.nuisance_parameters">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">nuisance_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">seyfert.cosmology.parameter.PhysicalParameter]</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.nuisance_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.obs_comb_keys_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">obs_comb_keys_list</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.obs_comb_keys_list" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.phys_pars">
+<span class="sig-name descname"><span class="pre">phys_pars</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></a></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.phys_pars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.present_cosmological_parameters">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">present_cosmological_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">seyfert.cosmology.parameter.PhysicalParameter]</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.present_cosmological_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.present_probes">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">present_probes</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.present_probes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.probe_configs">
+<span class="sig-name descname"><span class="pre">probe_configs</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.config.probe_config.ProbeConfig" title="seyfert.config.probe_config.ProbeConfig"><span class="pre">seyfert.config.probe_config.ProbeConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.probe_configs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.readXML">
+<span class="sig-name descname"><span class="pre">readXML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_xml</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.readXML" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.retrieveInputDataDir">
+<span class="sig-name descname"><span class="pre">retrieveInputDataDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rundir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.retrieveInputDataDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.forecast_config.ForecastConfig.survey_f_sky">
+<span class="sig-name descname"><span class="pre">survey_f_sky</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.config.forecast_config.ForecastConfig.survey_f_sky" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.config.main_config">
+<span id="seyfert-config-main-config-module"></span><h2>seyfert.config.main_config module<a class="headerlink" href="#module-seyfert.config.main_config" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">AngularConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.AngularConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._ValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.cl_integration_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cl_integration_method</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.cl_integration_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.cl_integration_settings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cl_integration_settings</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.cl_integration_settings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.lensing_efficiency_integration_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">lensing_efficiency_integration_method</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.lensing_efficiency_integration_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.limber_pmm_spline_settings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">limber_pmm_spline_settings</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.limber_pmm_spline_settings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.limber_spline_kx">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">limber_spline_kx</span></span><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.limber_spline_kx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.limber_spline_ky">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">limber_spline_ky</span></span><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.limber_spline_ky" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.AngularConfig.limber_spline_s">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">limber_spline_s</span></span><a class="headerlink" href="#seyfert.config.main_config.AngularConfig.limber_spline_s" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.main_config.DerivativeConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">DerivativeConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.DerivativeConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._ValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.DerivativeConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.DerivativeConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.DerivativeConfig.cl_dir">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cl_dir</span></span><a class="headerlink" href="#seyfert.config.main_config.DerivativeConfig.cl_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">FisherConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.FisherConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._ValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.FisherConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig.cl_derivatives">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cl_derivatives</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.config.main_config.FisherConfig.cl_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig.fisher_formula">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fisher_formula</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.config.main_config.FisherConfig.fisher_formula" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig.getXCDerivativeFlag">
+<span class="sig-name descname"><span class="pre">getXCDerivativeFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.FisherConfig.getXCDerivativeFlag" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.FisherConfig.shot_noise_phsp_xc_factor">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">shot_noise_phsp_xc_factor</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.config.main_config.FisherConfig.shot_noise_phsp_xc_factor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.main_config.MainConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">MainConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.MainConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._ValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.MainConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.MainConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.MainConfig.fromJSON">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.MainConfig.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.config.main_config.MainConfig" title="seyfert.config.main_config.MainConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">MainConfig</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.MainConfig.loadFromJSON">
+<span class="sig-name descname"><span class="pre">loadFromJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.MainConfig.loadFromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.MainConfig.writeToJSON">
+<span class="sig-name descname"><span class="pre">writeToJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.MainConfig.writeToJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">PowerSpectrumConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">seyfert.base_structs.generic_dict._ValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.boltzmann_code">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">boltzmann_code</span></span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.boltzmann_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.boltzmann_codes_settings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">boltzmann_codes_settings</span></span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.boltzmann_codes_settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.camb_ini_path">
+<span class="sig-name descname"><span class="pre">camb_ini_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.camb_ini_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.camb_settings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">camb_settings</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">str]</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.camb_settings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.class_settings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">class_settings</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">str]</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.class_settings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.loadFromJSON">
+<span class="sig-name descname"><span class="pre">loadFromJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.loadFromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.n_redshifts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_redshifts</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.n_redshifts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.z_grid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_grid</span></span><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.z_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.z_max">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_max</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.z_max" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.main_config.PowerSpectrumConfig.z_min">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_min</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.config.main_config.PowerSpectrumConfig.z_min" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.config.main_config.config_for_task">
+<span class="sig-prename descclassname"><span class="pre">seyfert.config.main_config.</span></span><span class="sig-name descname"><span class="pre">config_for_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.main_config.config_for_task" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.config.main_config.MainConfig" title="seyfert.config.main_config.MainConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">MainConfig</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.config.probe_config">
+<span id="seyfert-config-probe-config-module"></span><h2>seyfert.config.probe_config module<a class="headerlink" href="#module-seyfert.config.probe_config" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.config.probe_config.</span></span><span class="sig-name descname"><span class="pre">ProbeConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_xml_io</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_xml_io</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.bias_diff_method">
+<span class="sig-name descname"><span class="pre">bias_diff_method</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.bias_diff_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.bias_init_file">
+<span class="sig-name descname"><span class="pre">bias_init_file</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.bias_init_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.density_init_file">
+<span class="sig-name descname"><span class="pre">density_init_file</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.density_init_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.input_data_dir">
+<span class="sig-name descname"><span class="pre">input_data_dir</span></span><em class="property"><span class="pre">:</span> <span class="pre">pathlib.Path</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.input_data_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.l_bin_centers">
+<span class="sig-name descname"><span class="pre">l_bin_centers</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.l_bin_centers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.l_bin_widths">
+<span class="sig-name descname"><span class="pre">l_bin_widths</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.l_bin_widths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.loadFromXMLIO">
+<span class="sig-name descname"><span class="pre">loadFromXMLIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fc_xml_io</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.loadFromXMLIO" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.nuisance_parameters">
+<span class="sig-name descname"><span class="pre">nuisance_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><span class="pre">seyfert.cosmology.parameter.PhysicalParameter</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.nuisance_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.present_nuisance_parameters">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">present_nuisance_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">seyfert.cosmology.parameter.PhysicalParameter]</span></em><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.present_nuisance_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.cosmology.html#seyfert.cosmology.parameter.PhysicalParameter" title="seyfert.cosmology.parameter.PhysicalParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParameter</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.config.probe_config.ProbeConfig.readNuisanceParametersFromXML">
+<span class="sig-name descname"><span class="pre">readNuisanceParametersFromXML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fc_xml_io</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.config.probe_config.ProbeConfig.readNuisanceParametersFromXML" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-seyfert.config">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seyfert.config" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

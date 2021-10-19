@@ -1,0 +1,6 @@
+ClError
+=======
+
+.. currentmodule:: seyfert.cosmology.c_ells
+
+.. autoexception:: ClError

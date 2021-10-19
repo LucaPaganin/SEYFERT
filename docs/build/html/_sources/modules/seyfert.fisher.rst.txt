@@ -1,0 +1,28 @@
+seyfert.fisher package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.fisher.calculate_fisher_core
+   seyfert.fisher.delta_cl
+   seyfert.fisher.fisher_analysis
+   seyfert.fisher.fisher_cl_data
+   seyfert.fisher.fisher_computation
+   seyfert.fisher.fisher_element
+   seyfert.fisher.fisher_matrix
+   seyfert.fisher.fisher_plot
+   seyfert.fisher.fisher_results
+   seyfert.fisher.fisher_utils
+   seyfert.fisher.linalg_tools
+
+Module contents
+---------------
+
+.. automodule:: seyfert.fisher
+   :members:
+   :undoc-members:
+   :show-inheritance:

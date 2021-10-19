@@ -1,0 +1,133 @@
+seyfert.utils package
+=====================
+
+Submodules
+----------
+
+seyfert.utils.array\_utils module
+---------------------------------
+
+.. automodule:: seyfert.utils.array_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.comparison\_utils module
+--------------------------------------
+
+.. automodule:: seyfert.utils.comparison_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.converters module
+-------------------------------
+
+.. automodule:: seyfert.utils.converters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.dir\_explorer module
+----------------------------------
+
+.. automodule:: seyfert.utils.dir_explorer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.encoders module
+-----------------------------
+
+.. automodule:: seyfert.utils.encoders
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.filesystem\_utils module
+--------------------------------------
+
+.. automodule:: seyfert.utils.filesystem_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.formatters module
+-------------------------------
+
+.. automodule:: seyfert.utils.formatters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.general\_utils module
+-----------------------------------
+
+.. automodule:: seyfert.utils.general_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.ist\_comparison module
+------------------------------------
+
+.. automodule:: seyfert.utils.ist_comparison
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.run\_loader module
+--------------------------------
+
+.. automodule:: seyfert.utils.run_loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.shortcuts module
+------------------------------
+
+.. automodule:: seyfert.utils.shortcuts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.table\_utils module
+---------------------------------
+
+.. automodule:: seyfert.utils.table_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.tex\_utils module
+-------------------------------
+
+.. automodule:: seyfert.utils.tex_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.type\_helpers module
+----------------------------------
+
+.. automodule:: seyfert.utils.type_helpers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+seyfert.utils.workspace module
+------------------------------
+
+.. automodule:: seyfert.utils.workspace
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: seyfert.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

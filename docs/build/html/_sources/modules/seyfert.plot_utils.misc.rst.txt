@@ -1,0 +1,7 @@
+seyfert.plot\_utils.misc module
+===============================
+
+.. automodule:: seyfert.plot_utils.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:

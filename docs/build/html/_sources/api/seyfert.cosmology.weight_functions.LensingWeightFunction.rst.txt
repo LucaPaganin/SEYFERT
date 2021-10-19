@@ -1,0 +1,37 @@
+LensingWeightFunction
+=====================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: LensingWeightFunction
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LensingWeightFunction.H0
+      ~LensingWeightFunction.Omm
+      ~LensingWeightFunction.c_km_s
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LensingWeightFunction.computeIntrinsicAlignmentContribution
+      ~LensingWeightFunction.computeLensingEfficiency
+      ~LensingWeightFunction.computeLensingEfficiencyAtBin
+      ~LensingWeightFunction.evaluateOverRedshiftGrid
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: H0
+   .. autoattribute:: Omm
+   .. autoattribute:: c_km_s
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeIntrinsicAlignmentContribution
+   .. automethod:: computeLensingEfficiency
+   .. automethod:: computeLensingEfficiencyAtBin
+   .. automethod:: evaluateOverRedshiftGrid

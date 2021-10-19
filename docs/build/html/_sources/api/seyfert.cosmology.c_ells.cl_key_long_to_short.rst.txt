@@ -1,0 +1,6 @@
+cl_key_long_to_short
+====================
+
+.. currentmodule:: seyfert.cosmology.c_ells
+
+.. autofunction:: cl_key_long_to_short

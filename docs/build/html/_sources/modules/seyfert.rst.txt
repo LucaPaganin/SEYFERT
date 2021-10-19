@@ -1,0 +1,37 @@
+seyfert package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.base_structs
+   seyfert.batch
+   seyfert.config
+   seyfert.cosmology
+   seyfert.derivatives
+   seyfert.file_io
+   seyfert.fisher
+   seyfert.gui
+   seyfert.notebook_helpers
+   seyfert.numeric
+   seyfert.plot_utils
+   seyfert.utils
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.plotting
+
+Module contents
+---------------
+
+.. automodule:: seyfert
+   :members:
+   :undoc-members:
+   :show-inheritance:

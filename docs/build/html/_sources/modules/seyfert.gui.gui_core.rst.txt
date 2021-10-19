@@ -1,0 +1,7 @@
+seyfert.gui.gui\_core module
+============================
+
+.. automodule:: seyfert.gui.gui_core
+   :members:
+   :undoc-members:
+   :show-inheritance:

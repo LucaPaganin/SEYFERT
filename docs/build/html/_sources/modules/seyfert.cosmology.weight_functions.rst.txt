@@ -1,0 +1,7 @@
+seyfert.cosmology.weight\_functions module
+==========================================
+
+.. automodule:: seyfert.cosmology.weight_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

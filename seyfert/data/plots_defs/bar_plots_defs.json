@@ -1,0 +1,69 @@
+{
+  "phsp": {
+    "fullcl": [
+      "[GCph]",
+      "[GCph] + [GCsp]",
+      "[GCph+GCsp]",
+      "[GCph+GCsp+XC(GCph,GCsp)]"
+    ],
+    "2dx3d": [
+      "[GCph]",
+      "[GCsp(Pk)]",
+      "[GCph] + [GCsp(Pk)]",
+      "[GCph+XC(GCph,GCsp)] + [GCsp(Pk)]"
+    ],
+    "fullcl_vs_2dx3d": [
+      "[GCph]",
+      "[GCph] + [GCsp]",
+      "[GCph+GCsp]",
+      "[GCph+GCsp+XC(GCph,GCsp)]",
+      "[GCph] + [GCsp(Pk)]",
+      "[GCph+XC(GCph,GCsp)] + [GCsp(Pk)]"
+    ]
+  },
+  "wlsp": {
+    "fullcl": [
+      "[WL]",
+      "[WL] + [GCsp]",
+      "[WL+GCsp]",
+      "[WL+GCsp+XC(WL,GCsp)]"
+    ],
+    "2dx3d": [
+      "[WL]",
+      "[GCsp(Pk)]",
+      "[WL] + [GCsp(Pk)]",
+      "[WL+XC(WL,GCsp)] + [GCsp(Pk)]"
+    ],
+    "fullcl_vs_2dx3d": [
+      "[WL]",
+      "[WL] + [GCsp]",
+      "[WL+GCsp]",
+      "[WL+GCsp+XC(WL,GCsp)]",
+      "[WL] + [GCsp(Pk)]",
+      "[WL+XC(WL,GCsp)] + [GCsp(Pk)]"
+    ]
+  },
+  "6x2pt": {
+    "fullcl": [
+      "[WL+GCph+XC(WL,GCph)]",
+      "[WL+GCph+GCsp+XC(WL,GCph)+XC(GCph,GCsp)]",
+      "[WL+GCph+GCsp+XC(WL,GCph)+XC(WL,GCsp)]",
+      "[WL+GCph+GCsp+XC(WL,GCsp)+XC(GCph,GCsp)]",
+      "[WL+GCph+GCsp+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)]"
+    ],
+    "2dx3d": [
+      "[WL+GCph+XC(WL,GCph)] + [GCsp(Pk)]",
+      "[WL+GCph+XC(WL,GCph)+XC(WL,GCsp)] + [GCsp(Pk)]",
+      "[WL+GCph+XC(WL,GCph)+XC(GCph,GCsp)] + [GCsp(Pk)]",
+      "[WL+GCph+XC(WL,GCsp)+XC(GCph,GCsp)] + [GCsp(Pk)]",
+      "[WL+GCph+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)] + [GCsp(Pk)]"
+    ],
+    "fullcl_vs_2dx3d": [
+      "[WL+GCph+XC(WL,GCph)]",
+      "[WL+GCph+XC(WL,GCph)] + [GCsp]",
+      "[WL+GCph+GCsp+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)]",
+      "[WL+GCph+XC(WL,GCph)] + [GCsp(Pk)]",
+      "[WL+GCph+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)] + [GCsp(Pk)]"
+    ]
+  }
+}

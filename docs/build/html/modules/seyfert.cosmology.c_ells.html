@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.cosmology.c_ells module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.cosmology.cosmology module" href="seyfert.cosmology.cosmology.html" />
+    <link rel="prev" title="seyfert.cosmology.boltzmann_solver module" href="seyfert.cosmology.boltzmann_solver.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.cosmology.html">seyfert.cosmology package</a> &raquo;</li>
+        
+      <li>seyfert.cosmology.c_ells module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.cosmology.c_ells.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.cosmology.c_ells">
+<span id="seyfert-cosmology-c-ells-module"></span><h1>seyfert.cosmology.c_ells module<a class="headerlink" href="#module-seyfert.cosmology.c_ells" title="Permalink to this headline">¶</a></h1>
+<p>Module hosting the classes for computing and storing the angular power spectra.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.c_ells.</span></span><span class="sig-name descname"><span class="pre">AngularCoefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a particular kind of angular power spectrum (i.e. auto-correlation or cross-correlation.
+These are computed in the Limber approximation, meaning that a single redshift integral is performed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c_lij</strong> – np 3D array (l, i, j) storing the values of the Cl tomographic matrix. Here l is the multipole</p></li>
+<li><p><strong>l_bin_centers</strong> – the multipole bin centers where to compute the Cl, np 1D array.</p></li>
+<li><p><strong>l_bin_widths</strong> – the multipole bin widths, np 1D array.</p></li>
+<li><p><strong>limber_power_spectrum_l_z</strong> – np 2D array (l, z) storing the matter power spectrum evaluated in the Limber
+approximation, i.e. at wave-numbers <span class="math notranslate nohighlight">\(k = \frac{l+1/2}{r(z)}\)</span>. The redshift dimension is define by the
+redshift grid</p></li>
+<li><p><strong>cosmology</strong> – instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">Cosmology</span></code> class storing the current cosmology.</p></li>
+<li><p><strong>angular_config</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.AngularConfig" title="seyfert.config.main_config.AngularConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngularConfig</span></code></a>]) – configuration for the Cl computation, instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">AngularConfig</span></code>.</p></li>
+<li><p><strong>forecast_config</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="seyfert.config.forecast_config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForecastConfig</span></code></a>]) – forecast configuration, instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">ForecastConfig</span></code>.</p></li>
+<li><p><strong>kernel</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="seyfert.cosmology.kernel_functions.html#seyfert.cosmology.kernel_functions.KernelFunction" title="seyfert.cosmology.kernel_functions.KernelFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelFunction</span></code></a>]) – kernel function to be integrated against the Limber power spectrum, instance of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">KernelFunction</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.angular_config">
+<span class="sig-name descname"><span class="pre">angular_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.AngularConfig" title="seyfert.config.main_config.AngularConfig"><span class="pre">seyfert.config.main_config.AngularConfig</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.angular_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.applyVoidsCutToLimberPowerSpectrum">
+<span class="sig-name descname"><span class="pre">applyVoidsCutToLimberPowerSpectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.applyVoidsCutToLimberPowerSpectrum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.c_lij">
+<span class="sig-name descname"><span class="pre">c_lij</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.c_lij" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.computeClIntegral">
+<span class="sig-name descname"><span class="pre">computeClIntegral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">integrand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.computeClIntegral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for computing a single Cl_ij.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><span class="pre">seyfert.cosmology.cosmology.Cosmology</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.evaluateAngularCorrelation">
+<span class="sig-name descname"><span class="pre">evaluateAngularCorrelation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.evaluateAngularCorrelation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for evaluating and storing the Cl.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.evaluateLimberApproximatedPowerSpectrum">
+<span class="sig-name descname"><span class="pre">evaluateLimberApproximatedPowerSpectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.evaluateLimberApproximatedPowerSpectrum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.forecast_config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.fromHDF5">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.fromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.c_ells.AngularCoefficient" title="seyfert.cosmology.c_ells.AngularCoefficient"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngularCoefficient</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.getLimberRedshiftIntegrand">
+<span class="sig-name descname"><span class="pre">getLimberRedshiftIntegrand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.getLimberRedshiftIntegrand" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.getWeightFunction">
+<span class="sig-name descname"><span class="pre">getWeightFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.getWeightFunction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.weight_functions.html#seyfert.cosmology.weight_functions.WeightFunction" title="seyfert.cosmology.weight_functions.WeightFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">WeightFunction</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.integ_method">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">integ_method</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.integ_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.is_auto_correlation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_auto_correlation</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.is_auto_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.kernel">
+<span class="sig-name descname"><span class="pre">kernel</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.kernel_functions.html#seyfert.cosmology.kernel_functions.KernelFunction" title="seyfert.cosmology.kernel_functions.KernelFunction"><span class="pre">seyfert.cosmology.kernel_functions.KernelFunction</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.kernel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.loadCosmology">
+<span class="sig-name descname"><span class="pre">loadCosmology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pmm_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_power_spectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.loadCosmology" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.loadFromHDF5">
+<span class="sig-name descname"><span class="pre">loadFromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.loadFromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.n_ell">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_ell</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.n_ell" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.n_i">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_i</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.n_i" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.n_j">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_j</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.n_j" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.n_z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_z</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.n_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.obs_key">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">obs_key</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.obs_key" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">what</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.power_spectrum">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">power_spectrum</span></span><em class="property"><span class="pre">:</span> <span class="pre">seyfert.cosmology.power_spectrum.PowerSpectrum</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.power_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the power spectrum possessed by the cosmology attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.power_spectrum.html#seyfert.cosmology.power_spectrum.PowerSpectrum" title="seyfert.cosmology.power_spectrum.PowerSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrum</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.saveToHDF5">
+<span class="sig-name descname"><span class="pre">saveToHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.saveToHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.weight1">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">weight1</span></span><em class="property"><span class="pre">:</span> <span class="pre">seyfert.cosmology.weight_functions.WeightFunction</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.weight1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to first weight function making up the kernel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.weight_functions.html#seyfert.cosmology.weight_functions.WeightFunction" title="seyfert.cosmology.weight_functions.WeightFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">WeightFunction</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.weight2">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">weight2</span></span><em class="property"><span class="pre">:</span> <span class="pre">seyfert.cosmology.weight_functions.WeightFunction</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.weight2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to second weight function making up the kernel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="seyfert.cosmology.weight_functions.html#seyfert.cosmology.weight_functions.WeightFunction" title="seyfert.cosmology.weight_functions.WeightFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">WeightFunction</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficient.z_array">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z_array</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficient.z_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the <cite>z_grid</cite> attribute of the possessed <cite>cosmology</cite> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.c_ells.</span></span><span class="sig-name descname"><span class="pre">AngularCoefficientsCollector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiducial_cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">niz_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phys_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiducial_cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">niz_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.cl_dict">
+<span class="sig-name descname"><span class="pre">cl_dict</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.cosmology.c_ells.AngularCoefficient" title="seyfert.cosmology.c_ells.AngularCoefficient"><span class="pre">seyfert.cosmology.c_ells.AngularCoefficient</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.cl_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.cl_file_dataset">
+<span class="sig-name descname"><span class="pre">cl_file_dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">h5py._hl.files.File</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.cl_file_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.cosmology">
+<span class="sig-name descname"><span class="pre">cosmology</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><span class="pre">seyfert.cosmology.cosmology.Cosmology</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.evaluateAngularCoefficients">
+<span class="sig-name descname"><span class="pre">evaluateAngularCoefficients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.evaluateAngularCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.fiducial_cosmology">
+<span class="sig-name descname"><span class="pre">fiducial_cosmology</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.cosmology.html#seyfert.cosmology.cosmology.Cosmology" title="seyfert.cosmology.cosmology.Cosmology"><span class="pre">seyfert.cosmology.cosmology.Cosmology</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.fiducial_cosmology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.forecast_config">
+<span class="sig-name descname"><span class="pre">forecast_config</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.forecast_config.html#seyfert.config.forecast_config.ForecastConfig" title="seyfert.config.forecast_config.ForecastConfig"><span class="pre">seyfert.config.forecast_config.ForecastConfig</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.forecast_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.fromHDF5">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.fromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector" title="seyfert.cosmology.c_ells.AngularCoefficientsCollector"><code class="xref py py-class docutils literal notranslate"><span class="pre">AngularCoefficientsCollector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.l_bin_centers">
+<span class="sig-name descname"><span class="pre">l_bin_centers</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.l_bin_centers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.loadFromHDF5">
+<span class="sig-name descname"><span class="pre">loadFromHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.loadFromHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.obs_combinations">
+<span class="sig-name descname"><span class="pre">obs_combinations</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.obs_combinations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.obs_list">
+<span class="sig-name descname"><span class="pre">obs_list</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.obs_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.phys_params">
+<span class="sig-name descname"><span class="pre">phys_params</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><span class="pre">seyfert.cosmology.parameter.PhysicalParametersCollection</span></a></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.phys_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.probes">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">probes</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.probes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.probes_combinations">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">probes_combinations</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[Tuple[str]]</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.probes_combinations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.saveToHDF5">
+<span class="sig-name descname"><span class="pre">saveToHDF5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.saveToHDF5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">densities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.short_keys">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">short_keys</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.short_keys" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.AngularCoefficientsCollector.weight_dict">
+<span class="sig-name descname"><span class="pre">weight_dict</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="seyfert.cosmology.weight_functions.html#seyfert.cosmology.weight_functions.WeightFunction" title="seyfert.cosmology.weight_functions.WeightFunction"><span class="pre">seyfert.cosmology.weight_functions.WeightFunction</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.AngularCoefficientsCollector.weight_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.ClError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.c_ells.</span></span><span class="sig-name descname"><span class="pre">ClError</span></span><a class="headerlink" href="#seyfert.cosmology.c_ells.ClError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.c_ells.</span></span><span class="sig-name descname"><span class="pre">H5Cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.file_io.hdf5_io.html#seyfert.file_io.hdf5_io.AbstractH5FileIO" title="seyfert.file_io.hdf5_io.AbstractH5FileIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.file_io.hdf5_io.AbstractH5FileIO</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.absolute_main_path">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">absolute_main_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.absolute_main_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.build_data">
+<span class="sig-name descname"><span class="pre">build_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.builder_func">
+<span class="sig-name descname"><span class="pre">builder_func</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.builder_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">Path</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.main_path_rel_to_root">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">main_path_rel_to_root</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.main_path_rel_to_root" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.readBuildingData">
+<span class="sig-name descname"><span class="pre">readBuildingData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.readBuildingData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.writeObjectToFile">
+<span class="sig-name descname"><span class="pre">writeObjectToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.writeObjectToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5Cl.writeToObject">
+<span class="sig-name descname"><span class="pre">writeToObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5Cl.writeToObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.cosmology.c_ells.</span></span><span class="sig-name descname"><span class="pre">H5ClCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="seyfert.file_io.hdf5_io.html#seyfert.file_io.hdf5_io.AbstractH5FileIO" title="seyfert.file_io.hdf5_io.AbstractH5FileIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">seyfert.file_io.hdf5_io.AbstractH5FileIO</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.build_data">
+<span class="sig-name descname"><span class="pre">build_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.builder_func">
+<span class="sig-name descname"><span class="pre">builder_func</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.builder_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"><span class="pre">:</span> <span class="pre">Path</span></em><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.writeObjectToFile">
+<span class="sig-name descname"><span class="pre">writeObjectToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.writeObjectToFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.cosmology.c_ells.H5ClCollection.writeToObject">
+<span class="sig-name descname"><span class="pre">writeToObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.cosmology.c_ells.H5ClCollection.writeToObject" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.cosmology.cosmology.html" class="btn btn-neutral float-right" title="seyfert.cosmology.cosmology module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.cosmology.boltzmann_solver.html" class="btn btn-neutral float-left" title="seyfert.cosmology.boltzmann_solver module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

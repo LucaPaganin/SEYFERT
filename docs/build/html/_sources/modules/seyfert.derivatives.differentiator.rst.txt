@@ -1,0 +1,7 @@
+seyfert.derivatives.differentiator module
+=========================================
+
+.. automodule:: seyfert.derivatives.differentiator
+   :members:
+   :undoc-members:
+   :show-inheritance:

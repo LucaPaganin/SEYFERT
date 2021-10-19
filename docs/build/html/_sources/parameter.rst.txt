@@ -1,0 +1,4 @@
+Physical parameters
+=================
+
+.. automodapi:: seyfert.cosmology.parameter

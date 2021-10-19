@@ -1,0 +1,6 @@
+weight_function_for_probe
+=========================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autofunction:: weight_function_for_probe

@@ -1,0 +1,53 @@
+WeightFunction
+==============
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: WeightFunction
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~WeightFunction.H_z
+      ~WeightFunction.is_evaluated
+      ~WeightFunction.n_bins
+      ~WeightFunction.n_i_z
+      ~WeightFunction.probe
+      ~WeightFunction.r_tilde_z
+      ~WeightFunction.z_bin_centers
+      ~WeightFunction.z_bin_edges
+      ~WeightFunction.z_max
+      ~WeightFunction.z_min
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~WeightFunction.evaluateOverRedshiftGrid
+      ~WeightFunction.fromHDF5
+      ~WeightFunction.loadFromHDF5
+      ~WeightFunction.saveToHDF5
+      ~WeightFunction.setUp
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: H_z
+   .. autoattribute:: is_evaluated
+   .. autoattribute:: n_bins
+   .. autoattribute:: n_i_z
+   .. autoattribute:: probe
+   .. autoattribute:: r_tilde_z
+   .. autoattribute:: z_bin_centers
+   .. autoattribute:: z_bin_edges
+   .. autoattribute:: z_max
+   .. autoattribute:: z_min
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateOverRedshiftGrid
+   .. automethod:: fromHDF5
+   .. automethod:: loadFromHDF5
+   .. automethod:: saveToHDF5
+   .. automethod:: setUp

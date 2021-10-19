@@ -1,0 +1,20 @@
+seyfert.plot\_utils package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.plot_utils.cl_plot
+   seyfert.plot_utils.colors
+   seyfert.plot_utils.misc
+
+Module contents
+---------------
+
+.. automodule:: seyfert.plot_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

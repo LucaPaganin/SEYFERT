@@ -1,0 +1,7 @@
+seyfert.notebook\_helpers.barplots module
+=========================================
+
+.. automodule:: seyfert.notebook_helpers.barplots
+   :members:
+   :undoc-members:
+   :show-inheritance:

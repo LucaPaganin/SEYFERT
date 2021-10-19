@@ -1,0 +1,7 @@
+seyfert.plotting module
+=======================
+
+.. automodule:: seyfert.plotting
+   :members:
+   :undoc-members:
+   :show-inheritance:

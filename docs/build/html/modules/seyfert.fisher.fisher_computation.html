@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.fisher.fisher_computation module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.fisher.fisher_element module" href="seyfert.fisher.fisher_element.html" />
+    <link rel="prev" title="seyfert.fisher.fisher_cl_data module" href="seyfert.fisher.fisher_cl_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.fisher.html">seyfert.fisher package</a> &raquo;</li>
+        
+      <li>seyfert.fisher.fisher_computation module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.fisher.fisher_computation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.fisher.fisher_computation">
+<span id="seyfert-fisher-fisher-computation-module"></span><h1>seyfert.fisher.fisher_computation module<a class="headerlink" href="#module-seyfert.fisher.fisher_computation" title="Permalink to this headline">¶</a></h1>
+<p>Module hosting core functions doing fisher matrix computations.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.calc_fisher_parser">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">calc_fisher_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.calc_fisher_parser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.compute_all_fishers">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">compute_all_fishers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fishers_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_f_ell_auto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.compute_all_fishers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.fisher.fisher_matrix.html#seyfert.fisher.fisher_matrix.FisherMatrix" title="seyfert.fisher.fisher_matrix.FisherMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherMatrix</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.compute_autocorr_fishers">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">compute_autocorr_fishers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">auto_fishers_datavector_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.compute_autocorr_fishers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.compute_delta_cls">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">compute_delta_cls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fcfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fish_cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.compute_delta_cls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.compute_fisher_for_datavector">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">compute_fisher_for_datavector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datavector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_ells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_f_ells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.compute_fisher_for_datavector" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function computes the Fisher matrix for a given datavector. We assume that the various probes have a common
+range of ells, but we also allow for each probe to have exclusive ells, which are not in the common range. This
+function takes this fact into account: first it computes the fisher for the specified datavector, which is defined
+only from the common range of ells. Then it loops through the single probes involved and for each probe it checks
+if there are any exclusive ells. If so, it computes the fisher matrix coming from the contribution of those
+exclusive ells, and then it adds to the fisher computed before.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – the name of the Fisher matrix</p></li>
+<li><p><strong>datavector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – the datavector with the observables to combine</p></li>
+<li><p><strong>params</strong> (<a class="reference internal" href="seyfert.cosmology.parameter.html#seyfert.cosmology.parameter.PhysicalParametersCollection" title="seyfert.cosmology.parameter.PhysicalParametersCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalParametersCollection</span></code></a>) – the physical parameter collection with all cosmological and nuisance parameters</p></li>
+<li><p><strong>derivs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="seyfert.base_structs.cl_dict.html#seyfert.base_structs.cl_dict.ClDict" title="seyfert.base_structs.cl_dict.ClDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClDict</span></code></a>]) – the dictionary of the cl derivatives. It is a nested dict, with the primary key being the
+cosmological/nuisance parameter of the derivative, and the secondary key are the name of the cl combination</p></li>
+<li><p><strong>delta_cls</strong> (<a class="reference internal" href="seyfert.fisher.delta_cl.html#seyfert.fisher.delta_cl.DeltaClCollection" title="seyfert.fisher.delta_cl.DeltaClCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeltaClCollection</span></code></a>) – the delta cls</p></li>
+<li><p><strong>auto_ells</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]]) – a dictionary with the multipole ranges for the single probes. The key is the name of the probe,
+the value is the numpy array with the range</p></li>
+<li><p><strong>auto_f_ells</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]]) – a dictionary with the fisher elements for the single probes as functions of ell. The key is the
+parameters pair for the element, the value is the numpy array with the values of the fisher element in the ells
+range</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple with:
+- the multipole range for the current fisher;
+- a dictionary storing the fisher elements as functions of ell, analogously to the auto_f_ells parameter;
+- the FisherMatrix object containing the fisher matrix just computed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.evaluate_a_posteriori_fisher_combinations">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">evaluate_a_posteriori_fisher_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_fishers_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.evaluate_a_posteriori_fisher_combinations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.get_vectorized_derivatives">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">get_vectorized_derivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">derivs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_common</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.get_vectorized_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_computation.load_cl_derivatives">
+<span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_computation.</span></span><span class="sig-name descname"><span class="pre">load_cl_derivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_computation.load_cl_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.fisher.fisher_element.html" class="btn btn-neutral float-right" title="seyfert.fisher.fisher_element module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.fisher.fisher_cl_data.html" class="btn btn-neutral float-left" title="seyfert.fisher.fisher_cl_data module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+seyfert.utils.array\_utils module
+=================================
+
+.. automodule:: seyfert.utils.array_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,4 @@
+Power Spectrum
+=================
+
+.. automodapi:: seyfert.cosmology.power_spectrum

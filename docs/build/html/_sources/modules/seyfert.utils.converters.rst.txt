@@ -1,0 +1,7 @@
+seyfert.utils.converters module
+===============================
+
+.. automodule:: seyfert.utils.converters
+   :members:
+   :undoc-members:
+   :show-inheritance:

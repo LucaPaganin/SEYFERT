@@ -1,0 +1,87 @@
+{
+  "plot_settings": {
+    "dimensions": {
+    "fig_size_x_cm": 15,
+    "fig_size_y_cm": 15,
+    "subplots_spacing": {
+      "horizontal": 0.080,
+      "vertical": 0.080
+    }
+  },
+    "graphics": {
+      "dpi": 150,
+      "cl_alpha_dict": {
+        "gauss": {
+          "0.68": 0.25,
+          "0.95": 0.15
+        },
+        "ellipse": {
+          "0.68": 0.40,
+          "0.95": 0.20
+        }
+      },
+      "color_map": "rainbow"
+    },
+    "axes": {
+      "label_size": 10,
+      "x_label_pad": 10,
+      "y_label_pad": 10,
+      "borders_width": 1,
+      "lines_width": 1,
+      "ticks": {
+        "width": 1,
+        "length": 3,
+        "label_size": 8,
+        "number": 3,
+        "digits": 2,
+        "x_tick_labels_rot": 0,
+        "y_tick_labels_rot": 0
+      }
+    },
+    "legend": {
+      "loc": "lower left",
+      "bbox_to_anchor": [0.650, 0.700],
+      "fontsize": 10,
+      "title_fontsize": 14
+    },
+    "text_box": {
+      "dx_leg": 0.018,
+      "dy_leg": -0.025
+    },
+    "usetex": false
+  },
+  "fishers_addends_list": [
+    ["WL"],
+    ["GCph"],
+    ["GCsp"],
+    ["WL+GCph+XC"],
+    ["WL", "GCph"],
+    ["WL+GCsp+XC"],
+    ["WL", "GCsp"],
+    ["GCph+GCsp+XC"],
+    ["GCph", "GCsp"],
+    ["WL+GCph+GCsp+XC"]
+  ],
+  "cosmologies": {
+    "LCDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8"],
+      "pars_to_plot": "all"
+    },
+    "mnu_LCDM": {
+      "present": "false",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "mnu"],
+      "pars_to_plot": "all"
+    },
+    "w0_wa_CDM": {
+      "present": "true",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "w0", "wa"],
+      "pars_to_plot": "all"
+    },
+    "mnu_w0_wa_CDM": {
+      "present": "false",
+      "pars": ["h", "Omm", "Omb", "ns", "sigma8", "mnu", "w0", "wa"],
+      "pars_to_plot": "all"
+    }
+  }
+}

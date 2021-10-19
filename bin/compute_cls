@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# Author: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>,
+# Maintainer: Luca Paganin <luca.paganin@ge.infn.it>, Marco Bonici <marco.bonici@ge.infn.it>
+import time
+import logging
+import argparse
+
+import seyfert.config.cmd_line
+import seyfert.utils.filesystem_utils as fsu
+import seyfert.utils.general_utils as gu
+from seyfert.config import main_config as mcfg
+from seyfert.utils import formatters as fm
+from seyfert.utils.workspace import WorkSpace
+from seyfert.config.cmd_line import ClCLIArgs
+from seyfert.cosmology import redshift_density
+from seyfert.main import cl_core
+
+logger = logging.getLogger()
+
+
+def program_params() -> "argparse.ArgumentParser":
+    general_opts = seyfert.config.cmd_line.main_program_options()
+    parser = argparse.ArgumentParser(parents=[general_opts], description="Script for computing the Cls")
+    parser.add_argument("--main_config", "-mcfg", required=True, help="Path to the main config JSON file")
+    parser.add_argument("--power_spectrum_dir", "-pmm_dir",
+                        help="Path to power spectra directory (for standalone mode)")
+    parser.add_argument("--niz_file", "-nf",
+                        help="Path to density file (for standalone mode)")
+    parser.add_argument("--dvar", "-dvar", type=str,
+                        help="Name of varied parameter")
+    parser.add_argument("--step", "-step", type=int,
+                        help="Integer step between -7 and 7 for parameter variation")
+
+    return parser
+
+
+def main(args_dict):
+    t0 = time.time()
+    cli_args = ClCLIArgs(args_dict)
+    rundir = cli_args.rundir
+    workdir = cli_args.workdir
+    angular_config_file = workdir / cli_args.main_config
+    gu.configure_logger(logger, cli_args.logfile)
+
+    ws = WorkSpace(rundir)
+    forecast_config = ws.getForecastConfiguration()
+    angular_config = mcfg.AngularConfig(json_input=angular_config_file)
+    phys_pars = ws.getParamsCollection()
+    dvar, step = fsu.get_dvar_step_from_cosmology_jobdir_name(workdir.name)
+
+    phys_pars.updatePhysicalParametersForDvarStep(dvar=dvar, step=step)
+    phys_pars.writeJSON(workdir / 'params.json')
+
+    cosmology = cl_core.load_cosmology(ws, dvar=dvar, step=step, phys_pars=phys_pars)
+    fiducial_cosmology = cl_core.load_cosmology(ws, dvar='central', step=0, phys_pars=phys_pars)
+
+    densities = redshift_density.load_densities_from_file(ws.niz_file)
+
+    cl_collector = cl_core.compute_cls(cosmology, phys_pars, densities, forecast_config, angular_config,
+                                       fiducial_cosmology=fiducial_cosmology)
+
+    outfile_name = 'cl_%s.h5' % ("_".join(forecast_config.present_probes))
+    outfile = workdir / outfile_name
+    logger.info(f'Writing results to file {outfile}')
+    cl_collector.saveToHDF5(outfile)
+    tf = time.time()
+    logger.info(f'Total elapsed time: {fm.string_time_format(tf-t0)}')
+
+
+if __name__ == '__main__':
+    arguments_dict = vars(program_params().parse_args())
+    main(arguments_dict)

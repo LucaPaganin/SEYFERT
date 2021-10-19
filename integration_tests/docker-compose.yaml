@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  run_seyfert:
+    build:
+      context: .
+    image: "integration_test_seyfert"
+    container_name: "integ_test_seyfert"
+    volumes:
+      - /Users/lucapaganin/spectrophoto/:/home/spectrophoto/
+      - /Users/lucapaganin/PyCharmProjects/seyfert:/home/seyfert/
+    working_dir: /home/seyfert/integration_tests
+    command: >
+      ./do_integration_run.sh $CODEVERSION

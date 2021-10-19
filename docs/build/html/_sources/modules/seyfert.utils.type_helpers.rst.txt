@@ -1,0 +1,7 @@
+seyfert.utils.type\_helpers module
+==================================
+
+.. automodule:: seyfert.utils.type_helpers
+   :members:
+   :undoc-members:
+   :show-inheritance:

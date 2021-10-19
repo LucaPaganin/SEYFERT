@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+from typing import Dict, List
+from pathlib import Path
+import pandas as pd
+import re
+import json
+import logging
+import argparse
+
+from seyfert.utils import general_utils as gu
+from seyfert.fisher.results_collector import ResultsCollector
+
+cwd = Path().resolve()
+logger = logging.getLogger()
+
+
+def program_options() -> "argparse.ArgumentParser":
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                     description="Script to collect the result of multiple runs.")
+    parser.add_argument('--root_dir', type=Path, required=False, default=cwd,
+                        help='Root directory')
+    parser.add_argument("--outdir", type=Path, required=False, default=cwd / "results_collection",
+                        help="Path to base output directory")
+
+    return parser
+
+
+def main(args: "argparse.Namespace"):
+    root_dir = args.root_dir
+    outdir = args.outdir
+    gu.configure_logger(logger)
+
+    logger.info(f"Collecting final results in directory {root_dir}")
+
+    res_coll = ResultsCollector()
+    res_coll.loadWorkSpaces(root_dir)
+    logger.info("Found workspaces: %s" % ("\n".join([str(ws) for ws in res_coll.ws_list])))
+
+    for cosmology in ["w0_wa_CDM", "LCDM"]:
+        for res_subdir_name in ["marg_before", "marg_after", "nuis_fixed"]:
+            logger.info(f"Cosmology {cosmology}, dirname {res_subdir_name}")
+            res_coll.collectAndDumpResults(outdir=outdir, cosmology=cosmology, res_subdir_name=res_subdir_name)
+
+
+if __name__ == '__main__':
+    main(program_options().parse_args())
+
+

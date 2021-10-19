@@ -1,0 +1,7 @@
+seyfert.file\_io.hdf5\_io module
+================================
+
+.. automodule:: seyfert.file_io.hdf5_io
+   :members:
+   :undoc-members:
+   :show-inheritance:

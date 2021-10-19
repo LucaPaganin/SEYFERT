@@ -1,0 +1,19 @@
+seyfert.derivatives package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.derivatives.cl_derivative
+   seyfert.derivatives.differentiator
+
+Module contents
+---------------
+
+.. automodule:: seyfert.derivatives
+   :members:
+   :undoc-members:
+   :show-inheritance:

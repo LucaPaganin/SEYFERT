@@ -1,0 +1,6 @@
+{
+  "cl_integration_settings": {
+    "lensing_efficiency": "simpson",
+    "cl": "newton-cotes_2"
+  }
+}

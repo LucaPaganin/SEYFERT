@@ -1,0 +1,7 @@
+seyfert.cosmology.cosmology module
+==================================
+
+.. automodule:: seyfert.cosmology.cosmology
+   :members:
+   :undoc-members:
+   :show-inheritance:

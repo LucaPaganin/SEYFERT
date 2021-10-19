@@ -1,0 +1,6 @@
+ParameterError
+==============
+
+.. currentmodule:: seyfert.cosmology.parameter
+
+.. autoexception:: ParameterError

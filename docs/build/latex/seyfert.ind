@@ -1,0 +1,560 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{absolute\_main\_path}\spxextra{seyfert.cosmology.c\_ells.H5Cl attribute}, 
+		\hyperpage{51}
+  \item \spxentry{AngularCoefficient}\spxextra{class in seyfert.cosmology.c\_ells}, \hyperpage{45}
+  \item \spxentry{AngularCoefficientsCollector}\spxextra{class in seyfert.cosmology.c\_ells}, 
+		\hyperpage{49}
+  \item \spxentry{Aph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}, 
+		\hyperpage{31}
+  \item \spxentry{applyVoidsCutToLimberPowerSpectrum()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{Bias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{28}
+  \item \spxentry{BiasError}, \hyperpage{29}
+  \item \spxentry{BiasModel}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{29}
+  \item \spxentry{Bph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}, 
+		\hyperpage{31}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{c\_km\_s}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}, 
+		\hyperpage{39}
+  \item \spxentry{CAMBBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}, 
+		\hyperpage{19}
+  \item \spxentry{checkParameters()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{cl\_key\_long\_to\_short()}\spxextra{in module seyfert.cosmology.c\_ells}, 
+		\hyperpage{44}
+  \item \spxentry{cl\_key\_short\_to\_long()}\spxextra{in module seyfert.cosmology.c\_ells}, 
+		\hyperpage{45}
+  \item \spxentry{CLASSBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}, 
+		\hyperpage{21}
+  \item \spxentry{ClError}, \hyperpage{50}
+  \item \spxentry{compute\_photoXspectro\_shotnoise\_ij()}\spxextra{in module seyfert.cosmology.redshift\_density}, 
+		\hyperpage{22}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.BiasModel method}, \hyperpage{30}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.ConstantBias method}, 
+		\hyperpage{30}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias method}, 
+		\hyperpage{32}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.FiducialGrowthVoidBias method}, 
+		\hyperpage{32}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.PiecewiseBias method}, 
+		\hyperpage{33}
+  \item \spxentry{computeBias()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}, 
+		\hyperpage{35}
+  \item \spxentry{computeBinNormFactor()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{computeCAMBCosmologicalBasis()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}, 
+		\hyperpage{20}
+  \item \spxentry{computeCAMBRedshiftGroupsNumber()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}, 
+		\hyperpage{20}
+  \item \spxentry{computeCLASSCosmologicalBasis()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}, 
+		\hyperpage{21}
+  \item \spxentry{computeClIntegral()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{computeComovingDistance()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{computeDimensionlessComovingDistance()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{computeDimensionlessHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{computeHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{computeInstrumentResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{computeIntrinsicAlignmentContribution()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}, 
+		\hyperpage{39}
+  \item \spxentry{computeLensingEfficiency()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}, 
+		\hyperpage{39}
+  \item \spxentry{computeLensingEfficiencyAtBin()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}, 
+		\hyperpage{39}
+  \item \spxentry{computeNormalizedDensityAtBinAndRedshift()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{computePhysParSTEMValues()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{computeReciprocalDimensionlessHubbleParameter()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{7}
+  \item \spxentry{computeSigmaR()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{8}
+  \item \spxentry{computeSteMValues()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{12}
+  \item \spxentry{computeSurfaceDensityAtBin()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{computeTotalGalaxyNumber()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{computeValueForDisplacement()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{12}
+  \item \spxentry{computeVdnSizeFunction()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}, 
+		\hyperpage{35}
+  \item \spxentry{computeVoidMultiplicity()}\spxextra{seyfert.cosmology.bias.VdnVoidBias method}, 
+		\hyperpage{35}
+  \item \spxentry{ConstantBias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{30}
+  \item \spxentry{convolvedNdzdOmegaWithInstrumentResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{COSMO\_PAR\_STRING}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}, 
+		\hyperpage{12}
+  \item \spxentry{cosmo\_pars\_current}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, 
+		\hyperpage{6}
+  \item \spxentry{cosmo\_pars\_current\_values}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{14}
+  \item \spxentry{cosmo\_pars\_fiducials}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{14}
+  \item \spxentry{cosmological\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{14}
+  \item \spxentry{Cosmology}\spxextra{class in seyfert.cosmology.cosmology}, \hyperpage{4}
+  \item \spxentry{CosmologyError}, \hyperpage{9}
+  \item \spxentry{Cph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}, 
+		\hyperpage{31}
+  \item \spxentry{createCosmologicalParameter()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}, 
+		\hyperpage{12}
+  \item \spxentry{createNuisanceParameter()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}, 
+		\hyperpage{12}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{delta\_c0}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, \hyperpage{34}
+  \item \spxentry{delta\_v0}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, \hyperpage{35}
+  \item \spxentry{DensityError}, \hyperpage{23}
+  \item \spxentry{Dph}\spxextra{seyfert.cosmology.bias.EuclidFlagshipGCphBias attribute}, 
+		\hyperpage{31}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{E\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{EuclidFlagshipGCphBias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{31}
+  \item \spxentry{evaluate()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{evaluateAngularCoefficients()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}, 
+		\hyperpage{50}
+  \item \spxentry{evaluateAngularCorrelation()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{evaluateBias()}\spxextra{seyfert.cosmology.bias.Bias method}, \hyperpage{29}
+  \item \spxentry{evaluateBinNormFactors()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{evaluateLimberApproximatedPowerSpectrum()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}, 
+		\hyperpage{20}
+  \item \spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}, 
+		\hyperpage{21}
+  \item \spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method}, 
+		\hyperpage{22}
+  \item \spxentry{evaluateLinearAndNonLinearPowerSpectra()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}, 
+		\hyperpage{18}
+  \item \spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{8}
+  \item \spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction method}, 
+		\hyperpage{39}
+  \item \spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}, 
+		\hyperpage{43}
+  \item \spxentry{evaluateOverRedshiftGrid()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}, 
+		\hyperpage{43}
+  \item \spxentry{evaluatePowerSpectrum()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{8}
+  \item \spxentry{evaluateSurfaceDensity()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{ExternalBoltzmannSolver}\spxextra{class in seyfert.cosmology.boltzmann\_solver}, 
+		\hyperpage{21}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{FiducialGrowthVoidBias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{32}
+  \item \spxentry{finetuneScalarAmpFromSigma8()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}, 
+		\hyperpage{20}
+  \item \spxentry{free\_cosmo\_pars\_fiducials}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{14}
+  \item \spxentry{free\_cosmological\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{14}
+  \item \spxentry{free\_physical\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{15}
+  \item \spxentry{from\_dict()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}, 
+		\hyperpage{12}
+  \item \spxentry{from\_dict\_list()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection class method}, 
+		\hyperpage{15}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.bias.Bias static method}, \hyperpage{29}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient class method}, 
+		\hyperpage{48}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector class method}, 
+		\hyperpage{50}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology class method}, 
+		\hyperpage{8}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum class method}, 
+		\hyperpage{18}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity static method}, 
+		\hyperpage{26}
+  \item \spxentry{fromHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction class method}, 
+		\hyperpage{43}
+  \item \spxentry{fromJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter class method}, 
+		\hyperpage{12}
+  \item \spxentry{fromJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection class method}, 
+		\hyperpage{15}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{GalaxyClusteringWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{37}
+  \item \spxentry{get\_bins\_overlap()}\spxextra{in module seyfert.cosmology.redshift\_density}, 
+		\hyperpage{23}
+  \item \spxentry{getFreeNuisanceParametersForProbe()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{getLimberRedshiftIntegrand()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{getNuisanceParametersForProbe()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{getParamsDictFromDictList()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection static method}, 
+		\hyperpage{15}
+  \item \spxentry{getResultsFromMatterPowerGenerator()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}, 
+		\hyperpage{18}
+  \item \spxentry{getSortedBiasValues()}\spxextra{seyfert.cosmology.bias.PiecewiseBias method}, 
+		\hyperpage{33}
+  \item \spxentry{getTransferFunctionFromResults()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}, 
+		\hyperpage{20}
+  \item \spxentry{getWeightFunction()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{growth\_factor\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, 
+		\hyperpage{6}
+  \item \spxentry{growth\_factor\_z}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum attribute}, 
+		\hyperpage{18}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{h}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{H0}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{H0}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}, 
+		\hyperpage{39}
+  \item \spxentry{H5Bias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{32}
+  \item \spxentry{H5Cl}\spxextra{class in seyfert.cosmology.c\_ells}, \hyperpage{51}
+  \item \spxentry{H5ClCollection}\spxextra{class in seyfert.cosmology.c\_ells}, \hyperpage{52}
+  \item \spxentry{H5Cosmology}\spxextra{class in seyfert.cosmology.cosmology}, \hyperpage{9}
+  \item \spxentry{H5Density}\spxextra{class in seyfert.cosmology.redshift\_density}, \hyperpage{23}
+  \item \spxentry{H5PowerSpectrum}\spxextra{class in seyfert.cosmology.power\_spectrum}, 
+		\hyperpage{17}
+  \item \spxentry{H5WeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{38}
+  \item \spxentry{H\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{H\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{has\_output}\spxextra{seyfert.cosmology.bias.Bias attribute}, \hyperpage{29}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{initBiasModel()}\spxextra{seyfert.cosmology.bias.Bias method}, \hyperpage{29}
+  \item \spxentry{integ\_method}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{interpolateInput()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{is\_auto\_correlation}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{is\_cosmological}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}, 
+		\hyperpage{12}
+  \item \spxentry{is\_evaluated}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{is\_galaxy\_bias\_parameter}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}, 
+		\hyperpage{12}
+  \item \spxentry{is\_nuisance}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}, 
+		\hyperpage{12}
+
+  \indexspace
+  \bigletter K
+  \item \spxentry{k\_grid}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{LensingWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{38}
+  \item \spxentry{loadCosmology()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{48}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.bias.Bias method}, \hyperpage{29}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{49}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}, 
+		\hyperpage{50}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{8}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}, 
+		\hyperpage{18}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{loadFromHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}, 
+		\hyperpage{43}
+  \item \spxentry{loadStemDisplacements()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{main\_path\_rel\_to\_root}\spxextra{seyfert.cosmology.c\_ells.H5Cl attribute}, 
+		\hyperpage{51}
+  \item \spxentry{mnu}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{modifiedGaussianResponse()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity static method}, 
+		\hyperpage{26}
+  \item \spxentry{module}
+    \subitem \spxentry{seyfert.cosmology.bias}, \hyperpage{27}
+    \subitem \spxentry{seyfert.cosmology.boltzmann\_solver}, \hyperpage{19}
+    \subitem \spxentry{seyfert.cosmology.c\_ells}, \hyperpage{44}
+    \subitem \spxentry{seyfert.cosmology.cosmology}, \hyperpage{3}
+    \subitem \spxentry{seyfert.cosmology.parameter}, \hyperpage{10}
+    \subitem \spxentry{seyfert.cosmology.power\_spectrum}, \hyperpage{16}
+    \subitem \spxentry{seyfert.cosmology.redshift\_density}, \hyperpage{22}
+    \subitem \spxentry{seyfert.cosmology.weight\_functions}, \hyperpage{36}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{n\_bins}\spxextra{seyfert.cosmology.bias.BiasModel attribute}, \hyperpage{30}
+  \item \spxentry{n\_bins}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}, 
+		\hyperpage{25}
+  \item \spxentry{n\_bins}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{n\_ell}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{n\_i}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{n\_i\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{n\_j}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{n\_R}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, \hyperpage{35}
+  \item \spxentry{n\_z}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{47}
+  \item \spxentry{ns}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{NUISANCE\_PAR\_STRING}\spxextra{seyfert.cosmology.parameter.PhysicalParameter attribute}, 
+		\hyperpage{12}
+  \item \spxentry{nuisance\_parameters}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{15}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{obs\_key}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{48}
+  \item \spxentry{Omb}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{OmDE}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{OmK}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{Omm}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{6}
+  \item \spxentry{Omm}\spxextra{seyfert.cosmology.weight\_functions.LensingWeightFunction attribute}, 
+		\hyperpage{39}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{ParameterError}, \hyperpage{10}
+  \item \spxentry{params}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection attribute}, 
+		\hyperpage{15}
+  \item \spxentry{PhotometricGalaxyWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{40}
+  \item \spxentry{PhysicalParameter}\spxextra{class in seyfert.cosmology.parameter}, \hyperpage{11}
+  \item \spxentry{PhysicalParametersCollection}\spxextra{class in seyfert.cosmology.parameter}, 
+		\hyperpage{13}
+  \item \spxentry{PiecewiseBias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{33}
+  \item \spxentry{plot()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{49}
+  \item \spxentry{power\_spectrum}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{48}
+  \item \spxentry{PowerSpectrum}\spxextra{class in seyfert.cosmology.power\_spectrum}, 
+		\hyperpage{17}
+  \item \spxentry{probe}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{probe\_from\_weight\_function\_cls\_name()}\spxextra{in module seyfert.cosmology.weight\_functions}, 
+		\hyperpage{36}
+  \item \spxentry{probes}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}, 
+		\hyperpage{50}
+  \item \spxentry{probes\_combinations}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}, 
+		\hyperpage{50}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{R\_max\_Mpc}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, 
+		\hyperpage{34}
+  \item \spxentry{R\_min\_Mpc}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, 
+		\hyperpage{34}
+  \item \spxentry{r\_tilde\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, 
+		\hyperpage{6}
+  \item \spxentry{r\_tilde\_z}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{r\_z}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{7}
+  \item \spxentry{readBuildingData()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}, 
+		\hyperpage{51}
+  \item \spxentry{readBuildingData()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}, 
+		\hyperpage{9}
+  \item \spxentry{readBuildingData()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}, 
+		\hyperpage{38}
+  \item \spxentry{readCAMBIniFileToDict()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}, 
+		\hyperpage{20}
+  \item \spxentry{readJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{RedshiftDensity}\spxextra{class in seyfert.cosmology.redshift\_density}, 
+		\hyperpage{24}
+  \item \spxentry{resetCurrentValueToFiducial()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{12}
+  \item \spxentry{resetPhysicalParametersToFiducial()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}, 
+		\hyperpage{20}
+  \item \spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.CLASSBoltzmannSolver method}, 
+		\hyperpage{21}
+  \item \spxentry{run()}\spxextra{seyfert.cosmology.boltzmann\_solver.ExternalBoltzmannSolver method}, 
+		\hyperpage{22}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.bias.Bias method}, \hyperpage{29}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{49}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}, 
+		\hyperpage{50}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.cosmology.Cosmology method}, 
+		\hyperpage{8}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.power\_spectrum.PowerSpectrum method}, 
+		\hyperpage{18}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{26}
+  \item \spxentry{saveToHDF5()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}, 
+		\hyperpage{43}
+  \item \spxentry{setUp()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient method}, 
+		\hyperpage{49}
+  \item \spxentry{setUp()}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector method}, 
+		\hyperpage{50}
+  \item \spxentry{setUp()}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity method}, 
+		\hyperpage{27}
+  \item \spxentry{setUp()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction method}, 
+		\hyperpage{43}
+  \item \spxentry{setUp()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}, 
+		\hyperpage{43}
+  \item \spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.GalaxyClusteringWeightFunction method}, 
+		\hyperpage{37}
+  \item \spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.PhotometricGalaxyWeightFunction method}, 
+		\hyperpage{40}
+  \item \spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.SpectroscopicGalaxyWeightFunction method}, 
+		\hyperpage{40}
+  \item \spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.VoidWeightFunction method}, 
+		\hyperpage{41}
+  \item \spxentry{setupBias()}\spxextra{seyfert.cosmology.weight\_functions.WeightFunctionWithBias method}, 
+		\hyperpage{43}
+  \item \spxentry{seyfert.cosmology.bias}
+    \subitem \spxentry{module}, \hyperpage{27}
+  \item \spxentry{seyfert.cosmology.boltzmann\_solver}
+    \subitem \spxentry{module}, \hyperpage{19}
+  \item \spxentry{seyfert.cosmology.c\_ells}
+    \subitem \spxentry{module}, \hyperpage{44}
+  \item \spxentry{seyfert.cosmology.cosmology}
+    \subitem \spxentry{module}, \hyperpage{3}
+  \item \spxentry{seyfert.cosmology.parameter}
+    \subitem \spxentry{module}, \hyperpage{10}
+  \item \spxentry{seyfert.cosmology.power\_spectrum}
+    \subitem \spxentry{module}, \hyperpage{16}
+  \item \spxentry{seyfert.cosmology.redshift\_density}
+    \subitem \spxentry{module}, \hyperpage{22}
+  \item \spxentry{seyfert.cosmology.weight\_functions}
+    \subitem \spxentry{module}, \hyperpage{36}
+  \item \spxentry{short\_keys}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficientsCollector attribute}, 
+		\hyperpage{50}
+  \item \spxentry{shot\_noise}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}, 
+		\hyperpage{25}
+  \item \spxentry{sigma8}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{7}
+  \item \spxentry{sigmaR()}\spxextra{seyfert.cosmology.cosmology.Cosmology static method}, 
+		\hyperpage{8}
+  \item \spxentry{SpectroscopicGalaxyWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{40}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{to\_dict()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{13}
+  \item \spxentry{to\_JSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{13}
+  \item \spxentry{transfer\_function\_k}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, 
+		\hyperpage{7}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{updatePhysicalParametersForDvarStep()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{updateValueForDisplacement()}\spxextra{seyfert.cosmology.parameter.PhysicalParameter method}, 
+		\hyperpage{13}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{VdnVoidBias}\spxextra{class in seyfert.cosmology.bias}, \hyperpage{34}
+  \item \spxentry{voidMultiplicity()}\spxextra{seyfert.cosmology.bias.VdnVoidBias static method}, 
+		\hyperpage{35}
+  \item \spxentry{VoidWeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{41}
+
+  \indexspace
+  \bigletter W
+  \item \spxentry{w0}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{7}
+  \item \spxentry{wa}\spxextra{seyfert.cosmology.cosmology.Cosmology attribute}, \hyperpage{7}
+  \item \spxentry{weight1}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{48}
+  \item \spxentry{weight2}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{48}
+  \item \spxentry{weight\_cls\_name\_from\_obs()}\spxextra{in module seyfert.cosmology.weight\_functions}, 
+		\hyperpage{36}
+  \item \spxentry{weight\_function\_for\_probe()}\spxextra{in module seyfert.cosmology.weight\_functions}, 
+		\hyperpage{36}
+  \item \spxentry{WeightFunction}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{41}
+  \item \spxentry{WeightFunctionWithBias}\spxextra{class in seyfert.cosmology.weight\_functions}, 
+		\hyperpage{43}
+  \item \spxentry{writeDictToIniFile()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver static method}, 
+		\hyperpage{20}
+  \item \spxentry{writeJSON()}\spxextra{seyfert.cosmology.parameter.PhysicalParametersCollection method}, 
+		\hyperpage{15}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.bias.H5Bias method}, 
+		\hyperpage{33}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}, 
+		\hyperpage{51}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.c\_ells.H5ClCollection method}, 
+		\hyperpage{52}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}, 
+		\hyperpage{9}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.power\_spectrum.H5PowerSpectrum method}, 
+		\hyperpage{17}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.redshift\_density.H5Density method}, 
+		\hyperpage{24}
+  \item \spxentry{writeObjectToFile()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}, 
+		\hyperpage{38}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.bias.H5Bias method}, \hyperpage{33}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.c\_ells.H5Cl method}, \hyperpage{51}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.c\_ells.H5ClCollection method}, 
+		\hyperpage{52}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.cosmology.H5Cosmology method}, 
+		\hyperpage{9}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.power\_spectrum.H5PowerSpectrum method}, 
+		\hyperpage{17}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.redshift\_density.H5Density method}, 
+		\hyperpage{24}
+  \item \spxentry{writeToObject()}\spxextra{seyfert.cosmology.weight\_functions.H5WeightFunction method}, 
+		\hyperpage{38}
+  \item \spxentry{writeUpdatedCAMBIniFile()}\spxextra{seyfert.cosmology.boltzmann\_solver.CAMBBoltzmannSolver method}, 
+		\hyperpage{21}
+
+  \indexspace
+  \bigletter Z
+  \item \spxentry{z\_array}\spxextra{seyfert.cosmology.c\_ells.AngularCoefficient attribute}, 
+		\hyperpage{48}
+  \item \spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.bias.BiasModel attribute}, 
+		\hyperpage{30}
+  \item \spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}, 
+		\hyperpage{25}
+  \item \spxentry{z\_bin\_centers}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{z\_bin\_edges}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{z\_grid}\spxextra{seyfert.cosmology.bias.VdnVoidBias attribute}, \hyperpage{35}
+  \item \spxentry{z\_max}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}, 
+		\hyperpage{25}
+  \item \spxentry{z\_max}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+  \item \spxentry{z\_min}\spxextra{seyfert.cosmology.redshift\_density.RedshiftDensity attribute}, 
+		\hyperpage{25}
+  \item \spxentry{z\_min}\spxextra{seyfert.cosmology.weight\_functions.WeightFunction attribute}, 
+		\hyperpage{42}
+
+\end{sphinxtheindex}

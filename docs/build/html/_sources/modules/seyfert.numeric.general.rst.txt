@@ -1,0 +1,7 @@
+seyfert.numeric.general module
+==============================
+
+.. automodule:: seyfert.numeric.general
+   :members:
+   :undoc-members:
+   :show-inheritance:

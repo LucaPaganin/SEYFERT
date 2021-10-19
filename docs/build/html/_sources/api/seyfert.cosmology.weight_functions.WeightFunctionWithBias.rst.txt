@@ -1,0 +1,21 @@
+WeightFunctionWithBias
+======================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: WeightFunctionWithBias
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~WeightFunctionWithBias.evaluateOverRedshiftGrid
+      ~WeightFunctionWithBias.setUp
+      ~WeightFunctionWithBias.setupBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateOverRedshiftGrid
+   .. automethod:: setUp
+   .. automethod:: setupBias

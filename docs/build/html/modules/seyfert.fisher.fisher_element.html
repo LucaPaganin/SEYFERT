@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>seyfert.fisher.fisher_element module &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="seyfert.fisher.fisher_matrix module" href="seyfert.fisher.fisher_matrix.html" />
+    <link rel="prev" title="seyfert.fisher.fisher_computation module" href="seyfert.fisher.fisher_computation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">seyfert</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="seyfert.html">seyfert package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seyfert.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seyfert.base_structs.html">seyfert.base_structs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.batch.html">seyfert.batch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.config.html">seyfert.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.cosmology.html">seyfert.cosmology package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.derivatives.html">seyfert.derivatives package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.file_io.html">seyfert.file_io package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="seyfert.fisher.html">seyfert.fisher package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.gui.html">seyfert.gui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.notebook_helpers.html">seyfert.notebook_helpers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.numeric.html">seyfert.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.plot_utils.html">seyfert.plot_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seyfert.utils.html">seyfert.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seyfert.html#module-seyfert">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">seyfert</a> &raquo;</li>
+        
+          <li><a href="seyfert.html">seyfert package</a> &raquo;</li>
+        
+          <li><a href="seyfert.fisher.html">seyfert.fisher package</a> &raquo;</li>
+        
+      <li>seyfert.fisher.fisher_element module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/seyfert.fisher.fisher_element.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-seyfert.fisher.fisher_element">
+<span id="seyfert-fisher-fisher-element-module"></span><h1>seyfert.fisher.fisher_element module<a class="headerlink" href="#module-seyfert.fisher.fisher_element" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_element.</span></span><span class="sig-name descname"><span class="pre">FisherElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.buildCellBlocks">
+<span class="sig-name descname"><span class="pre">buildCellBlocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltaCls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dC_coll_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.buildCellBlocks" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.cfg">
+<span class="sig-name descname"><span class="pre">cfg</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.FisherConfig" title="seyfert.config.main_config.FisherConfig"><span class="pre">seyfert.config.main_config.FisherConfig</span></a></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.cfg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.computeFisherOfMultipole">
+<span class="sig-name descname"><span class="pre">computeFisherOfMultipole</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.computeFisherOfMultipole" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.computeSingleProbesContribution">
+<span class="sig-name descname"><span class="pre">computeSingleProbesContribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fisher_autocorr_elems_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.computeSingleProbesContribution" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.dC1">
+<span class="sig-name descname"><span class="pre">dC1</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.dC1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.dC2">
+<span class="sig-name descname"><span class="pre">dC2</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.dC2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.deltaCl">
+<span class="sig-name descname"><span class="pre">deltaCl</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.deltaCl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.dvar1">
+<span class="sig-name descname"><span class="pre">dvar1</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.dvar1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.dvar2">
+<span class="sig-name descname"><span class="pre">dvar2</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.dvar2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.ell">
+<span class="sig-name descname"><span class="pre">ell</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.ell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fisher_autocorr_elems_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.f_ell">
+<span class="sig-name descname"><span class="pre">f_ell</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.f_ell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.fisher_formula">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fisher_formula</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.fisher_formula" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.fourthOrderCovarianceFormula">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">fourthOrderCovarianceFormula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltacl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dCl_dvar1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dCl_dvar2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ells</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.fourthOrderCovarianceFormula" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.getSingleProbeUniqueContribution">
+<span class="sig-name descname"><span class="pre">getSingleProbeUniqueContribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f_auto_el</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.getSingleProbeUniqueContribution" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.getdClArray">
+<span class="sig-name descname"><span class="pre">getdClArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dCl_coll</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.getdClArray" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.invdeltaCl">
+<span class="sig-name descname"><span class="pre">invdeltaCl</span></span><em class="property"><span class="pre">:</span> <span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.invdeltaCl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.is_auto_correlation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_auto_correlation</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.is_auto_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.is_cross_correlation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_cross_correlation</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.is_cross_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.loadFromNumpyZFile">
+<span class="sig-name descname"><span class="pre">loadFromNumpyZFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.loadFromNumpyZFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.probes">
+<span class="sig-name descname"><span class="pre">probes</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.probes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.secondOrderCovarianceFormula">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">secondOrderCovarianceFormula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inv_deltacl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dCl_dvar1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dCl_dvar2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ells</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.secondOrderCovarianceFormula" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElement.writeOnNumpyZFile">
+<span class="sig-name descname"><span class="pre">writeOnNumpyZFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElement.writeOnNumpyZFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seyfert.fisher.fisher_element.</span></span><span class="sig-name descname"><span class="pre">FisherElementsCollector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dvar1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dvar2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.buildFisherElement">
+<span class="sig-name descname"><span class="pre">buildFisherElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.buildFisherElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#seyfert.fisher.fisher_element.FisherElement" title="seyfert.fisher.fisher_element.FisherElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">FisherElement</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.cfg">
+<span class="sig-name descname"><span class="pre">cfg</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.config.main_config.html#seyfert.config.main_config.FisherConfig" title="seyfert.config.main_config.FisherConfig"><span class="pre">seyfert.config.main_config.FisherConfig</span></a></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.cfg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.dCl_dvar1_coll">
+<span class="sig-name descname"><span class="pre">dCl_dvar1_coll</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.derivatives.cl_derivative.html#seyfert.derivatives.cl_derivative.ClDerivativeCollector" title="seyfert.derivatives.cl_derivative.ClDerivativeCollector"><span class="pre">seyfert.derivatives.cl_derivative.ClDerivativeCollector</span></a></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.dCl_dvar1_coll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.dCl_dvar2_coll">
+<span class="sig-name descname"><span class="pre">dCl_dvar2_coll</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.derivatives.cl_derivative.html#seyfert.derivatives.cl_derivative.ClDerivativeCollector" title="seyfert.derivatives.cl_derivative.ClDerivativeCollector"><span class="pre">seyfert.derivatives.cl_derivative.ClDerivativeCollector</span></a></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.dCl_dvar2_coll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.delta_cls">
+<span class="sig-name descname"><span class="pre">delta_cls</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="seyfert.fisher.delta_cl.html#seyfert.fisher.delta_cl.DeltaClCollection" title="seyfert.fisher.delta_cl.DeltaClCollection"><span class="pre">seyfert.fisher.delta_cl.DeltaClCollection</span></a></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.delta_cls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.dvar1">
+<span class="sig-name descname"><span class="pre">dvar1</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.dvar1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.dvar2">
+<span class="sig-name descname"><span class="pre">dvar2</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.dvar2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.element_values">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">element_values</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">float]</span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.element_values" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.evaluateAutoCorrelationsFisherElements">
+<span class="sig-name descname"><span class="pre">evaluateAutoCorrelationsFisherElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.evaluateAutoCorrelationsFisherElements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.evaluateFisherMatrixElements">
+<span class="sig-name descname"><span class="pre">evaluateFisherMatrixElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.evaluateFisherMatrixElements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.fisher_elements">
+<span class="sig-name descname"><span class="pre">fisher_elements</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#seyfert.fisher.fisher_element.FisherElement" title="seyfert.fisher.fisher_element.FisherElement"><span class="pre">seyfert.fisher.fisher_element.FisherElement</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.fisher_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.loadInputData">
+<span class="sig-name descname"><span class="pre">loadInputData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta_cls_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">der_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.loadInputData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.probes">
+<span class="sig-name descname"><span class="pre">probes</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.probes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.turnoffClDerivatives">
+<span class="sig-name descname"><span class="pre">turnoffClDerivatives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.turnoffClDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seyfert.fisher.fisher_element.FisherElementsCollector.writeOnDisk">
+<span class="sig-name descname"><span class="pre">writeOnDisk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seyfert.fisher.fisher_element.FisherElementsCollector.writeOnDisk" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="seyfert.fisher.fisher_matrix.html" class="btn btn-neutral float-right" title="seyfert.fisher.fisher_matrix module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="seyfert.fisher.fisher_computation.html" class="btn btn-neutral float-left" title="seyfert.fisher.fisher_computation module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

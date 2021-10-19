@@ -1,0 +1,19 @@
+H5Density
+=========
+
+.. currentmodule:: seyfert.cosmology.redshift_density
+
+.. autoclass:: H5Density
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H5Density.writeObjectToFile
+      ~H5Density.writeToObject
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: writeObjectToFile
+   .. automethod:: writeToObject

@@ -1,0 +1,17 @@
+SpectroscopicGalaxyWeightFunction
+=================================
+
+.. currentmodule:: seyfert.cosmology.weight_functions
+
+.. autoclass:: SpectroscopicGalaxyWeightFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SpectroscopicGalaxyWeightFunction.setupBias
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setupBias

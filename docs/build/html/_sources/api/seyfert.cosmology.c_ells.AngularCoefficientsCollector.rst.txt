@@ -1,0 +1,39 @@
+AngularCoefficientsCollector
+============================
+
+.. currentmodule:: seyfert.cosmology.c_ells
+
+.. autoclass:: AngularCoefficientsCollector
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AngularCoefficientsCollector.probes
+      ~AngularCoefficientsCollector.probes_combinations
+      ~AngularCoefficientsCollector.short_keys
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AngularCoefficientsCollector.evaluateAngularCoefficients
+      ~AngularCoefficientsCollector.fromHDF5
+      ~AngularCoefficientsCollector.loadFromHDF5
+      ~AngularCoefficientsCollector.saveToHDF5
+      ~AngularCoefficientsCollector.setUp
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: probes
+   .. autoattribute:: probes_combinations
+   .. autoattribute:: short_keys
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateAngularCoefficients
+   .. automethod:: fromHDF5
+   .. automethod:: loadFromHDF5
+   .. automethod:: saveToHDF5
+   .. automethod:: setUp

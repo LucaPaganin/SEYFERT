@@ -1,0 +1,43 @@
+VdnVoidBias
+===========
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: VdnVoidBias
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~VdnVoidBias.R_max_Mpc
+      ~VdnVoidBias.R_min_Mpc
+      ~VdnVoidBias.delta_c0
+      ~VdnVoidBias.delta_v0
+      ~VdnVoidBias.n_R
+      ~VdnVoidBias.z_grid
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~VdnVoidBias.computeBias
+      ~VdnVoidBias.computeVdnSizeFunction
+      ~VdnVoidBias.computeVoidMultiplicity
+      ~VdnVoidBias.voidMultiplicity
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: R_max_Mpc
+   .. autoattribute:: R_min_Mpc
+   .. autoattribute:: delta_c0
+   .. autoattribute:: delta_v0
+   .. autoattribute:: n_R
+   .. autoattribute:: z_grid
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: computeBias
+   .. automethod:: computeVdnSizeFunction
+   .. automethod:: computeVoidMultiplicity
+   .. automethod:: voidMultiplicity

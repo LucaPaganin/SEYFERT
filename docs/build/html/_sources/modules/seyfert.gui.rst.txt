@@ -1,0 +1,19 @@
+seyfert.gui package
+===================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   seyfert.gui.gui_core
+   seyfert.gui.interface_window
+
+Module contents
+---------------
+
+.. automodule:: seyfert.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

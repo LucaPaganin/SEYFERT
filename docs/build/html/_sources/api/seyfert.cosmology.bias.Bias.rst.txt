@@ -1,0 +1,35 @@
+Bias
+====
+
+.. currentmodule:: seyfert.cosmology.bias
+
+.. autoclass:: Bias
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Bias.has_output
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Bias.evaluateBias
+      ~Bias.fromHDF5
+      ~Bias.initBiasModel
+      ~Bias.loadFromHDF5
+      ~Bias.saveToHDF5
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: has_output
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: evaluateBias
+   .. automethod:: fromHDF5
+   .. automethod:: initBiasModel
+   .. automethod:: loadFromHDF5
+   .. automethod:: saveToHDF5

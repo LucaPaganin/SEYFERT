@@ -1,0 +1,7 @@
+seyfert.fisher.fisher\_plot module
+==================================
+
+.. automodule:: seyfert.fisher.fisher_plot
+   :members:
+   :undoc-members:
+   :show-inheritance:

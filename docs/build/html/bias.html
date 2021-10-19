@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Bias &mdash; SEYFERT 1.3.7dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bias" href="api/seyfert.cosmology.bias.Bias.html" />
+    <link rel="prev" title="RedshiftDensity" href="api/seyfert.cosmology.redshift_density.RedshiftDensity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/seyfert.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">Physical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power_spectrum.html">Power Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boltzmann_solver.html">Boltzmann solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redshift_density.html">Redshift Density</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bias</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-seyfert.cosmology.bias">seyfert.cosmology.bias Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.Bias.html">Bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.BiasError.html">BiasError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.BiasModel.html">BiasModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.ConstantBias.html">ConstantBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.EuclidFlagshipGCphBias.html">EuclidFlagshipGCphBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.FiducialGrowthVoidBias.html">FiducialGrowthVoidBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.H5Bias.html">H5Bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.PiecewiseBias.html">PiecewiseBias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/seyfert.cosmology.bias.VdnVoidBias.html">VdnVoidBias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="weight_functions.html">Weight functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c_ells.html">Angular power spectra</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEYFERT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Bias</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/bias.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bias">
+<h1>Bias<a class="headerlink" href="#bias" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-seyfert.cosmology.bias">
+<span id="seyfert-cosmology-bias-module"></span><h2>seyfert.cosmology.bias Module<a class="headerlink" href="#module-seyfert.cosmology.bias" title="Permalink to this headline">¶</a></h2>
+<p>Module hosting the bias class and the implemented bias models.</p>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ABC</span></code>()</p></td>
+<td><p>Helper class that provides a standard way to create an ABC using inheritance.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AbstractH5FileIO</span></code>([root])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.Bias.html#seyfert.cosmology.bias.Bias" title="seyfert.cosmology.bias.Bias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bias</span></code></a>([probe, z_bin_edges])</p></td>
+<td><p>Class managing the bias.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.BiasError.html#seyfert.cosmology.bias.BiasError" title="seyfert.cosmology.bias.BiasError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BiasError</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.BiasModel.html#seyfert.cosmology.bias.BiasModel" title="seyfert.cosmology.bias.BiasModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BiasModel</span></code></a>([name, z_bin_edges, cosmology, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.ConstantBias.html#seyfert.cosmology.bias.ConstantBias" title="seyfert.cosmology.bias.ConstantBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstantBias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.EuclidFlagshipGCphBias.html#seyfert.cosmology.bias.EuclidFlagshipGCphBias" title="seyfert.cosmology.bias.EuclidFlagshipGCphBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EuclidFlagshipGCphBias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.FiducialGrowthVoidBias.html#seyfert.cosmology.bias.FiducialGrowthVoidBias" title="seyfert.cosmology.bias.FiducialGrowthVoidBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FiducialGrowthVoidBias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.H5Bias.html#seyfert.cosmology.bias.H5Bias" title="seyfert.cosmology.bias.H5Bias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">H5Bias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Path</span></code>(*args, **kwargs)</p></td>
+<td><p>PurePath subclass that can make system calls.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.PiecewiseBias.html#seyfert.cosmology.bias.PiecewiseBias" title="seyfert.cosmology.bias.PiecewiseBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PiecewiseBias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/seyfert.cosmology.bias.VdnVoidBias.html#seyfert.cosmology.bias.VdnVoidBias" title="seyfert.cosmology.bias.VdnVoidBias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VdnVoidBias</span></code></a>(**kwargs)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<div class="graphviz"><img src="_images/inheritance-e64f42a521284988893f79de6ce011a201ff7abe.png" alt="Inheritance diagram of seyfert.cosmology.bias.Bias, seyfert.cosmology.bias.BiasError, seyfert.cosmology.bias.BiasModel, seyfert.cosmology.bias.ConstantBias, seyfert.cosmology.bias.EuclidFlagshipGCphBias, seyfert.cosmology.bias.FiducialGrowthVoidBias, seyfert.cosmology.bias.H5Bias, seyfert.cosmology.bias.PiecewiseBias, seyfert.cosmology.bias.VdnVoidBias" usemap="#inheritance104e915e77" class="inheritance graphviz" /></div>
+<map id="inheritance104e915e77" name="inheritance104e915e77">
+<area shape="rect" id="node5" href="api/seyfert.cosmology.bias.BiasModel.html#seyfert.cosmology.bias.BiasModel" target="_top" title="BiasModel" alt="" coords="149,129,232,155"/>
+<area shape="rect" id="node9" href="api/seyfert.cosmology.bias.H5Bias.html#seyfert.cosmology.bias.H5Bias" target="_top" title="H5Bias" alt="" coords="347,5,419,31"/>
+<area shape="rect" id="node3" href="api/seyfert.cosmology.bias.Bias.html#seyfert.cosmology.bias.Bias" target="_top" title="Class managing the bias." alt="" coords="7,56,79,81"/>
+<area shape="rect" id="node4" href="api/seyfert.cosmology.bias.BiasError.html#seyfert.cosmology.bias.BiasError" target="_top" title="BiasError" alt="" coords="5,7,81,32"/>
+<area shape="rect" id="node6" href="api/seyfert.cosmology.bias.ConstantBias.html#seyfert.cosmology.bias.ConstantBias" target="_top" title="ConstantBias" alt="" coords="333,55,434,80"/>
+<area shape="rect" id="node7" href="api/seyfert.cosmology.bias.EuclidFlagshipGCphBias.html#seyfert.cosmology.bias.EuclidFlagshipGCphBias" target="_top" title="EuclidFlagshipGCphBias" alt="" coords="300,104,467,129"/>
+<area shape="rect" id="node8" href="api/seyfert.cosmology.bias.FiducialGrowthVoidBias.html#seyfert.cosmology.bias.FiducialGrowthVoidBias" target="_top" title="FiducialGrowthVoidBias" alt="" coords="303,153,463,179"/>
+<area shape="rect" id="node10" href="api/seyfert.cosmology.bias.PiecewiseBias.html#seyfert.cosmology.bias.PiecewiseBias" target="_top" title="PiecewiseBias" alt="" coords="329,203,437,228"/>
+<area shape="rect" id="node11" href="api/seyfert.cosmology.bias.VdnVoidBias.html#seyfert.cosmology.bias.VdnVoidBias" target="_top" title="VdnVoidBias" alt="" coords="335,252,431,277"/>
+</map></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api/seyfert.cosmology.bias.Bias.html" class="btn btn-neutral float-right" title="Bias" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api/seyfert.cosmology.redshift_density.RedshiftDensity.html" class="btn btn-neutral float-left" title="RedshiftDensity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Luca Paganin, Marco Bonici, Stefano Davini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

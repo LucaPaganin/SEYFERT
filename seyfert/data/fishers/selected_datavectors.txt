@@ -1,0 +1,42 @@
+# auto-correlations
+[WL]: ['wlwl']
+[GCph]: ['phph']
+[GCsp]: ['spsp']
+
+# WL & GCph
+[WL+GCph]: ['wlwl', 'phph']
+[WL+GCph+XC(WL,GCph)]: ['wlwl', 'phph', 'wlph']
+[WL+XC(WL,GCph)]: ['wlwl', 'wlph']
+[GCph+XC(WL,GCph)]: ['phph', 'wlph']
+[XC(WL,GCph)]: ['wlph']
+
+# WL & GCsp
+[WL+GCsp]: ['wlwl', 'spsp']
+[WL+GCsp+XC(WL,GCsp)]: ['wlwl', 'spsp', 'wlsp']
+[WL+XC(WL,GCsp)]: ['wlwl', 'wlsp']
+[GCsp+XC(WL,GCsp)]: ['spsp', 'wlsp']
+[XC(WL,GCsp)]: ['wlsp']
+
+# GCph & GCsp
+[GCph+GCsp]: ['phph', 'spsp']
+[GCph+GCsp+XC(GCph,GCsp)]: ['phph', 'spsp', 'phsp']
+[GCph+XC(GCph,GCsp)]: ['phph', 'phsp']
+[GCsp+XC(GCph,GCsp)]: ['spsp', 'phsp']
+[XC(GCph,GCsp)]: ['phsp']
+
+# 6x2pt
+[WL+GCph+GCsp]: ['wlwl', 'phph', 'spsp']
+[WL+GCph+GCsp+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'spsp', 'wlph', 'wlsp', 'phsp']
+[WL+GCph+GCsp+XC(WL,GCph)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'spsp', 'wlph', 'phsp']
+[WL+GCph+GCsp+XC(WL,GCph)+XC(WL,GCsp)]: ['wlwl', 'phph', 'spsp', 'wlph', 'wlsp']
+[WL+GCph+GCsp+XC(WL,GCsp)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'spsp', 'wlsp', 'phsp']
+[WL+GCph+GCsp+XC(WL,GCph)]: ['wlwl', 'phph', 'spsp', 'wlph']
+[WL+GCph+GCsp+XC(WL,GCsp)]: ['wlwl', 'phph', 'spsp', 'wlsp']
+[WL+GCph+GCsp+XC(GCph,GCsp)]: ['wlwl', 'phph', 'spsp', 'phsp']
+[WL+GCph+XC(WL,GCph)+XC(WL,GCsp)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'wlph', 'wlsp', 'phsp']
+[WL+GCph+XC(WL,GCph)+XC(WL,GCsp)]: ['wlwl', 'phph', 'wlph', 'wlsp']
+[WL+GCph+XC(WL,GCph)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'wlph', 'phsp']
+[WL+GCph+XC(WL,GCsp)+XC(GCph,GCsp)]: ['wlwl', 'phph', 'wlsp', 'phsp']
+[WL+GCph+XC(WL,GCsp)]: ['wlwl', 'phph', 'wlsp']
+[WL+GCph+XC(GCph,GCsp)]: ['wlwl', 'phph', 'phsp']
+[GCsp+XC(WL,GCph)]: ['spsp', 'wlph']
