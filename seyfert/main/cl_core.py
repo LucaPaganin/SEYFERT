@@ -58,16 +58,13 @@ def compute_cls(cosmology: "Cosmology", phys_pars: "PhysicalParametersCollection
     cosmology.evaluateOverRedshiftGrid()
     if fiducial_cosmology is not None:
         fiducial_cosmology.evaluateOverRedshiftGrid()
-    if forecast_config.verbose:
-        logger.info('Instantiating Cl collector')
+    logger.info('Instantiating Cl collector')
     cl_collector = AngularCoefficientsCollector(phys_params=phys_pars, cosmology=cosmology,
                                                 fiducial_cosmology=fiducial_cosmology,
                                                 forecast_config=forecast_config, angular_config=angular_config)
-    if forecast_config.verbose:
-        logger.info('Building angular coefficients')
+    logger.info('Building angular coefficients')
     cl_collector.setUp(densities=densities)
-    if forecast_config.verbose:
-        logger.info('Computing angular coefficients')
+    logger.info('Computing angular coefficients')
     cl_collector.evaluateAngularCoefficients()
 
     return cl_collector

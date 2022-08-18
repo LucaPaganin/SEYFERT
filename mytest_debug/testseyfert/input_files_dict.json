@@ -1,0 +1,9 @@
+{
+  "forecast": "input_files_dir/basic_forecast_config.json",
+  "PowerSpectrum": "input_files_dir/power_spectrum_config.json",
+  "Angular": "input_files_dir/angular_config.json",
+  "Derivative": "input_files_dir/derivative_config.json",
+  "Fisher": "input_files_dir/fisher_config.json",
+  "params": "input_files_dir/params.json",
+  "input_data_dir": "/Users/lucapaganin/git_repos/seyfert/seyfert/data/input_data"
+}

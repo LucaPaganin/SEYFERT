@@ -21,46 +21,45 @@ logger = logging.getLogger(__name__)
 
 
 def prepare_workspace(args_dict):
-    now = datetime.datetime.now()
-    input_data_dir = args_dict['input_data_dir']
-
+    cfgdir = fsu.config_files_dir()
+    datadir = fsu.default_data_dir()
+    input_data_dir = args_dict.get('input_data_dir', datadir)
+    test = args_dict.get("test", False)
     src_input_files = {
-        'forecast': args_dict['forecast_config'],
-        'PowerSpectrum': args_dict['powerspectrum_config'],
-        'Angular': args_dict["angular_config"],
-        'Derivative': args_dict["derivative_config"],
-        'Fisher': args_dict["fisher_config"],
+        'forecast': args_dict.get("forecast_config", cfgdir/"basic_forecast_config.json"),
+        'PowerSpectrum': args_dict.get('powerspectrum_config', cfgdir/"power_spectrum_config.json"),
+        'Angular': args_dict.get("angular_config", cfgdir/'angular_config.json'),
+        'Derivative': args_dict.get('derivative_config', cfgdir/'derivative_config.json'),
+        'Fisher': args_dict.get('fisher_config', cfgdir/'fisher_config.json'),
     }
-
     logger.info("Configuration files:")
     for key, value in src_input_files.items():
         logger.info(f"{key}: {value}")
-
     fcfg = ForecastConfig(input_file=src_input_files['forecast'], input_data_dir=input_data_dir)
     fcfg.loadPhysicalParametersFromJSONConfig()
-
-    run_dir_name = f"run_{fcfg.getConfigID()}_{formatters.datetime_str_format(now)}"
-    run_dir = args_dict['workdir']
-
+    if test:
+        run_dir = Path(".").resolve()/"test_seyfert_run"
+    else:
+        run_dir = args_dict['workdir']
     ws = WorkSpace(run_dir)
     ws.run_dir.mkdir(exist_ok=True, parents=True)
-    ws.createInputFilesDir(src_input_files=src_input_files, phys_pars=fcfg.phys_pars, input_data_dir=input_data_dir)
+    ws.createInputFilesDir(src_input_files=src_input_files, 
+                           phys_pars=fcfg.phys_pars, 
+                           input_data_dir=input_data_dir)
 
-    pmm_dir = args_dict['powerspectrum_dir']
+    pmm_dir = args_dict.get('powerspectrum_dir')
     if pmm_dir is None:
-        pmm_dir = Path.home() / "spectrophoto/powerspectra/istf_pmms"
-        logger.info(f"Default power spectra: {pmm_dir}")
+        pmm_dir = ws.run_dir/"PowerSpectrum"
+        pmm_dir.mkdir(exist_ok=True)
 
-    ext_dirs = {
-        "PowerSpectrum": pmm_dir
-    }
-    if args_dict['angular_dir'] is not None:
-        ext_dirs["Angular"] = Path(args_dict['angular_dir'])
-    if args_dict['derivative_dir'] is not None:
-        ext_dirs["Derivative"] = Path(args_dict['derivative_dir'])
-
+    ext_dirs = {}
+    cldir = args_dict.get('angular_dir')
+    derdir = args_dict.get('derivative_dir')
+    if cldir is not None:
+        ext_dirs["Angular"] = Path(cldir)
+    if derdir is not None:
+        ext_dirs["Derivative"] = Path(derdir)
     ws.symlinkToExternalDirs(ext_dirs, link_delta_cls=False)
-
     return fcfg, ws
 
 

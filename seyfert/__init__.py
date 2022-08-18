@@ -38,3 +38,7 @@ __all__ = [
     'derivatives',
     'fisher'
 ]
+
+from seyfert.seyfert import Seyfert
+from seyfert.cosmology.cosmology import Cosmology
+from seyfert.cosmology.redshift_density import RedshiftDensity

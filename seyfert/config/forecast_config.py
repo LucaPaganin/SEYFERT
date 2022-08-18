@@ -32,7 +32,9 @@ class ForecastConfig:
     survey_f_sky: "float"
     json_config: "JSONForecastConfig"
 
-    def __init__(self, input_file: "TPathLike" = None, input_data_dir: "TPathLike" = None):
+    def __init__(self, input_file: "TPathLike" = None, 
+                 input_data_dir: "TPathLike" = None, 
+                 load_phys_params: "bool" = False):
         self.input_file = input_file
         self.input_data_dir = input_data_dir
         self.probe_configs = {}
@@ -44,7 +46,9 @@ class ForecastConfig:
         self.verbose = False
 
         if self.input_file is not None and self.input_data_dir is not None:
-            self.loadConfiguration(input_file=self.input_file, input_data_dir=self.input_data_dir)
+            self.loadConfiguration(input_file=self.input_file, 
+                                   input_data_dir=self.input_data_dir, 
+                                   load_phys_params=load_phys_params)
         else:
             logger.warning("Missing one of input_data_dir and input_file, forecast configuration not loaded")
 

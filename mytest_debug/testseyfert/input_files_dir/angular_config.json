@@ -1,0 +1,11 @@
+{
+  "cl_integration_settings": {
+    "lensing_efficiency": "simpson",
+    "cl": "simpson"
+  },
+  "limber_pmm_spline_settings": {
+    "kx": 5,
+    "ky": 5,
+    "s": 0
+  }
+}

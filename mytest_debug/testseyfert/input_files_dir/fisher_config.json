@@ -1,0 +1,16 @@
+{
+  "shot_noise_phsp_xc_factor": 0.0,
+  "fisher_formula": "second_order",
+  "cl_derivatives": {
+    "Lensing_Lensing": true,
+    "Lensing_PhotometricGalaxy": true,
+    "Lensing_SpectroscopicGalaxy": true,
+    "Lensing_Void": true,
+    "PhotometricGalaxy_PhotometricGalaxy": true,
+    "PhotometricGalaxy_SpectroscopicGalaxy": true,
+    "PhotometricGalaxy_Void": true,
+    "SpectroscopicGalaxy_SpectroscopicGalaxy": true,
+    "SpectroscopicGalaxy_Void": true,
+    "Void_Void": true
+  }
+}

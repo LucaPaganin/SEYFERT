@@ -1,0 +1,312 @@
+[
+  {
+    "name": "h",
+    "fiducial": 0.67,
+    "current_value": 0.67,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "w0",
+    "fiducial": -1.0,
+    "current_value": -1.0,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "wa",
+    "fiducial": 0.0,
+    "current_value": 0.0,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "OmDE",
+    "fiducial": 0.68,
+    "current_value": 0.68,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": false,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "Omm",
+    "fiducial": 0.32,
+    "current_value": 0.32,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "Omb",
+    "fiducial": 0.05,
+    "current_value": 0.05,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "ns",
+    "fiducial": 0.96,
+    "current_value": 0.96,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "sigma8",
+    "fiducial": 0.816,
+    "current_value": 0.816,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "mnu",
+    "fiducial": 0.06,
+    "current_value": 0.06,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": false,
+    "stem_factor": 7.0,
+    "derivative_method": "SteM",
+    "units": "eV"
+  },
+  {
+    "name": "gamma",
+    "fiducial": 0.55,
+    "current_value": 0.55,
+    "kind": "CosmologicalParameter",
+    "is_free_parameter": false,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None"
+  },
+  {
+    "name": "aIA",
+    "fiducial": 1.72,
+    "current_value": 1.72,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "Lensing"
+  },
+  {
+    "name": "cIA",
+    "fiducial": 0.0134,
+    "current_value": 0.0134,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": false,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "Lensing"
+  },
+  {
+    "name": "etaIA",
+    "fiducial": -0.41,
+    "current_value": -0.41,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "Lensing"
+  },
+  {
+    "name": "betaIA",
+    "fiducial": 2.17,
+    "current_value": 2.17,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "Lensing"
+  },
+  {
+    "name": "bgph0",
+    "fiducial": 1.0997727037892875,
+    "current_value": 1.0997727037892875,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph1",
+    "fiducial": 1.220245876862528,
+    "current_value": 1.220245876862528,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph2",
+    "fiducial": 1.2723993083933989,
+    "current_value": 1.2723993083933989,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph3",
+    "fiducial": 1.316624471897739,
+    "current_value": 1.316624471897739,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph4",
+    "fiducial": 1.35812370570578,
+    "current_value": 1.35812370570578,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph5",
+    "fiducial": 1.3998214171814918,
+    "current_value": 1.3998214171814918,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph6",
+    "fiducial": 1.4446452851824907,
+    "current_value": 1.4446452851824907,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph7",
+    "fiducial": 1.4964959071110084,
+    "current_value": 1.4964959071110084,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph8",
+    "fiducial": 1.5652475842498528,
+    "current_value": 1.5652475842498528,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgph9",
+    "fiducial": 1.7429859437184225,
+    "current_value": 1.7429859437184225,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "PhotometricGalaxy"
+  },
+  {
+    "name": "bgsp0",
+    "fiducial": 1.46,
+    "current_value": 1.46,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "SpectroscopicGalaxy"
+  },
+  {
+    "name": "bgsp1",
+    "fiducial": 1.61,
+    "current_value": 1.61,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "SpectroscopicGalaxy"
+  },
+  {
+    "name": "bgsp2",
+    "fiducial": 1.75,
+    "current_value": 1.75,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "SpectroscopicGalaxy"
+  },
+  {
+    "name": "bgsp3",
+    "fiducial": 1.9,
+    "current_value": 1.9,
+    "kind": "NuisanceParameter",
+    "is_free_parameter": true,
+    "stem_factor": 1.0,
+    "derivative_method": "SteM",
+    "units": "None",
+    "probe": "SpectroscopicGalaxy"
+  },
+  {
+    "base_stem_disps": [
+      0.00625,
+      0.0125,
+      0.01875,
+      0.025,
+      0.0375,
+      0.05,
+      0.1
+    ],
+    "is_universe_flat": true
+  }
+]

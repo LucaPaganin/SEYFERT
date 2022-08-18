@@ -50,7 +50,7 @@ class PowerSpectrum:
         """
         self.cosmological_parameters = cosmo_pars
         self.power_spectrum_config = power_spectrum_config
-        self.boltzmann_code = "CAMB"
+        self.boltzmann_code = "CLASS"
         self.boltzmann_solver = None
         self.k_grid = None
         self.z_grid = None
