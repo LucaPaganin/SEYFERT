@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING, Dict
 import logging
 import numpy as np
+from timeit import default_timer as timer
 
 from seyfert.utils.workspace import WorkSpace
 from seyfert.cosmology.cosmology import Cosmology
@@ -11,7 +12,7 @@ from seyfert.fisher.delta_cl import DeltaClCollection
 if TYPE_CHECKING:
     from seyfert.config.forecast_config import ForecastConfig
     from seyfert.config.probe_config import ProbeConfig
-    from seyfert.config.main_config import AngularConfig
+    from seyfert.config.main_config import AngularConfig, PowerSpectrumConfig
     from seyfert.cosmology.parameter import PhysicalParametersCollection
 
 logger = logging.getLogger(__name__)
@@ -25,7 +26,8 @@ def load_cosmology(ws: "WorkSpace", dvar: "str", step: "int", phys_pars: "Physic
 
     cosmo = Cosmology.fromHDF5(file)
     if cosmo.params != phys_pars.cosmological_parameters:
-        logger.error(f"Inconsistency between cosmology loaded from {file} and physical parameters")
+        logger.error(
+            f"Inconsistency between cosmology loaded from {file} and physical parameters")
         for par_name, param in cosmo.params.items():
             if par_name == "gamma":
                 continue
@@ -52,10 +54,15 @@ def compute_densities(probe_configs: "Dict[str, ProbeConfig]", z_grid: "np.ndarr
 
 def compute_cls(cosmology: "Cosmology", phys_pars: "PhysicalParametersCollection",
                 densities: "Dict[str, RedshiftDensity]",
-                forecast_config: "ForecastConfig", angular_config: "AngularConfig",
-                fiducial_cosmology: "Cosmology" = None) -> "AngularCoefficientsCollector":
-
+                forecast_config: "ForecastConfig",
+                angular_config: "AngularConfig",
+                pmm_cfg: "PowerSpectrumConfig" = None,
+                fiducial_cosmology: "Cosmology" = None,
+                compute_pmm=False) -> "AngularCoefficientsCollector":
     cosmology.evaluateOverRedshiftGrid()
+    if compute_pmm:
+        cosmology.evaluatePowerSpectrum(
+            workdir=".", power_spectrum_config=pmm_cfg)
     if fiducial_cosmology is not None:
         fiducial_cosmology.evaluateOverRedshiftGrid()
     logger.info('Instantiating Cl collector')
@@ -65,20 +72,33 @@ def compute_cls(cosmology: "Cosmology", phys_pars: "PhysicalParametersCollection
     logger.info('Building angular coefficients')
     cl_collector.setUp(densities=densities)
     logger.info('Computing angular coefficients')
+    t0 = timer()
     cl_collector.evaluateAngularCoefficients()
+    logger.info(f"elapsed time {timer()-t0} s")
 
     return cl_collector
 
 
 def compute_cls_variations(dvar: "str", fid_cls, ws, phys_pars, densities, forecast_config, angular_config,
+                           pmm_cfg=None, compute_pmm=False,
                            fiducial_cosmology=None) -> "Dict[int, AngularCoefficientsCollector]":
     cl_coll_variations = {0: fid_cls}
     for step in np.r_[-7:0, 1:8]:
         logger.info(f"dvar {dvar}, step {step}")
         phys_pars.updatePhysicalParametersForDvarStep(dvar=dvar, step=step)
-        cosmology = load_cosmology(ws, dvar, step, phys_pars)
+        if not compute_pmm:
+            cosmology = load_cosmology(ws, dvar, step, phys_pars)
+        else:
+            cosmology = Cosmology(params=phys_pars.cosmological_parameters,
+                                  flat=True, cosmology_name="CPL",
+                                  z_grid=pmm_cfg.z_grid)
+            cosmology.evaluatePowerSpectrum(
+                workdir=".", power_spectrum_config=pmm_cfg)
+            cosmology.evaluateOverRedshiftGrid()
+
         cl_coll_varied = compute_cls(cosmology, phys_pars, densities, forecast_config, angular_config,
-                                     fiducial_cosmology=fiducial_cosmology)
+                                     fiducial_cosmology=fiducial_cosmology,
+                                     pmm_cfg=pmm_cfg, compute_pmm=compute_pmm)
         cl_coll_variations[step] = cl_coll_varied
         phys_pars.resetPhysicalParametersToFiducial()
 

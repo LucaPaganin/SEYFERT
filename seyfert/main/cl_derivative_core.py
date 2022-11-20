@@ -1,5 +1,6 @@
 from typing import TYPE_CHECKING, Dict
 import numpy as np
+from sympy import comp
 
 from seyfert.main.cl_core import compute_cls_variations
 from seyfert.derivatives import cl_derivative, differentiator
@@ -12,16 +13,19 @@ if TYPE_CHECKING:
     from seyfert.utils.workspace import WorkSpace
     from seyfert.cosmology.redshift_density import RedshiftDensity
     from seyfert.config.forecast_config import ForecastConfig
-    from seyfert.config.main_config import AngularConfig
+    from seyfert.config.main_config import AngularConfig, PowerSpectrumConfig
 
 
 def compute_cls_derivatives_wrt(dvar: "str", fid_cls: "AngularCoefficientsCollector", ws: "WorkSpace",
                                 phys_pars: "PhysicalParametersCollection", densities: "Dict[str, RedshiftDensity]",
-                                forecast_config: "ForecastConfig", angular_config: "AngularConfig",
+                                forecast_config: "ForecastConfig", 
+                                angular_config: "AngularConfig",
+                                pmm_cfg: "PowerSpectrumConfig" = None, 
+                                compute_pmm=False,
                                 fiducial_cosmology: "Cosmology" = None) -> "cl_derivative.ClDerivativeCollector":
     cls_dvar = compute_cls_variations(dvar, fid_cls, ws, phys_pars, densities, forecast_config, angular_config,
-                                      fiducial_cosmology=fiducial_cosmology)
-
+                                      fiducial_cosmology=fiducial_cosmology, 
+                                      pmm_cfg=pmm_cfg, compute_pmm=compute_pmm)
     deriv_coll = cl_derivative.ClDerivativeCollector(dvar=dvar)
     deriv_coll.dcl_dict = {}
 

@@ -124,7 +124,11 @@
     "WL": {
       "long_name": "Lensing",
       "presence_flag": true,
-      "ell_external_filename": "wl_optm_ells_10_3000_log_nell_100_and_3000_5000_lin.txt",
+      "ell_external_filename": null,
+      "l_min": 10,
+      "l_max": 3000,
+      "ell_log_selection": true,
+      "log_l_number": 100,
       "density_file": "gcph_dndz_redbook.h5",
       "extra_nuisance_parameters": [
         {

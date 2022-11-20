@@ -55,7 +55,7 @@ class Cosmology:
     z_grid: "np.ndarray"
     params: "Dict[str, PhysicalParameter]"
 
-    def __init__(self, params: "Dict[str, PhysicalParameter]" = None, flat: "bool" = None, model_name: "str" = None,
+    def __init__(self, params: "Dict[str, PhysicalParameter]" = None, flat: "bool" = None, model_name: "str" = "CPL",
                  z_grid: "np.ndarray" = None, cosmology_name: "str" = None):
         self.dimensionless_hubble_array = None
         self.dimensionless_comoving_distance_array = None
@@ -438,6 +438,7 @@ class H5Cosmology(AbstractH5FileIO):
                 grp.attrs.update(par.to_dict())
         else:
             logger.warning('cosmological parameters absent from cosmology, not writing them to file')
+        logger.info("closing file")
         self.closeFile()
 
 

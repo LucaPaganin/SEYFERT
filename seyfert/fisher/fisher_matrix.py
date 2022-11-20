@@ -355,7 +355,7 @@ class FisherMatrix:
     def loadFromFile(self, file: "Union[Path, str]" = None, file_ext: "str" = 'hdf5') -> "None":
         if file_ext == 'hdf5':
             hf = h5py.File(file, 'r')
-            self.name = hf["name"][()]
+            self.name = str(hf["name"][()])
             try:
                 self._nuisance_parameters = set(hf["nuisance_pars"][()])
             except KeyError:

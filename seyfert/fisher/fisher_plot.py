@@ -219,6 +219,10 @@ class FisherPlotter:
     @property
     def plot_ranges(self) -> "Dict[str, Tuple[float, float]]":
         return self.config.plot_ranges
+    
+    @plot_ranges.setter
+    def plot_ranges(self, value) -> None:
+        self.config.plot_ranges = value
 
     def setUpDefault(self) -> "None":
         self.setParamsToPlot(pars_to_plot='all')
